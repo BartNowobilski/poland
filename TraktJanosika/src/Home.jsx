@@ -97,11 +97,11 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
               "/h3.jpg",
               "/h4.jpg",
               "/bialka.jpg",
-              "/S9.JPG",
-              "/S6.JPG",
-              "/S4.JPG",
-              "/S5.JPG",
-              "/S25.JPG",
+              "/S9.jpg",
+              "/S6.jpg",
+              "/S4.jpg",
+              "/S5.jpg",
+              "/S25.jpg",
             ]}
           />
           <div>
