@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import { Routes, Route, Link, useLocation } from "react-router-dom";
+import Gallery from "./Gallery";
+import Home from "./Home";
 /* =========================
    CONFIG
 ========================= */
@@ -62,158 +64,10 @@ const COPY = {
 };
 
 /* =========================
-   UI BITS
-========================= */
-function Field({ label, name, type = "text", textarea = false, required }) {
-  return (
-    <label className="field">
-      <span className="label">{label}</span>
-      {textarea ? (
-        <textarea name={name} rows={4} required={required} />
-      ) : (
-        <input name={name} type={type} required={required} />
-      )}
-    </label>
-  );
-}
-
-function NearbyCard({ icon: Icon, text }) {
-  return (
-    <div className="nearby-card">
-      <Icon />
-      <p>{text}</p>
-    </div>
-  );
-}
-
-/* Icons used */
-const MountainIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path d="M3 20l7-12 4 7 2-3 5 8H3z" fill="currentColor" />
-  </svg>
-);
-const TreesIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path d="M12 2l4 7h-3l3 5h-3l2 4H9l2-4H8l3-5H8l4-7z" fill="currentColor" />
-  </svg>
-);
-const BikeIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <circle cx="6.5" cy="17.5" r="3.5" fill="currentColor" />
-    <circle cx="17.5" cy="17.5" r="3.5" fill="currentColor" />
-    <path
-      d="M10 17.5h3l-3-7h5l2 3"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      fill="none"
-    />
-  </svg>
-);
-const CarIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path
-      d="M3 14l2-5a3 3 0 012.8-2h8.4A3 3 0 0119 9l2 5v4h-2a2 2 0 01-4 0H9a2 2 0 01-4 0H3v-4z"
-      fill="currentColor"
-    />
-  </svg>
-);
-const MapPinIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path
-      d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"
-      fill="currentColor"
-    />
-  </svg>
-);
-const MailIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path
-      d="M3 6h18v12H3z"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      fill="none"
-    />
-    <path
-      d="M3 6l9 7 9-7"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      fill="none"
-    />
-  </svg>
-);
-const PhoneIcon = () => (
-  <svg viewBox="0 0 24 24" className="svg" aria-hidden="true">
-    <path
-      d="M6 2h4l2 5-2 2a14 14 0 006 6l2-2 5 2v4a2 2 0 01-2 2C10 21 3 14 2 4a2 2 0 012-2z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-/* Slideshow */
-function Slideshow({ images, interval = 4000 }) {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const id = setInterval(
-      () => setIndex((p) => (p + 1) % images.length),
-      interval
-    );
-    return () => clearInterval(id);
-  }, [images.length, interval]);
-  return (
-    <div className="slideshow ratio-4x3" aria-label="Gallery">
-      {images.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`Slide ${i + 1}`}
-          className={`slide ${i === index ? "active" : ""}`}
-          loading="lazy"
-          decoding="async"
-        />
-      ))}
-    </div>
-  );
-}
-
-/* 360° panorama (Pannellum) */
-function Panorama({ src = "/pano1.jpeg", autoRotate = 1, controls = false }) {
-  const containerRef = useRef(null);
-  const viewerRef = useRef(null);
-  useEffect(() => {
-    if (!window.pannellum || !containerRef.current) return;
-    if (viewerRef.current?.destroy) viewerRef.current.destroy();
-    viewerRef.current = window.pannellum.viewer(containerRef.current, {
-      type: "equirectangular",
-      panorama: src,
-      autoLoad: true,
-      autoRotate,
-      showControls: controls,
-      showFullscreenCtrl: controls,
-      showZoomCtrl: controls,
-      compass: false,
-      hfov: 90,
-      pitch: 0,
-      yaw: 0,
-    });
-    return () => {
-      if (viewerRef.current?.destroy) viewerRef.current.destroy();
-      viewerRef.current = null;
-    };
-  }, [src, autoRotate, controls]);
-  return (
-    <div
-      ref={containerRef}
-      className="iframe"
-      aria-label="360° panorama viewer"
-    />
-  );
-}
-
-/* =========================
    APP
 ========================= */
 export default function App() {
+  const { pathname } = useLocation();
   const [lang, setLang] = useState("pl");
   const [sendStatus, setSendStatus] = useState("idle"); // idle | sending | success | error
   const t = COPY[lang];
@@ -239,7 +93,7 @@ export default function App() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, [pathname]);
 
   async function submit(e) {
     e.preventDefault();
@@ -291,16 +145,50 @@ export default function App() {
       {/* NAV */}
       <header className="nav" role="banner">
         <div className="nav-inner container">
-          <a className="brand" href="#top" aria-label="Trakt Janosika – home">
-            <img
-              src="/logoT.PNG"
-              alt="Trakt Janosika"
-              className="logo"
-              decoding="async"
-            />
-          </a>
+          <Link
+            to="/"
+            className="brand"
+            aria-label="Trakt Janosika – home"
+            onClick={(e) => {
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
+            <img src="/logoT.PNG" alt="Trakt Janosika" className="logo" />
+          </Link>
           <div className="flex-spacer" />
           <div className="nav-actions">
+            <Link
+              to="/"
+              className="btn secondary"
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
+              Home
+            </Link>
+
+            <Link to="/gallery" className="btn secondary">
+              Gallery
+            </Link>
+            <Link
+              to="/#contact"
+              className="btn"
+              onClick={() => {
+                // Wait a tiny bit so React renders the Home page first, then scroll
+                setTimeout(() => {
+                  const el = document.getElementById("contact");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              {t.heroCta}
+            </Link>
             <button
               className="btn secondary"
               onClick={() => setLang(lang === "pl" ? "en" : "pl")}
@@ -308,271 +196,24 @@ export default function App() {
             >
               {lang === "pl" ? "EN" : "PL"}
             </button>
-            <a href="#contact" className="btn">
-              {t.heroCta}
-            </a>
           </div>
         </div>
       </header>
-
-      {/* HERO */}
-      <section className="hero" id="top" role="region" aria-label="Hero">
-        <div className="hero-content container">
-          <h1 className="hero-title">{t.estateName}</h1>
-          <p className="hero-sub">{t.motto}</p>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section
-        id="about"
-        className="section reveal"
-        aria-label="About the estate"
-      >
-        <div className="container grid stagger">
-          <Slideshow
-            images={[
-              "/S1.JPG",
-              "/S2.JPG",
-              "/S3.JPG",
-              "/S4.JPG",
-              "/S5.JPG",
-              "/S6.JPG",
-              "/S8.JPG",
-              "/S9.JPG",
-              "/S25.JPG",
-              "/S26.JPG",
-              "/S27.JPG",
-            ]}
-          />
-          <div>
-            <h2 className="h2">{t.sectionAbout}</h2>
-            <p className="muted">{t.aboutBody}</p>
-            <ul className="features">
-              <li>{lang === "pl" ? "4–5 sypialnie" : "4–5 bedrooms"}</li>
-              <li>180–210 m²</li>
-              <li>
-                {lang === "pl"
-                  ? "Energooszczędna konstrukcja"
-                  : "Energy-efficient build"}
-              </li>
-              <li>{lang === "pl" ? "Prywatne działki" : "Private plots"}</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 360° VIEW */}
-      <section
-        id="homes"
-        className="section section-alt reveal"
-        aria-label="360° Panorama"
-      >
-        <div className="container stagger">
-          <h2
-            className="h2"
-            style={{ textAlign: "center", marginBottom: "1rem" }}
-          >
-            {t.sectionHomes}
-          </h2>
-          <div className="iframe-wrap ratio-16x9">
-            <Panorama src="/pano1.jpeg" autoRotate={1} controls={false} />
-          </div>
-        </div>
-      </section>
-
-      {/* MASTERPLAN */}
-      <section
-        id="masterplan"
-        className="section reveal"
-        aria-label="Masterplan"
-      >
-        <div className="container grid stagger">
-          <img
-            src="/bialka.JPG"
-            alt="Aerial masterplan"
-            className="img"
-            loading="lazy"
-            decoding="async"
-          />
-          <div>
-            <h2 className="h2">{t.sectionMasterplan}</h2>
-            <p className="muted">{t.masterplanBody}</p>
-            <ul className="bullets">
-              <li>
-                {lang === "pl"
-                  ? "Prywatna brama i monitoring"
-                  : "Private entry gate and CCTV"}
-              </li>
-              <li>
-                {lang === "pl"
-                  ? "Odwodnienie i zimowy dojazd"
-                  : "Snow-ready access & drainage"}
-              </li>
-              <li>
-                {lang === "pl" ? "Media w ziemi" : "Underground utilities"}
-              </li>
-              <li>
-                {lang === "pl"
-                  ? "Strefa dzienna od południa"
-                  : "South-facing living areas where feasible"}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* LOCATION */}
-      <section
-        id="location"
-        className="section section-alt reveal"
-        aria-label="Location and nearby"
-      >
-        <div className="container stagger">
-          <h2 className="h2">{t.sectionLocation}</h2>
-          <div className="grid grid-5">
-            <div className="map-wrap">
-              <div className="iframe-wrap ratio-3x2 mobile-ratio-4x3">
-                <iframe
-                  title="Map – Grapa 35, Białka Tatrzańska"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10382.870673847287!2d20.10010108126425!3d49.41424464260443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4715fa73f20c8ea5%3A0xff0c22540ea5697!2sGrapa%2035%2C%2034-405%20Bia%C5%82ka%20Tatrza%C5%84ska%2C%20Poland!5e0!3m2!1sen!2sus!4v1756944425212!5m2!1sen!2sus"
-                  loading="lazy"
-                  className="iframe"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
-              </div>
-              <div className="map-link">
-                <MapPinIcon />
-                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer">
-                  {t.viewOnMaps}
-                </a>
-              </div>
-            </div>
-
-            <div className="nearby">
-              <NearbyCard
-                icon={MountainIcon}
-                text={
-                  lang === "pl"
-                    ? "Stacja narciarska ~1 mila"
-                    : "Ski resort ~1 mile"
-                }
-              />
-              <NearbyCard
-                icon={TreesIcon}
-                text={lang === "pl" ? "Szlaki piesze" : "Hiking trails"}
-              />
-              <NearbyCard
-                icon={BikeIcon}
-                text={lang === "pl" ? "Trasy rowerowe" : "Bike routes"}
-              />
-              <NearbyCard
-                icon={CarIcon}
-                text={lang === "pl" ? "Wygodny dojazd" : "Easy access by car"}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section id="story" className="section reveal" aria-label="Our story">
-        <div className="container grid stagger">
-          <div>
-            <h2 className="h2">{t.sectionStory}</h2>
-            <p className="muted">{t.storyBody}</p>
-          </div>
-          <img
-            src="/janosik.jpg"
-            alt="Regional heritage"
-            className="img"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="section section-alt reveal"
-        aria-label="Contact"
-      >
-        <div className="container contact-grid stagger">
-          <div>
-            <h2 className="h2">{t.sectionContact}</h2>
-            <p className="muted">{t.contactBlurb}</p>
-
-            <div className="contact-line">
-              <MailIcon /> <span>info@traktjanosika.pl</span>
-            </div>
-            <div className="contact-line">
-              <PhoneIcon /> <span>+48 000 000 000</span>
-            </div>
-
-            <div className="spacer-sm" />
-          </div>
-
-          <form onSubmit={submit} className="form" autoComplete="on">
-            <div className="grid-2">
-              <Field label={t.firstName} name="firstName" required />
-              <Field label={t.lastName} name="lastName" required />
-            </div>
-            <Field label="Email" name="email" type="email" required />
-            <Field label={t.phone} name="phone" />
-            <Field label={t.message} name="message" textarea />
-
-            <button
-              type="submit"
-              className="btn full"
-              disabled={sendStatus === "sending"}
-              aria-busy={sendStatus === "sending"}
-              style={{ marginTop: 12 }}
-            >
-              {sendStatus === "sending"
-                ? lang === "pl"
-                  ? "Wysyłanie…"
-                  : "Sending…"
-                : t.send}
-            </button>
-
-            <p
-              className="muted"
-              style={{ marginTop: 8, minHeight: 22 }}
-              aria-live="polite"
-              role="status"
-            >
-              {sendStatus === "success" &&
-                (lang === "pl" ? "Wiadomość wysłana!" : "Message sent!")}
-              {sendStatus === "error" &&
-                (lang === "pl"
-                  ? "Błąd podczas wysyłania."
-                  : "Error sending message.")}
-            </p>
-          </form>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="footer" role="contentinfo">
-        <div className="container footer-inner">
-          <p>
-            © {new Date().getFullYear()} {t.estateName}.{" "}
-            {lang === "pl"
-              ? "Wszelkie prawa zastrzeżone."
-              : "All rights reserved."}
-          </p>
-          <nav className="footer-nav" aria-label="Footer">
-            <a href="#about">{t.sectionAbout}</a>
-            <a href="#homes">{t.sectionHomes}</a>
-            <a href="#location">{t.sectionLocation}</a>
-            <a href="#contact">{t.sectionContact}</a>
-          </nav>
-        </div>
-      </footer>
-
-      <style>{css}</style>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              t={t}
+              lang={lang}
+              submit={submit}
+              sendStatus={sendStatus}
+              GOOGLE_MAPS_URL={GOOGLE_MAPS_URL}
+            />
+          }
+        />
+        <Route path="/gallery" element={<Gallery lang={lang} />} />
+      </Routes>
     </div>
   );
 }
@@ -623,7 +264,7 @@ a{color:inherit; text-decoration:none}
   position:relative;
   background:
     linear-gradient(to bottom, rgba(243,239,231,0) 65%, rgba(243,239,231,1) 100%),
-    url('/bialka.JPG') center/cover no-repeat;
+    url('/bialka.jpg') center/cover no-repeat;
 }
 .hero-content{position:relative; padding:clamp(64px,10vw,120px) 0; display:flex; flex-direction:column; align-items:flex-start; text-align:left; gap:.25rem}
 .hero-title{
