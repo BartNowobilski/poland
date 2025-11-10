@@ -38,7 +38,7 @@ const COPY = {
   pl: {
     estateName: "Trakt Janosika",
     motto: "Tam, gdzie historia spotyka nowoczesność",
-    heroCta: "Skontatkuj sie z nami",
+    heroCta: "Skontatkuj sie",
     sectionAbout: "O Inwestycji",
     aboutBody:
       "Trakt Janosika to kameralne, strzeżone osiedle ośmiu domów zaprojektowanych przez architektów u podnóża gór. Inspirowane góralskim rzemiosłem, łączy naturalne materiały, energooszczędne rozwiązania i ponadczasową formę.",
@@ -176,6 +176,13 @@ export default function App() {
             <Link to="/gallery" className="btn secondary">
               Gallery
             </Link>
+            <button
+              className="btn secondary"
+              onClick={() => setLang(lang === "pl" ? "en" : "pl")}
+              aria-label="Toggle language"
+            >
+              {lang === "pl" ? "EN" : "PL"}
+            </button>
             <Link
               to="/#contact"
               className="btn"
@@ -189,13 +196,6 @@ export default function App() {
             >
               {t.heroCta}
             </Link>
-            <button
-              className="btn secondary"
-              onClick={() => setLang(lang === "pl" ? "en" : "pl")}
-              aria-label="Toggle language"
-            >
-              {lang === "pl" ? "EN" : "PL"}
-            </button>
           </div>
         </div>
       </header>
@@ -251,14 +251,58 @@ a{color:inherit; text-decoration:none}
 .btn.full{width:100%}
 
 /* nav */
-.nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
-  background:rgba(243,239,231,.85); border-bottom:1px solid var(--border); padding-top:var(--safe-top)}
-.nav-inner{display:flex; align-items:center; justify-content:flex-start; gap:12px; width:100%; padding:10px 0}
-.brand{flex:0 0 auto}
-.flex-spacer{flex:1 1 auto}
-.nav-actions{display:inline-flex; align-items:center; gap:8px}
-.logo{height:100px; width:auto}
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: rgba(243,239,231,.85);
+  border-bottom: 1px solid var(--border);
+  padding-top: var(--safe-top);
+}
 
+/* Make the inner bar a proper flex row */
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* Brand (logo) pinned left */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10x;
+  min-width: 0;
+}
+
+/* Push actions all the way right */
+.flex-spacer { flex: 1 1 auto; }
+.nav-actions {
+  margin-left: auto;             /* <-- key for right alignment */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+/* Logo sizing */
+.logo { height: 64px; width: auto; }
+
+/* Keep buttons compact and on one line */
+.nav-actions .btn { white-space: nowrap; }
+
+/* Phone tweaks */
+@media (max-width: 640px) {
+  .logo { height: 65px; }
+  .nav-inner { padding: 8px 0; }
+  .nav-actions .btn { padding: 8px 8px; font-size: 14px; }
+  .nav-actions .btn.secondary { padding: 8px 8px; }
+  /* If buttons still squeeze, allow slight wrap without breaking layout */
+  .nav-actions { flex-wrap: wrap; row-gap: 6px; justify-content: flex-end; }
+}
 /* hero with bottom fade */
 .hero{
   position:relative;
