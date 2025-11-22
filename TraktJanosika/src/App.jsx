@@ -15,16 +15,32 @@ const COPY = {
     heroCta: "Contact",
     sectionAbout: "About the Estate",
     aboutBody:
-      "Trakt Janosika is an intimate, gated community of eight architect-designed homes in the foothills of southern Poland. Inspired by Góralskie craftsmanship, each residence blends natural materials, energy-efficient systems, and timeless design.",
+      "Trakt Janosika is an exclusive, gated community of eight modern homes nestled in the scenic foothills of southern Poland. Each residence ranges from 160 to 200 m² and reflects the harmony between traditional Góralskie craftsmanship and contemporary design. Buyers may fully customize their home layout—choosing between 4 to 6 bedrooms and 4 to 5 bathrooms—to suit their lifestyle. " +
+      "Homes can be purchased in several stages of completion: in a developer’s state (with finished exterior and utilities, allowing the buyer to complete the interior), partially finished (with the attic left open for future expansion), or fully finished and ready for move-in. This flexibility lets every owner shape a mountain retreat that fits their needs and timeline. " +
+      "Trakt Janosika is currently under active construction, with completion expected within the year. Visitors and potential buyers are welcome to follow progress and explore available options for ownership and customization.",
+
     sectionHomes: "360° Panorama",
     sectionMasterplan: "Masterplan",
     masterplanBody:
-      "Eight plots arranged along a private lane with controlled gate access, guest parking, snow-ready infrastructure, and generous green buffers.",
+      "The masterplan arranges eight private plots along a secure, gated lane designed for year-round comfort. Each home enjoys its own dedicated access, private land, and fully installed underground utilities, ensuring long-term reliability and convenience. " +
+      "The internal road and infrastructure are engineered for all seasons, including winter conditions typical for the Podhale region. Green buffers between properties enhance privacy and create a natural, harmonious environment. " +
+      "Every plot has been positioned to maximize sunlight exposure—especially in the living and outdoor areas—and to capture beautiful panoramic views of the surrounding mountains. The estate is designed to offer peace, privacy, and a strong connection to nature while remaining close to Białka’s most important attractions.",
+
     sectionLocation: "Location & Nearby",
     viewOnMaps: "Open in Maps",
+    distanceNote:
+      "Located just steps from nature: approx. 0.5 km to the Białka River and the Skałki Białczańskie rock formations, ~3.0 km to the Kotelnica Białczańska ski resort, ~3.0 km to the Terma Bania thermal baths, ~22 km to Zakopane, and ~17 km to Nowy Targ — with hiking and cycling routes beginning directly in the surrounding forests.",
+
+    locationBody:
+      "Trakt Janosika sits in an exceptional position in Białka Tatrzańska, directly along the scenic Grapa hillside. From here, the clean waters of the Białka River and the dramatic Skałki Białczańskie cliffs lie only about 0.5 km away — a peaceful walk through untouched nature. " +
+      "For winter and summer activities, the Kotelnica Białczańska ski area is approximately 3 km from the estate, offering dozens of slopes, snow parks, ski schools, and lift connections across the valley. The renowned Terma Bania thermal complex is also roughly 3 km away, featuring indoor and outdoor geothermal pools with panoramic mountain views. " +
+      "For daily amenities, Nowy Targ is just ~17 km away, while the mountain capital of Zakopane lies ~22 km from the property, making weekend trips, shopping, and cultural outings easily accessible. With forests, trails, and open landscapes surrounding the estate, this is a location that combines nature, convenience, and year-round lifestyle comfort.",
+
     sectionStory: "Our Roots",
     storyBody:
-      "In the heart of Białka, where the legendary Janosik once walked and the famous Skałki Białczańskie rise above the river, we draw inspiration from our heritage. Just as these rocks stand timeless, we honor local tradition and culture while giving our homes a modern touch.",
+      "Our project draws inspiration from the heritage and strength of the Podhale region. In the heart of Białka, where the legendary Janosik once roamed and the Skałki Białczańskie stand as timeless guardians of the valley, we continue a story of resilience and craftsmanship. " +
+      "Trakt Janosika is more than a housing development—it is a tribute to the local tradition of building with heart and purpose. By combining natural materials, regional artistry, and modern energy-efficient technologies, we create homes that honor our roots while embracing the future.",
+
     sectionContact: "Contact",
     contactBlurb:
       "Leave your details and we’ll send the brochure, floorplans, and construction updates.",
@@ -41,16 +57,30 @@ const COPY = {
     heroCta: "Skontatkuj sie",
     sectionAbout: "O Inwestycji",
     aboutBody:
-      "Trakt Janosika to kameralne, strzeżone osiedle ośmiu domów zaprojektowanych przez architektów u podnóża gór. Inspirowane góralskim rzemiosłem, łączy naturalne materiały, energooszczędne rozwiązania i ponadczasową formę.",
-    sectionHomes: "Panorama 360°",
+      "Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu nowoczesnych domów położonych u podnóża malowniczych gór południowej Polski. Każdy dom ma powierzchnię od 160 do 200 m² i łączy w sobie góralskie rzemiosło z nowoczesną architekturą. Kupujący mogą w pełni dostosować układ domu — wybierając od 4 do 6 sypialni oraz od 4 do 5 łazienek — tak, aby najlepiej odpowiadał ich potrzebom i stylowi życia. " +
+      "Domy dostępne są w różnych etapach wykończenia: w stanie deweloperskim (z ukończoną elewacją i mediami, z możliwością samodzielnego wykończenia wnętrz), częściowo wykończone (z niezaadaptowanym poddaszem, np. 4 sypialnie zamiast 5 lub 6), lub w pełni wykończone, gotowe do zamieszkania. " +
+      "Dzięki tej elastyczności każdy właściciel może stworzyć dom dokładnie taki, jakiego potrzebuje — dopasowany do harmonogramu i budżetu. Inwestycja jest obecnie w trakcie budowy, a jej zakończenie planowane jest w ciągu najbliższego roku.",
+
     sectionMasterplan: "Masterplan",
     masterplanBody:
-      "Osiem działek wzdłuż prywatnej drogi z kontrolowanym wjazdem, miejscami dla gości, infrastrukturą zimową i pasami zieleni.",
+      "Masterplan inwestycji obejmuje osiem prywatnych działek rozmieszczonych wzdłuż bezpiecznej, ogrodzonej drogi wewnętrznej przystosowanej do całorocznego użytkowania. Każdy dom posiada własny, niezależny wjazd, prywatną działkę oraz pełne uzbrojenie terenu z mediami poprowadzonymi w ziemi, zapewniając wygodę i niezawodność na lata. " +
+      "Infrastruktura osiedla została zaprojektowana z myślą o warunkach Podhala — w tym o typowej zimowej aurze — aby zapewnić komfort i bezpieczeństwo dojazdu przez cały rok. Pasy zieleni pomiędzy działkami zwiększają prywatność i tworzą harmonijne otoczenie. " +
+      "Układ działek został zaplanowany tak, aby maksymalnie wykorzystać naturalne nasłonecznienie, szczególnie w częściach dziennych i na tarasach, oraz podkreślić widoki na okoliczne góry. Osiedle oferuje spokój, prywatność oraz bliskość natury, pozostając jednocześnie niedaleko głównych atrakcji Białki.",
     sectionLocation: "Lokalizacja i Okolica",
     viewOnMaps: "Otwórz w Mapach",
+    distanceNote:
+      "Położenie w otoczeniu natury: ok. 0,5 km do rzeki Białki i skałek Skałki Białczańskie, ok. 3,0 km do ośrodka narciarskiego Kotelnica Białczańska, ok. 3,0 km do Termy Bania, ok. 22 km do Zakopanego oraz ok. 17 km do Nowego Targu — ze szlakami pieszymi i rowerowymi rozpoczynającymi się tuż obok inwestycji.",
+
+    locationBody:
+      "Trakt Janosika znajduje się w wyjątkowej lokalizacji w Białce Tatrzańskiej, bezpośrednio na malowniczym zboczu Grapy. Od czystej rzeki Białki i imponujących skałek Skałki Białczańskie dzieli inwestycję jedynie około 0,5 km — idealnie na spokojny spacer w otoczeniu natury. " +
+      "Dla miłośników sportów zimowych i letnich, główny ośrodek narciarski Kotelnica Białczańska znajduje się w odległości około 3 km, oferując dziesiątki tras, snowparki, szkoły narciarskie oraz połączenia wyciągów w całej dolinie. Również około 3 km od osiedla położony jest kompleks Terma Bania z basenami termalnymi wewnętrznymi i zewnętrznymi oraz widokami na Tatry. " +
+      "Do pełnego zaplecza usługowego Nowego Targu jest około 17 km, a do stolicy Podhala — Zakopanego — około 22 km, co zapewnia wygodny dostęp do sklepów, atrakcji i wydarzeń kulturowych. Dzięki otaczającym lasom, szlakom i przestrzeni, lokalizacja łączy naturę, wygodę i całoroczny komfort życia.",
+
     sectionStory: "Nasze Korzenie",
     storyBody:
-      "W sercu Białki, gdzie niegdyś chodził legendarny Janosik, a słynne Skałki Białczańskie górują nad rzeką, czerpiemy inspirację z naszego dziedzictwa. Tak jak te skały trwają w czasie, my pielęgnujemy lokalną tradycję i kulturę, nadając naszym domom nowoczesny charakter.",
+      "Inspiracją dla projektu Trakt Janosika jest bogata tradycja i siła regionu Podhala. W sercu Białki, gdzie niegdyś wędrował legendarny Janosik, a nad rzeką górują Skałki Białczańskie, kontynuujemy opowieść o rzemiośle, pasji i trwałości. " +
+      "Trakt Janosika to nie tylko inwestycja mieszkaniowa — to hołd dla lokalnych tradycji budownictwa, w którym łączymy naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania. " +
+      "W ten sposób powstają domy, które z szacunkiem odnoszą się do przeszłości, a jednocześnie patrzą w przyszłość.",
     sectionContact: "Kontakt",
     contactBlurb:
       "Zostaw dane, a wyślemy broszurę, rzuty i aktualizacje postępu prac.",

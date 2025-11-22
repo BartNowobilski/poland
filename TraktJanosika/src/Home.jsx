@@ -107,16 +107,6 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
           <div>
             <h2 className="h2">{t.sectionAbout}</h2>
             <p className="muted">{t.aboutBody}</p>
-            <ul className="features">
-              <li>{lang === "pl" ? "4–5 sypialnie" : "4–5 bedrooms"}</li>
-              <li>180–210 m²</li>
-              <li>
-                {lang === "pl"
-                  ? "Energooszczędna konstrukcja"
-                  : "Energy-efficient build"}
-              </li>
-              <li>{lang === "pl" ? "Prywatne działki" : "Private plots"}</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -157,26 +147,6 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
           <div>
             <h2 className="h2">{t.sectionMasterplan}</h2>
             <p className="muted">{t.masterplanBody}</p>
-            <ul className="bullets">
-              <li>
-                {lang === "pl"
-                  ? "Prywatna brama i monitoring"
-                  : "Private entry gate and CCTV"}
-              </li>
-              <li>
-                {lang === "pl"
-                  ? "Odwodnienie i zimowy dojazd"
-                  : "Snow-ready access & drainage"}
-              </li>
-              <li>
-                {lang === "pl" ? "Media w ziemi" : "Underground utilities"}
-              </li>
-              <li>
-                {lang === "pl"
-                  ? "Strefa dzienna od południa"
-                  : "South-facing living areas where feasible"}
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -189,7 +159,13 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
       >
         <div className="container stagger">
           <h2 className="h2">{t.sectionLocation}</h2>
-          <div className="grid grid-5">
+
+          {/* Full descriptive body */}
+          <p className="muted" style={{ marginTop: "12px" }}>
+            {t.locationBody}
+          </p>
+
+          <div className="grid grid-5" style={{ marginTop: "20px" }}>
             <div className="map-wrap">
               <div className="iframe-wrap ratio-3x2 mobile-ratio-4x3">
                 <iframe
@@ -201,6 +177,7 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
                   allowFullScreen
                 />
               </div>
+
               <div className="map-link">
                 <MapPinIcon />
                 <a href={GOOGLE_MAPS_URL} target="_blank" rel="noreferrer">
@@ -209,26 +186,43 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
               </div>
             </div>
 
+            {/* Nearby Cards */}
             <div className="nearby">
               <NearbyCard
                 icon={MountainIcon}
                 text={
                   lang === "pl"
-                    ? "Stacja narciarska ~1 mila"
-                    : "Ski resort ~1 mile"
+                    ? "Kotelnica Białczańska – ok. 3 km"
+                    : "Kotelnica Białczańska ski resort – ~3 km"
+                }
+              />
+              <NearbyCard
+                icon={CarIcon}
+                text={
+                  lang === "pl"
+                    ? "Terma Bania – ok. 3 km"
+                    : "Terma Bania thermal baths – ~3 km"
                 }
               />
               <NearbyCard
                 icon={TreesIcon}
-                text={lang === "pl" ? "Szlaki piesze" : "Hiking trails"}
+                text={
+                  lang === "pl"
+                    ? "Rzeka Białka i Skałki – ok. 0,5 km"
+                    : "Białka River & Skałki – ~0.5 km"
+                }
               />
               <NearbyCard
                 icon={BikeIcon}
-                text={lang === "pl" ? "Trasy rowerowe" : "Bike routes"}
+                text={lang === "pl" ? "Szlaki rowerowe" : "Bike routes"}
               />
               <NearbyCard
                 icon={CarIcon}
-                text={lang === "pl" ? "Wygodny dojazd" : "Easy access by car"}
+                text={
+                  lang === "pl"
+                    ? "Łatwy dojazd do Nowego Targu i Zakopanego"
+                    : "Easy access to Nowy Targ & Zakopane"
+                }
               />
             </div>
           </div>
@@ -243,7 +237,7 @@ export default function Home({ t, lang, submit, sendStatus, GOOGLE_MAPS_URL }) {
             <p className="muted">{t.storyBody}</p>
           </div>
           <img
-            src="/janosik.jpg"
+            src="/logoT.PNG"
             alt="Regional heritage"
             className="img"
             loading="lazy"
