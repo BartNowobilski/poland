@@ -1,0 +1,111 @@
+/* =========================================================
+   Trakt Janosika — design tokens
+   Change values here; components only reference variables.
+   ========================================================= */
+:root {
+  /* ---------- Palette ---------- */
+  --c-ivory: #f5f0e6;        /* primary background */
+  --c-paper: #faf7f0;        /* raised surfaces, inputs */
+  --c-sand: #ebe2d2;         /* alternate section background */
+  --c-linen: #ddd0bb;        /* hairlines on sand, placeholders */
+  --c-wood: #8b6b4a;         /* natural wood — accents, icons */
+  --c-clay: #a86e3e;         /* original brand brown — kept for accents */
+  --c-walnut: #4a3526;       /* primary buttons, strong accents */
+  --c-walnut-deep: #3a291d;
+  --c-forest: #344537;       /* dark sections */
+  --c-forest-deep: #263228;
+  --c-charcoal: #252521;     /* body text, darkest sections */
+  --c-gold: #b69a68;         /* ornaments & highlights (decorative / on dark only) */
+  --c-gold-soft: #cdb78f;
+
+  /* ---------- Semantic colours (light surfaces) ---------- */
+  --text: var(--c-charcoal);
+  --text-soft: #5a4d3e;      /* 7:1 on ivory */
+  --text-muted: #6e6253;     /* 5.3:1 on ivory — minimum for body copy */
+  --line: rgba(74, 53, 38, 0.16);
+  --line-strong: rgba(74, 53, 38, 0.32);
+  --focus: #8b6b4a;
+
+  /* ---------- Semantic colours (dark surfaces) ---------- */
+  --text-on-dark: #f5f0e6;
+  --text-on-dark-soft: rgba(245, 240, 230, 0.78);
+  --line-on-dark: rgba(245, 240, 230, 0.2);
+
+  /* ---------- Typography ---------- */
+  --font-display: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* fluid scale (≈360px → 1440px viewport) */
+  --fs-display: clamp(3rem, 1.9rem + 4.9vw, 6.5rem);
+  --fs-h1: clamp(2.5rem, 1.8rem + 3.2vw, 4.75rem);
+  --fs-h2: clamp(2.125rem, 1.6rem + 2.3vw, 3.75rem);
+  --fs-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2.125rem);
+  --fs-h4: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --fs-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-xs: 0.8125rem;
+  --fs-eyebrow: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.15;
+  --lh-body: 1.7;
+
+  --tracking-eyebrow: 0.24em;
+  --tracking-button: 0.14em;
+  --tracking-display: -0.01em;
+
+  --measure: 62ch;           /* comfortable line length for paragraphs */
+
+  /* ---------- Spacing (4px base) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --section-y: clamp(5rem, 3rem + 8vw, 10rem);
+  --section-y-tight: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+  --gutter: clamp(1.25rem, 0.5rem + 3.5vw, 5rem);
+  --maxw: 1360px;
+  --maxw-narrow: 880px;
+  --grid-gap: clamp(1.5rem, 0.8rem + 2.5vw, 4rem);
+
+  /* ---------- Shape & depth ---------- */
+  --radius-sm: 2px;
+  --radius: 4px;
+  --shadow-soft: 0 1px 2px rgba(37, 37, 33, 0.04), 0 12px 32px -12px rgba(58, 41, 29, 0.18);
+  --shadow-lift: 0 2px 4px rgba(37, 37, 33, 0.05), 0 28px 60px -24px rgba(58, 41, 29, 0.35);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur: 320ms;
+  --dur-slow: 700ms;
+  --dur-reveal: 1000ms;
+
+  /* ---------- Layout ---------- */
+  --nav-h: 76px;
+  --nav-h-compact: 64px;
+  --z-nav: 50;
+  --z-menu: 60;
+  --z-lightbox: 100;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --nav-h: 64px;
+    --nav-h-compact: 58px;
+    --fs-body: 1rem;
+  }
+}

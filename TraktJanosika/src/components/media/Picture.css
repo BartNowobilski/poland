@@ -1,0 +1,75 @@
+.picture {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ph-color, var(--c-linen));
+}
+/* blurred low-res preview, shown until the real image fades in */
+.picture::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: var(--ph-image, none);
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px) saturate(1.1);
+  transform: scale(1.04);
+  transition: opacity var(--dur-slow) var(--ease-out);
+}
+/* soft shimmer when no placeholder image exists */
+.picture:not(.is-loaded)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 70%
+  );
+  background-size: 220% 100%;
+  animation: picture-shimmer 1.8s var(--ease-in-out) infinite;
+}
+@keyframes picture-shimmer {
+  from { background-position: 120% 0; }
+  to { background-position: -120% 0; }
+}
+
+.picture picture,
+.picture img {
+  width: 100%;
+  height: auto;
+}
+.picture--framed picture,
+.picture--framed img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+.picture img {
+  object-fit: cover;
+  opacity: 0;
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform 1.4s var(--ease-cinematic);
+}
+.picture--contain img {
+  object-fit: contain;
+}
+.picture.is-loaded img {
+  opacity: 1;
+}
+.picture.is-loaded::before {
+  opacity: 0;
+}
+.picture.is-priority img {
+  opacity: 1;
+  transition: none;
+}
+
+/* hover zoom — add .zoom-on-hover to the Picture or any ancestor link/card */
+@media (hover: hover) {
+  .zoom-on-hover:hover .picture img,
+  .picture.zoom-on-hover:hover img {
+    transform: scale(1.045);
+  }
+}

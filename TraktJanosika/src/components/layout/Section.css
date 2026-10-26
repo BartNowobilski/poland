@@ -1,0 +1,72 @@
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+.section--tight {
+  padding-block: var(--section-y-tight);
+}
+.section--none {
+  padding-block: 0;
+}
+
+/* ---------- Tones ---------- */
+.tone-ivory {
+  background: var(--c-ivory);
+  color: var(--text);
+}
+.tone-sand {
+  background: var(--c-sand);
+  color: var(--text);
+}
+.tone-forest {
+  background: var(--c-forest);
+  color: var(--text-on-dark);
+  --line: var(--line-on-dark);
+  --line-strong: rgba(245, 240, 230, 0.4);
+}
+.tone-charcoal {
+  background: var(--c-charcoal);
+  color: var(--text-on-dark);
+  --line: var(--line-on-dark);
+  --line-strong: rgba(245, 240, 230, 0.4);
+}
+
+/* subtle paper grain on light tones — pure CSS, no image request */
+.tone-ivory::after,
+.tone-sand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: radial-gradient(rgba(74, 53, 38, 0.06) 0.5px, transparent 0.6px);
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+}
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Heading block ---------- */
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+  max-width: 52rem;
+}
+.section-heading .lead {
+  margin-top: var(--space-2);
+}
+.section-heading--center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+.section-heading--center .lead {
+  margin-inline: auto;
+}
+.section-heading__ornament {
+  margin-bottom: var(--space-1);
+}

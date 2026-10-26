@@ -1,146 +1,64 @@
-import React from "react";
+import { format, useLanguage } from "./i18n/context";
+import { Section, SectionHeading } from "./components/layout/Section";
+import Reveal from "./components/motion/Reveal";
+import Picture from "./components/media/Picture";
+import "./Gallery.css";
 
-export default function Gallery({ lang }) {
-  const labels = {
-    en: {
-      gallery: "Gallery",
-      interior: "Interior",
-      exterior: "Exterior",
-    },
-    pl: {
-      gallery: "Galeria",
-      interior: "Wnętrza",
-      exterior: "Zewnętrze",
-    },
-  };
+// Interim lists — replaced by the central image manifest in Phase 4.
+const INTERIOR = [
+  "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S15", "S16", "S17",
+  "S18", "S19", "S20", "S21", "S22", "S23", "S24", "S25", "S26", "S27", "S28",
+  "S29a", "S29b", "S29c", "S30", "S31", "S32", "S33", "S34", "S35", "S36",
+  "S37", "S39", "S40", "S41", "S42", "S43", "S44", "S45",
+].map((name) => ({ src: `/${name}.jpg`, width: 1600, height: 1600 }));
 
-  const t = labels[lang] || labels.en;
-  const interior = [
-    "/S1.jpg",
-    "/S2.jpg",
-    "/S3.jpg",
-    "/S4.jpg",
-    "/S5.jpg",
-    "/S6.jpg",
-    "/S7.jpg",
-    "/S8.jpg",
-    "/S9.jpg",
-    "/S15.jpg",
-    "/S16.jpg",
-    "/S17.jpg",
-    "/S18.jpg",
-    "/S19.jpg",
-    "/S20.jpg",
-    "/S21.jpg",
-    "/S22.jpg",
-    "/S23.jpg",
-    "/S24.jpg",
-    "/S25.jpg",
-    "/S26.jpg",
-    "/S27.jpg",
-    "/S28.jpg",
-    "/S29a.jpg",
-    "/S29b.jpg",
-    "/S29c.jpg",
-    "/S30.jpg",
-    "/S31.jpg",
-    "/S32.jpg",
-    "/S33.jpg",
-    "/S34.jpg",
-    "/S35.jpg",
-    "/S36.jpg",
-    "/S37.jpg",
-    "/S39.jpg",
-    "/S40.jpg",
-    "/S41.jpg",
-    "/S42.jpg",
-    "/S43.jpg",
-    "/S44.jpg",
-    "/S45.jpg",
-  ];
+const EXTERIOR = [
+  { src: "/bialka.jpg", width: 4032, height: 2268 },
+  { src: "/h5.jpg", width: 3840, height: 2560 },
+  { src: "/h2.jpg", width: 3840, height: 2560 },
+  { src: "/h3.jpg", width: 3840, height: 2560 },
+  { src: "/h4.jpg", width: 3840, height: 2560 },
+];
 
-  const exterior = ["bialka.jpg", "h5.jpg", "h2.jpg", "h3.jpg", "h4.jpg"];
+function Grid({ images, category, square }) {
+  const { t } = useLanguage();
   return (
-    <div className="section section-alt">
+    <ul role="list" className={`gallery-grid ${square ? "gallery-grid--square" : ""}`}>
+      {images.map((img, i) => (
+        <Reveal as="li" key={img.src} variant="fade" delay={(i % 3) * 80} className="zoom-on-hover">
+          <Picture
+            image={img}
+            ratio={square ? "1 / 1" : "3 / 2"}
+            alt={format(t.gallery.imageAlt, { category, n: i + 1 })}
+            sizes="(min-width: 1100px) 33vw, (min-width: 640px) 50vw, 100vw"
+          />
+        </Reveal>
+      ))}
+    </ul>
+  );
+}
+
+export default function Gallery() {
+  const { t } = useLanguage();
+  return (
+    <Section tone="ivory" className="gallery-page" labelledBy="gallery-title">
       <div className="container">
-        {/* Main gallery title */}
-        <h2
-          className="h2"
-          style={{
-            textAlign: "center",
-            marginBottom: "2rem",
-            textTransform: "uppercase",
-          }}
-        >
-          {t.gallery}
-        </h2>
+        <SectionHeading id="gallery-title" level={1} size="h1" title={t.gallery.title} align="center" ornament />
 
-        {/* INTERIOR SECTION */}
-        <div style={{ marginBottom: "3rem" }}>
-          <h3
-            className="h3"
-            style={{
-              textAlign: "center",
-              marginBottom: "1rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-            }}
-          >
-            {t.interior}
-          </h3>
-          <div
-            className="grid"
-            style={{
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "16px",
-            }}
-          >
-            {interior.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`${t.interior} ${i + 1}`}
-                className="img"
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
-          </div>
-        </div>
+        <section className="gallery-group" aria-labelledby="gallery-exterior">
+          <h2 id="gallery-exterior" className="eyebrow gallery-group__title">
+            {t.gallery.exterior}
+          </h2>
+          <Grid images={EXTERIOR} category={t.gallery.exterior} />
+        </section>
 
-        {/* EXTERIOR SECTION */}
-        <div>
-          <h3
-            className="h3"
-            style={{
-              textAlign: "center",
-              marginBottom: "1rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-            }}
-          >
-            {t.exterior}
-          </h3>
-          <div
-            className="grid"
-            style={{
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "16px",
-            }}
-          >
-            {exterior.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`${t.exterior} ${i + 1}`}
-                className="img"
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
-          </div>
-        </div>
+        <section className="gallery-group" aria-labelledby="gallery-interior">
+          <h2 id="gallery-interior" className="eyebrow gallery-group__title">
+            {t.gallery.interior}
+          </h2>
+          <Grid images={INTERIOR} category={t.gallery.interior} square />
+        </section>
       </div>
-    </div>
+    </Section>
   );
 }
