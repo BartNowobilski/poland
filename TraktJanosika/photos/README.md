@@ -60,3 +60,10 @@ Use the id to:
 - JPEG, PNG, WebP, TIFF and AVIF are accepted. iPhone HEIC photos: export
   them as JPEG first (Photos → File → Export).
 - Do not add stock photos or images you don't have the rights to.
+- **Location data:** this repository is public and originals keep their
+  metadata. Phone photos usually contain GPS coordinates — export them
+  without location (iPhone: Share → Options → turn off "Location") before
+  adding them here. The website copies in `public/img/` never contain any
+  metadata (it is stripped automatically).
+- iPhone HEIC files can be converted on a Mac with:
+  `sips -s format jpeg -s formatOptions 95 IMG_0001.HEIC --out photos/interiors/name.jpg`

@@ -120,7 +120,7 @@ export default function Styleguide() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1rem" }}>
             <Reveal variant="mask"><Picture image={getImage("h2")} ratio="4 / 5" alt="" /></Reveal>
             <Reveal variant="zoom"><Picture image={getImage("h3")} ratio="4 / 5" alt="" /></Reveal>
-            <Reveal variant="up" delay={150} className="zoom-on-hover"><Picture image={getImage("s1")} ratio="4 / 5" alt="" /></Reveal>
+            <Reveal variant="up" delay={150} className="zoom-on-hover"><Picture image={getImage("interiors-lazienka-wanna-01")} ratio="4 / 5" alt="" /></Reveal>
           </div>
           <p className="small">mask · zoom · up + hover-zoom</p>
         </div>

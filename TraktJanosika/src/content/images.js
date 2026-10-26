@@ -16,13 +16,14 @@ export const IMAGES = {
   houseFront: getImage("h3", { position: "50% 45%" }),
   houseGarden: getImage("h4", { position: "45% 50%" }),
 
-  // Interior visualisations (example arrangements)
-  hall: getImage("s1"),
-  living: getImage("s9", { position: "50% 55%" }),
-  dining: getImage("s5", { position: "50% 55%" }),
-  carvedRosette: getImage("s19", { position: "50% 30%" }),
-  carvedMirror: getImage("s29c", { position: "50% 35%" }),
-  bedroom: getImage("s25", { position: "50% 60%" }),
+  // Photos — interiors (September 2026)
+  bathVanity: getImage("interiors-lazienka-umywalka-02", { position: "50% 40%" }),
+  bathShower: getImage("interiors-lazienka-prysznic-02", { position: "50% 55%" }),
+  bathTub: getImage("interiors-lazienka-wanna-01", { position: "50% 40%" }),
+
+  // Photos — exteriors after dark (September 2026)
+  houseNight: getImage("architecture-dom-zmierzch-02", { position: "50% 45%" }),
+  houseNightWide: getImage("architecture-dom-zmierzch-05", { position: "50% 55%" }),
 
   // 360° viewer needs the full-resolution equirectangular original
   panorama: { src: "/pano1.jpeg", width: 3072, height: 2048 },

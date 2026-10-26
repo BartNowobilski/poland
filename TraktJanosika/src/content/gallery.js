@@ -20,102 +20,104 @@ export const CATEGORIES = [
   { id: "renderings", label: { pl: "Wizualizacje", en: "Renderings" } },
 ];
 
-const ext = (pl, en) => ({ pl: `${pl} — wizualizacja`, en: `${en} — visualisation` });
-
-// Interior visualisations are grouped by room for consistent alt text.
-const ROOMS = {
-  hall: ["Hol ze schodami i antresolą", "Hallway with staircase and gallery"],
-  living: ["Salon z kominkiem", "Living room with fireplace"],
-  dining: ["Jadalnia", "Dining room"],
-  kitchen: ["Kuchnia", "Kitchen"],
-  bedroom: ["Sypialnia", "Bedroom"],
-  kids: ["Pokój dziecięcy", "Children’s room"],
-  bathroom: ["Łazienka", "Bathroom"],
-};
-const room = (id, key, extra = {}) => ({
-  id,
-  category: "interiors",
-  render: true,
-  alt: { pl: `${ROOMS[key][0]} — wizualizacja wnętrza`, en: `${ROOMS[key][1]} — interior visualisation` },
-  ...extra,
-});
+const render = (pl, en) => ({ pl: `${pl} — wizualizacja`, en: `${en} — visualisation` });
+const photo = (pl, en) => ({ pl: `${pl} — zdjęcie, wrzesień 2026`, en: `${en} — photo, September 2026` });
 
 export const GALLERY = [
+  // ---------- Photos: exteriors (September 2026) ----------
+  {
+    id: "architecture-dom-zmierzch-05",
+    category: "architecture",
+    featured: true,
+    alt: photo("Dom Trakt Janosika po zmroku, z oświetloną elewacją", "A Trakt Janosika home after dark, façade lit"),
+  },
+  {
+    id: "architecture-dom-zmierzch-02",
+    category: "architecture",
+    featured: true,
+    alt: photo("Wysoki góralski szczyt domu i podjazd z kostki", "Tall Highlander gable and paved driveway"),
+  },
+  {
+    id: "architecture-dom-zmierzch-01",
+    category: "architecture",
+    alt: photo("Dom z kamienną podmurówką i oświetlonym okapem", "Home with stone plinth and lit eaves"),
+  },
+  {
+    id: "architecture-dom-zmierzch-03",
+    category: "architecture",
+    alt: photo("Domy osiedla i brukowany podjazd", "The homes and the paved driveway"),
+  },
+  {
+    id: "architecture-dom-zmierzch-04",
+    category: "architecture",
+    alt: photo("Dom z garażem i podjazdem", "Home with garage and driveway"),
+  },
+  {
+    id: "architecture-dom-zmierzch-06",
+    category: "architecture",
+    alt: photo("Elewacja domu z balkonem i kamienną podmurówką", "Façade with balcony and stone plinth"),
+  },
+
+  // ---------- Photos: interiors (September 2026) ----------
+  {
+    id: "interiors-lazienka-umywalka-02",
+    category: "interiors",
+    featured: true,
+    alt: photo("Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem", "Bathroom with double basin and round backlit mirror"),
+  },
+  {
+    id: "interiors-lazienka-wanna-01",
+    category: "interiors",
+    featured: true,
+    alt: photo("Łazienka na poddaszu z wanną i drewnianym sufitem", "Attic bathroom with bathtub and timber ceiling"),
+  },
+  {
+    id: "interiors-lazienka-prysznic-02",
+    category: "interiors",
+    alt: photo("Łazienka z prysznicem i wolnostojącą umywalką", "Bathroom with shower and freestanding basin"),
+  },
+  {
+    id: "interiors-lazienka-umywalka-01",
+    category: "interiors",
+    alt: photo("Podwójna umywalka i złota armatura prysznicowa", "Double basin and brass shower fittings"),
+  },
+  {
+    id: "interiors-lazienka-prysznic-01",
+    category: "interiors",
+    alt: photo("Strefa prysznica z deszczownicą", "Shower area with rain shower"),
+  },
+
   // ---------- Exterior visualisations ----------
   {
     id: "bialka",
     category: "architecture",
     render: true,
     featured: true,
-    alt: ext("Osiedle Trakt Janosika z lotu ptaka, w tle Tatry", "Trakt Janosika from above, with the Tatras behind"),
+    alt: render("Osiedle Trakt Janosika z lotu ptaka, w tle Tatry", "Trakt Janosika from above, with the Tatras behind"),
   },
   {
     id: "h5",
     category: "architecture",
     render: true,
     featured: true,
-    alt: ext("Wjazd na ogrodzone osiedle z kamiennym murem", "Gated entrance with a stone wall"),
-  },
-  {
-    id: "h2",
-    category: "architecture",
-    render: true,
-    alt: ext("Dom w stylu góralskim ze stromym dachem i balkonem", "Highlander-style home with steep roof and balcony"),
+    alt: render("Wjazd na ogrodzone osiedle z kamiennym murem", "Gated entrance with a stone wall"),
   },
   {
     id: "h3",
     category: "architecture",
     render: true,
-    featured: true,
-    alt: ext("Fasada domu z wysokim szczytem i tarasem", "House façade with tall gable and terrace"),
+    alt: render("Fasada domu z wysokim szczytem i tarasem", "House façade with tall gable and terrace"),
+  },
+  {
+    id: "h2",
+    category: "architecture",
+    render: true,
+    alt: render("Dom w stylu góralskim ze stromym dachem i balkonem", "Highlander-style home with steep roof and balcony"),
   },
   {
     id: "h4",
     category: "architecture",
     render: true,
-    alt: ext("Dom od strony ogrodu — kamień i drewno", "Garden side — stone and timber"),
+    alt: render("Dom od strony ogrodu — kamień i drewno", "Garden side — stone and timber"),
   },
-
-  // ---------- Interior visualisations ----------
-  room("s1", "hall", { featured: true }),
-  room("s2", "hall"),
-  room("s3", "kitchen"),
-  room("s4", "living"),
-  room("s5", "dining", { featured: true }),
-  room("s6", "dining"),
-  room("s7", "kitchen"),
-  room("s8", "living"),
-  room("s9", "living"),
-  room("s15", "bedroom"),
-  room("s16", "bedroom"),
-  room("s17", "bedroom"),
-  room("s18", "bedroom"),
-  room("s19", "bedroom", { featured: true }),
-  room("s20", "bathroom"),
-  room("s21", "bathroom"),
-  room("s22", "bathroom"),
-  room("s23", "bathroom"),
-  room("s24", "bedroom"),
-  room("s25", "bedroom"),
-  room("s26", "bedroom"),
-  room("s27", "bedroom"),
-  room("s28", "bedroom"),
-  room("s29a", "bathroom"),
-  room("s29b", "bathroom"),
-  room("s29c", "bathroom", { featured: true }),
-  room("s30", "kids"),
-  room("s31", "kids"),
-  room("s32", "kids"),
-  room("s33", "kids"),
-  room("s34", "kids"),
-  room("s35", "bathroom"),
-  room("s36", "bathroom"),
-  room("s37", "bathroom"),
-  room("s39", "bedroom"),
-  room("s40", "bedroom"),
-  room("s41", "bedroom"),
-  room("s42", "bathroom"),
-  room("s43", "bathroom"),
-  room("s44", "bathroom"),
-  room("s45", "bathroom"),
 ];

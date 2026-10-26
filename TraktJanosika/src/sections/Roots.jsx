@@ -18,7 +18,7 @@ export default function Roots() {
         <figure className="roots__figure">
           <Reveal variant="mask">
             <Picture
-              image={IMAGES.carvedRosette}
+              image={IMAGES.houseNight}
               ratio="4 / 5"
               alt={s.imageAlt}
               sizes="(min-width: 960px) 40vw, 100vw"

@@ -7,9 +7,9 @@ const pl = {
     title: "Trakt Janosika — domy w stylu góralskim w Białce Tatrzańskiej",
     description:
       "Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu domów jednorodzinnych w Białce Tatrzańskiej na Podhalu (gmina Bukowina Tatrzańska). Domy 160–200 m² łączące góralskie rzemiosło z nowoczesną architekturą.",
-    galleryTitle: "Galeria — wizualizacje domów i wnętrz | Trakt Janosika",
+    galleryTitle: "Galeria — zdjęcia domów i wnętrz | Trakt Janosika",
     galleryDescription:
-      "Galeria Trakt Janosika: wizualizacje domów w stylu góralskim, wnętrz i osiedla w Białce Tatrzańskiej oraz zdjęcia z postępu budowy.",
+      "Galeria Trakt Janosika: zdjęcia domów w stylu góralskim i ich wnętrz w Białce Tatrzańskiej oraz wizualizacje osiedla.",
     notFoundTitle: "Nie znaleziono strony | Trakt Janosika",
     langName: "Polski",
     switchTo: "Zmień język na polski",
@@ -84,7 +84,7 @@ const pl = {
       },
     ],
     imageAlt: "Wjazd na ogrodzone osiedle Trakt Janosika z kamiennym murem i tablicą z nazwą",
-    detailAlt: "Salon z kominkiem i drewnianymi detalami — przykładowa aranżacja wnętrza",
+    detailAlt: "Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem — zdjęcie wnętrza",
   },
 
   architecture: {
@@ -113,14 +113,14 @@ const pl = {
     interiorsTitle: "Wnętrza z *duszą*", // DRAFT
     interiorsText:
       "Naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania — rzemiosło obecne w codziennym życiu domu.", // DRAFT (reuses claims from "Nasze korzenie")
-    interiorsNote: "Przykładowe aranżacje wnętrz — wizualizacje.",
+    interiorsNote: "Zdjęcia z wnętrz domów Trakt Janosika, wrzesień 2026.",
     alts: {
       wide: "Dom w stylu góralskim ze stromym dachem, kamienną podmurówką i balkonem",
       front: "Fasada domu z wysokim szczytem i dużymi przeszkleniami",
       garden: "Dom od strony ogrodu — kamień, drewno i taras",
-      hall: "Hol z drewnianymi schodami i rzeźbionymi listwami",
-      rosette: "Sypialnia z rzeźbioną drewnianą rozetą na ścianie",
-      mirror: "Łazienka z lustrem w rzeźbionej drewnianej ramie",
+      bathTub: "Łazienka na poddaszu z wanną i drewnianym sufitem",
+      bathVanity: "Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem",
+      bathShower: "Łazienka z prysznicem i wolnostojącą umywalką",
     },
   },
 
@@ -176,8 +176,8 @@ const pl = {
       "W ten sposób powstają domy, które z szacunkiem odnoszą się do przeszłości, a jednocześnie patrzą w przyszłość.",
     ],
     values: ["Tradycja", "Rzemiosło", "Trwałość"],
-    imageAlt: "Rzeźbiona drewniana rozeta — motyw inspirowany góralską snycerką",
-    imageCaption: "Motyw rozety — przykładowa aranżacja wnętrza (wizualizacja)",
+    imageAlt: "Dom Trakt Janosika po zmroku — oświetlona elewacja i wysoki góralski szczyt",
+    imageCaption: "Trakt Janosika — zdjęcie z budowy, wrzesień 2026",
   },
 
   contact: {
@@ -253,13 +253,13 @@ const pl = {
   galleryPreview: {
     eyebrow: "Galeria",
     title: "Zobacz *Trakt Janosika*", // DRAFT
-    lead: "Architektura, wnętrza i krajobraz Podhala — w wizualizacjach, a wkrótce także na zdjęciach z budowy.", // DRAFT
+    lead: "Zdjęcia domów i ich wnętrz prosto z budowy oraz wizualizacje całego osiedla.", // DRAFT
     cta: "Zobacz całą galerię",
   },
 
   gallery: {
     title: "Galeria",
-    lead: "Wizualizacje architektury i wnętrz, okolica oraz zdjęcia z postępu prac.", // DRAFT
+    lead: "Zdjęcia domów i wnętrz, wizualizacje osiedla oraz postęp prac.", // DRAFT
     all: "Wszystkie",
     filterLabel: "Filtruj według kategorii",
     showMore: "Pokaż więcej",

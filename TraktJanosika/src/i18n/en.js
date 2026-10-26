@@ -6,9 +6,9 @@ const en = {
     title: "Trakt Janosika — Highlander-style mountain homes in Białka Tatrzańska, Poland",
     description:
       "Trakt Janosika is an exclusive, gated community of eight single-family homes in Białka Tatrzańska, Podhale, Poland. Homes of 160–200 m² combining Highlander craftsmanship with contemporary design.",
-    galleryTitle: "Gallery — homes and interiors | Trakt Janosika",
+    galleryTitle: "Gallery — photos of the homes and interiors | Trakt Janosika",
     galleryDescription:
-      "Trakt Janosika gallery: visualisations of the Highlander-style homes, interiors and estate in Białka Tatrzańska, plus construction progress photos.",
+      "Trakt Janosika gallery: photographs of the Highlander-style homes and their interiors in Białka Tatrzańska, plus visualisations of the estate.",
     notFoundTitle: "Page not found | Trakt Janosika",
     langName: "English",
     switchTo: "Switch language to English",
@@ -83,7 +83,7 @@ const en = {
       },
     ],
     imageAlt: "Entrance to the gated Trakt Janosika estate with a stone wall and name plaque",
-    detailAlt: "Living room with fireplace and timber details — example interior",
+    detailAlt: "Bathroom with double basin and round backlit mirror — interior photo",
   },
 
   architecture: {
@@ -112,14 +112,14 @@ const en = {
     interiorsTitle: "Interiors with *soul*", // DRAFT
     interiorsText:
       "Natural materials, regional artistry and modern energy-efficient technologies — craftsmanship that is part of everyday life at home.", // DRAFT (reuses claims from "Our Roots")
-    interiorsNote: "Example interior arrangements — visualisations.",
+    interiorsNote: "Photos from inside the Trakt Janosika homes, September 2026.",
     alts: {
       wide: "Highlander-style home with a steep roof, stone plinth and balcony",
       front: "House façade with a tall gable and large windows",
       garden: "The garden side of a home — stone, timber and terrace",
-      hall: "Hallway with timber staircase and carved trims",
-      rosette: "Bedroom with a carved wooden rosette on the wall",
-      mirror: "Bathroom with a mirror in a carved wooden frame",
+      bathTub: "Attic bathroom with bathtub and timber ceiling",
+      bathVanity: "Bathroom with double basin and round backlit mirror",
+      bathShower: "Bathroom with shower and freestanding basin",
     },
   },
 
@@ -174,8 +174,8 @@ const en = {
       "Trakt Janosika is more than a housing development—it is a tribute to the local tradition of building with heart and purpose. By combining natural materials, regional artistry, and modern energy-efficient technologies, we create homes that honor our roots while embracing the future.",
     ],
     values: ["Heritage", "Craftsmanship", "Resilience"],
-    imageAlt: "Carved wooden rosette — a motif inspired by Highlander woodcarving",
-    imageCaption: "Rosette motif — example interior (visualisation)",
+    imageAlt: "A Trakt Janosika home after dark — lit façade and tall Highlander gable",
+    imageCaption: "Trakt Janosika — on site, September 2026",
   },
 
   contact: {
@@ -251,13 +251,13 @@ const en = {
   galleryPreview: {
     eyebrow: "Gallery",
     title: "See *Trakt Janosika*", // DRAFT
-    lead: "Architecture, interiors and the Podhale landscape — in visualisations, and soon in photographs from the site.", // DRAFT
+    lead: "Photographs of the homes and their interiors straight from the site, plus visualisations of the whole estate.", // DRAFT
     cta: "View the full gallery",
   },
 
   gallery: {
     title: "Gallery",
-    lead: "Architectural and interior visualisations, the surroundings and construction progress.", // DRAFT
+    lead: "Photographs of the homes and interiors, visualisations of the estate and construction progress.", // DRAFT
     all: "All",
     filterLabel: "Filter by category",
     showMore: "Show more",
