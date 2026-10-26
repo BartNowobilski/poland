@@ -1,0 +1,182 @@
+.location__head {
+  display: grid;
+  gap: var(--space-5) var(--grid-gap);
+  align-items: end;
+  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+}
+.location__head .eyebrow {
+  margin-bottom: var(--space-4);
+}
+@media (min-width: 960px) {
+  .location__head {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+}
+
+.location__band {
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .location__band .picture {
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+/* ---------- Distance cards ---------- */
+.places {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: clamp(2rem, 1rem + 3vw, 4rem);
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line);
+}
+.place {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-5);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--dur) var(--ease-out);
+}
+@media (hover: hover) {
+  .place:hover {
+    background: var(--c-paper);
+  }
+}
+.place__icon {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-5);
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--c-wood);
+}
+.place__value {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 1.8rem + 1.6vw, 3.25rem);
+  line-height: 1;
+  color: var(--c-walnut);
+}
+.place__value small {
+  font-size: 0.42em;
+  font-family: var(--font-body);
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.place__name {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  line-height: 1.25;
+}
+.place__note {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+@media (min-width: 600px) {
+  .places {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* the last card ("trails") spans two columns so every row is full */
+  .place:last-child {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1100px) {
+  .places {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Prose + map ---------- */
+.location__more {
+  display: grid;
+  gap: var(--space-7) var(--grid-gap);
+  margin-top: clamp(4rem, 2.5rem + 5vw, 8rem);
+}
+@media (min-width: 960px) {
+  .location__more {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: start;
+  }
+}
+.location__map {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+.map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--c-linen);
+}
+@media (min-width: 720px) {
+  .map {
+    aspect-ratio: 3 / 2;
+  }
+}
+.map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map__facade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  text-align: center;
+}
+.map__pin {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--c-gold);
+}
+.map__address {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-style: normal;
+  line-height: 1.25;
+  color: var(--text-on-dark);
+}
+.map__note {
+  font-size: var(--fs-xs);
+  color: var(--text-on-dark-soft);
+}
+
+/* phones: compact rows — distance | name + note */
+@media (max-width: 599px) {
+  .place {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    grid-template-rows: auto auto;
+    column-gap: var(--space-4);
+    row-gap: 0.15rem;
+    align-items: baseline;
+    padding: var(--space-5) var(--space-4);
+  }
+  .place__icon {
+    display: none;
+  }
+  .place__value {
+    grid-row: span 2;
+    font-size: 2rem;
+  }
+  .place__name {
+    margin-top: 0;
+  }
+}

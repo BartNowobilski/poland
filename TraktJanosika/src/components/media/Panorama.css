@@ -1,0 +1,98 @@
+.panorama {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--c-forest-deep) var(--poster, none) center / cover no-repeat;
+  box-shadow: var(--shadow-lift);
+}
+@media (max-width: 900px) {
+  .panorama {
+    aspect-ratio: 4 / 3;
+  }
+}
+@media (max-width: 560px) {
+  .panorama {
+    aspect-ratio: 1 / 1;
+  }
+}
+.panorama__viewer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out);
+}
+.panorama.is-ready .panorama__viewer {
+  opacity: 1;
+}
+/* Pannellum ships its own UI chrome; quiet it down to match the site */
+.panorama .pnlm-container {
+  background: transparent;
+  font-family: var(--font-body);
+}
+.panorama .pnlm-load-box {
+  display: none !important;
+}
+
+.panorama__activate {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  width: 100%;
+  color: var(--c-ivory);
+  background: radial-gradient(ellipse at center, rgba(18, 16, 12, 0.35), rgba(18, 16, 12, 0.05) 70%);
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease-out);
+}
+.panorama__activate:disabled {
+  cursor: progress;
+}
+.panorama__badge {
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  line-height: 1;
+  font-style: italic;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+.panorama__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1.4rem;
+  border: 1px solid rgba(245, 240, 230, 0.6);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-button);
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color var(--dur), color var(--dur);
+}
+.panorama__cta .icon {
+  width: 1rem;
+  height: 1rem;
+}
+@media (hover: hover) {
+  .panorama__activate:not(:disabled):hover .panorama__cta {
+    background: var(--c-ivory);
+    color: var(--c-charcoal);
+  }
+}
+.panorama__hint {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-4);
+  transform: translateX(-50%);
+  padding: 0.4rem 0.9rem;
+  background: rgba(18, 16, 12, 0.55);
+  color: var(--c-ivory);
+  font-size: var(--fs-xs);
+  pointer-events: none;
+  animation: pano-hint 4s var(--ease-out) forwards;
+}
+@keyframes pano-hint {
+  0%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}

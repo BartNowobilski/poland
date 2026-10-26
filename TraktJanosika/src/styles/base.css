@@ -89,8 +89,7 @@ ol[role="list"] {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
-.on-dark :focus-visible,
-:is(.tone-forest, .tone-charcoal) :focus-visible {
+.on-dark :focus-visible {
   outline-color: var(--c-gold-soft);
 }
 
@@ -256,11 +255,15 @@ ol[role="list"] {
 .has-reveal [data-reveal="fade"]:not(.is-revealed) {
   opacity: 0;
 }
-.has-reveal [data-reveal="mask"]:not(.is-revealed) {
-  clip-path: inset(100% 0 0 0);
-}
-.has-reveal [data-reveal="mask"] {
+/* the clip sits on the child: Chrome clips a target's own clip-path out of
+   its intersection rect, so a fully-clipped target would never intersect */
+.has-reveal [data-reveal="mask"] > * {
   clip-path: inset(0 0 0 0);
+  transition: clip-path calc(var(--dur-reveal) * 1.2) var(--ease-cinematic);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.has-reveal [data-reveal="mask"]:not(.is-revealed) > * {
+  clip-path: inset(100% 0 0 0);
 }
 .has-reveal [data-reveal="zoom"] {
   overflow: hidden;
@@ -286,6 +289,7 @@ ol[role="list"] {
     transition-delay: 0ms !important;
   }
   .has-reveal [data-reveal]:not(.is-revealed),
+  .has-reveal [data-reveal="mask"]:not(.is-revealed) > *,
   .has-reveal [data-reveal="zoom"]:not(.is-revealed) > * {
     opacity: 1;
     transform: none;

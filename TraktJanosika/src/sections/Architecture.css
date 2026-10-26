@@ -1,0 +1,119 @@
+/* ---------- Full-bleed band ---------- */
+.arch__band {
+  position: relative;
+  height: clamp(420px, 62vw, 860px);
+  overflow: hidden;
+}
+.arch__band-media {
+  position: absolute;
+  inset: -8% 0;
+}
+.arch__band-media .picture,
+.arch__band-media picture,
+.arch__band-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.arch__band-media img {
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .arch__band {
+    height: 120vw;
+  }
+}
+
+/* ---------- Pillars + pair ---------- */
+.arch__split {
+  display: grid;
+  gap: var(--space-8) var(--grid-gap);
+  margin-top: clamp(4rem, 2.5rem + 5vw, 8rem);
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .arch__split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+.pillars {
+  display: grid;
+  border-top: 1px solid var(--line-strong);
+}
+.pillar {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid var(--line);
+}
+.pillar__num {
+  padding-top: 0.45rem;
+  font-size: 0.95rem;
+  color: var(--c-wood);
+}
+.pillar__title {
+  margin-bottom: var(--space-2);
+}
+.pillar__text {
+  max-width: 46ch;
+  color: var(--text-muted);
+}
+
+.arch__pair {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(0.75rem, 0.4rem + 1.2vw, 1.5rem);
+  align-items: start;
+}
+.arch__pair-b {
+  margin-top: 22%;
+}
+
+/* ---------- Interiors ---------- */
+.arch__interiors {
+  display: grid;
+  gap: var(--space-7) var(--grid-gap);
+  margin-top: clamp(5rem, 3rem + 6vw, 10rem);
+  align-items: end;
+}
+@media (min-width: 960px) {
+  .arch__interiors {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  }
+}
+.arch__interiors-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.arch__note {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.arch__mosaic {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(0.5rem, 0.3rem + 1vw, 1.25rem);
+}
+.arch__m1 {
+  grid-row: span 2;
+}
+.arch__mosaic > * {
+  overflow: hidden;
+}
+/* tall tile stretches to match the two stacked squares */
+.arch__m1 .picture {
+  height: 100%;
+  aspect-ratio: auto !important;
+}
+.arch__m1 .picture picture,
+.arch__m1 .picture img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}

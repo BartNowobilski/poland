@@ -40,7 +40,7 @@
   -webkit-mask: url("/patterns/rozeta.svg") repeat center / var(--pattern-size, 96px);
   mask: url("/patterns/rozeta.svg") repeat center / var(--pattern-size, 96px);
 }
-:is(.tone-forest, .tone-charcoal).pattern-rozeta {
+:is(.tone-forest, .tone-walnut, .tone-charcoal).pattern-rozeta {
   --pattern-color: var(--c-gold);
   --pattern-opacity: 0.09;
 }

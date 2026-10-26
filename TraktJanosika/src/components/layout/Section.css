@@ -24,6 +24,12 @@
   --line: var(--line-on-dark);
   --line-strong: rgba(245, 240, 230, 0.4);
 }
+.tone-walnut {
+  background: var(--c-walnut-deep);
+  color: var(--text-on-dark);
+  --line: var(--line-on-dark);
+  --line-strong: rgba(245, 240, 230, 0.4);
+}
 .tone-charcoal {
   background: var(--c-charcoal);
   color: var(--text-on-dark);

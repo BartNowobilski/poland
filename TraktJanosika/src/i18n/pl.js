@@ -1,4 +1,7 @@
 // Polish — primary language. Keep keys identical to en.js.
+// Text wrapped in *asterisks* is rendered in italic accent (see <Rich>).
+// Paragraph arrays preserve the original site copy, split at its natural breaks.
+// Lines marked "DRAFT" are new copy written for the redesign — please review.
 const pl = {
   meta: {
     langName: "Polski",
@@ -12,7 +15,7 @@ const pl = {
   nav: {
     label: "Nawigacja główna",
     about: "O inwestycji",
-    homes: "Panorama 360°",
+    architecture: "Architektura",
     location: "Lokalizacja",
     story: "Nasze korzenie",
     gallery: "Galeria",
@@ -24,79 +27,171 @@ const pl = {
   },
   common: {
     skipToContent: "Przejdź do treści",
-    viewOnMaps: "Otwórz w Mapach",
-    learnMore: "Dowiedz się więcej",
-    comingSoon: "Wkrótce",
+    viewOnMaps: "Otwórz w Mapach Google",
+    visualisation: "Wizualizacja",
+    approx: "ok.",
   },
 
   hero: {
-    eyebrow: "Białka Tatrzańska · Podhale",
+    eyebrow: "Domy w Białce Tatrzańskiej · Podhale",
+    // DRAFT — condensed from the existing "O inwestycji" copy
+    intro:
+      "Osiem ekskluzywnych domów jednorodzinnych w ogrodzonym osiedlu — góralskie rzemiosło połączone z nowoczesną architekturą.",
     ctaPrimary: "Odkryj inwestycję",
+    scroll: "Przewiń",
     scrollLabel: "Przewiń do sekcji O inwestycji",
+    imageAlt:
+      "Widok z lotu ptaka na domy w stylu góralskim w Białce Tatrzańskiej, w tle panorama Tatr",
   },
 
+  facts: [
+    { value: "8", label: "domów jednorodzinnych" },
+    { value: "160–200 m²", label: "powierzchni domu" },
+    { value: "4–6", label: "sypialni" },
+    { value: "4–5", label: "łazienek" },
+  ],
+
   about: {
-    title: "O Inwestycji",
-    body:
-      "Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu nowoczesnych domów położonych u podnóża malowniczych gór południowej Polski. Każdy dom ma powierzchnię od 160 do 200 m² i łączy w sobie góralskie rzemiosło z nowoczesną architekturą. Kupujący mogą w pełni dostosować układ domu — wybierając od 4 do 6 sypialni oraz od 4 do 5 łazienek — tak, aby najlepiej odpowiadał ich potrzebom i stylowi życia. " +
-      "Domy dostępne są w różnych etapach wykończenia: w stanie deweloperskim (z ukończoną elewacją i mediami, z możliwością samodzielnego wykończenia wnętrz), częściowo wykończone (z niezaadaptowanym poddaszem, np. 4 sypialnie zamiast 5 lub 6), lub w pełni wykończone, gotowe do zamieszkania. " +
+    eyebrow: "O inwestycji",
+    title: "Osiem domów w rytmie *Podhala*", // DRAFT
+    body: [
+      "Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu nowoczesnych domów położonych u podnóża malowniczych gór południowej Polski. Każdy dom ma powierzchnię od 160 do 200 m² i łączy w sobie góralskie rzemiosło z nowoczesną architekturą. Kupujący mogą w pełni dostosować układ domu — wybierając od 4 do 6 sypialni oraz od 4 do 5 łazienek — tak, aby najlepiej odpowiadał ich potrzebom i stylowi życia.",
       "Dzięki tej elastyczności każdy właściciel może stworzyć dom dokładnie taki, jakiego potrzebuje — dopasowany do harmonogramu i budżetu. Inwestycja jest obecnie w trakcie budowy, a jej zakończenie planowane jest w ciągu najbliższego roku.",
-    slideshowLabel: "Wizualizacje inwestycji",
-    slideAlt: "Wizualizacja Trakt Janosika, zdjęcie {n}",
+    ],
+    stagesTitle: "Domy dostępne są w różnych etapach wykończenia",
+    stages: [
+      {
+        title: "Stan deweloperski",
+        text: "Z ukończoną elewacją i mediami, z możliwością samodzielnego wykończenia wnętrz.",
+      },
+      {
+        title: "Częściowo wykończony",
+        text: "Z niezaadaptowanym poddaszem, np. 4 sypialnie zamiast 5 lub 6.",
+      },
+      {
+        title: "W pełni wykończony",
+        text: "Gotowy do zamieszkania.",
+      },
+    ],
+    imageAlt: "Wjazd na ogrodzone osiedle Trakt Janosika z kamiennym murem i tablicą z nazwą",
+    detailAlt: "Salon z kominkiem i drewnianymi detalami — przykładowa aranżacja wnętrza",
+  },
+
+  architecture: {
+    eyebrow: "Architektura",
+    title: "Góralska tradycja, *współczesna forma*", // DRAFT
+    lead: "Domy Trakt Janosika czerpią z architektury Podhala — z jej stromych dachów, kamienia i drewna — i łączą ją z wygodą nowoczesnego domu.", // DRAFT
+    pillars: [
+      // DRAFT — describes what the visualisations show; no technical specs implied
+      {
+        title: "Dach",
+        text: "Strome, wielospadowe dachy i wysokie szczyty — znak rozpoznawczy podhalańskiego budownictwa.",
+      },
+      {
+        title: "Kamień",
+        text: "Kamienna podmurówka osadza dom w krajobrazie i nawiązuje do tradycyjnych góralskich domów.",
+      },
+      {
+        title: "Drewno",
+        text: "Drewniane detale elewacji i wnętrz przypominają o kunszcie lokalnych cieśli i snycerzy.",
+      },
+      {
+        title: "Światło",
+        text: "Duże przeszklenia i balkony otwierają wnętrza na światło i widok gór.",
+      },
+    ],
+    interiorsTitle: "Wnętrza z *duszą*", // DRAFT
+    interiorsText:
+      "Naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania — rzemiosło obecne w codziennym życiu domu.", // DRAFT (reuses claims from "Nasze korzenie")
+    interiorsNote: "Przykładowe aranżacje wnętrz — wizualizacje.",
+    alts: {
+      wide: "Dom w stylu góralskim ze stromym dachem, kamienną podmurówką i balkonem",
+      front: "Fasada domu z wysokim szczytem i dużymi przeszkleniami",
+      garden: "Dom od strony ogrodu — kamień, drewno i taras",
+      hall: "Hol z drewnianymi schodami i rzeźbionymi listwami",
+      rosette: "Sypialnia z rzeźbioną drewnianą rozetą na ścianie",
+      mirror: "Łazienka z lustrem w rzeźbionej drewnianej ramie",
+    },
+  },
+
+  masterplan: {
+    eyebrow: "Masterplan",
+    title: "Osiem działek, *jedna spokojna droga*", // DRAFT
+    body: [
+      "Masterplan inwestycji obejmuje osiem prywatnych działek rozmieszczonych wzdłuż bezpiecznej, ogrodzonej drogi wewnętrznej przystosowanej do całorocznego użytkowania. Każdy dom posiada własny, niezależny wjazd, prywatną działkę oraz pełne uzbrojenie terenu z mediami poprowadzonymi w ziemi, zapewniając wygodę i niezawodność na lata.",
+      "Infrastruktura osiedla została zaprojektowana z myślą o warunkach Podhala — w tym o typowej zimowej aurze — aby zapewnić komfort i bezpieczeństwo dojazdu przez cały rok. Pasy zieleni pomiędzy działkami zwiększają prywatność i tworzą harmonijne otoczenie.",
+      "Układ działek został zaplanowany tak, aby maksymalnie wykorzystać naturalne nasłonecznienie, szczególnie w częściach dziennych i na tarasach, oraz podkreślić widoki na okoliczne góry. Osiedle oferuje spokój, prywatność oraz bliskość natury, pozostając jednocześnie niedaleko głównych atrakcji Białki.",
+    ],
+    features: [
+      "Ogrodzona droga wewnętrzna",
+      "Własny wjazd i prywatna działka",
+      "Media poprowadzone w ziemi",
+      "Infrastruktura przystosowana do zimy",
+      "Pasy zieleni między działkami",
+      "Działki zorientowane na słońce i widoki",
+    ],
   },
 
   panorama: {
     title: "Panorama 360°",
-    viewerLabel: "Interaktywna panorama 360°",
-  },
-
-  masterplan: {
-    title: "Masterplan",
-    imageAlt: "Wizualizacja wjazdu na osiedle Trakt Janosika",
-    body:
-      "Masterplan inwestycji obejmuje osiem prywatnych działek rozmieszczonych wzdłuż bezpiecznej, ogrodzonej drogi wewnętrznej przystosowanej do całorocznego użytkowania. Każdy dom posiada własny, niezależny wjazd, prywatną działkę oraz pełne uzbrojenie terenu z mediami poprowadzonymi w ziemi, zapewniając wygodę i niezawodność na lata. " +
-      "Infrastruktura osiedla została zaprojektowana z myślą o warunkach Podhala — w tym o typowej zimowej aurze — aby zapewnić komfort i bezpieczeństwo dojazdu przez cały rok. Pasy zieleni pomiędzy działkami zwiększają prywatność i tworzą harmonijne otoczenie. " +
-      "Układ działek został zaplanowany tak, aby maksymalnie wykorzystać naturalne nasłonecznienie, szczególnie w częściach dziennych i na tarasach, oraz podkreślić widoki na okoliczne góry. Osiedle oferuje spokój, prywatność oraz bliskość natury, pozostając jednocześnie niedaleko głównych atrakcji Białki.",
+    viewerLabel: "Interaktywna panorama 360° osiedla",
+    activate: "Obracaj panoramę",
+    hint: "Przeciągnij, aby się rozejrzeć",
   },
 
   location: {
-    eyebrow: "Białka Tatrzańska",
-    title: "Lokalizacja i Okolica",
-    mapTitle: "Mapa — Grapa 35, Białka Tatrzańska",
-    distanceNote:
-      "Położenie w otoczeniu natury: ok. 0,5 km do rzeki Białki i skałek Skałki Białczańskie, ok. 3,0 km do ośrodka narciarskiego Kotelnica Białczańska, ok. 3,0 km do Termy Bania, ok. 22 km do Zakopanego oraz ok. 17 km do Nowego Targu — ze szlakami pieszymi i rowerowymi rozpoczynającymi się tuż obok inwestycji.",
-    body:
-      "Trakt Janosika znajduje się w wyjątkowej lokalizacji w Białce Tatrzańskiej, bezpośrednio na malowniczym zboczu Grapy. Od czystej rzeki Białki i imponujących skałek Skałki Białczańskie dzieli inwestycję jedynie około 0,5 km — idealnie na spokojny spacer w otoczeniu natury. " +
-      "Dla miłośników sportów zimowych i letnich, główny ośrodek narciarski Kotelnica Białczańska znajduje się w odległości około 3 km, oferując dziesiątki tras, snowparki, szkoły narciarskie oraz połączenia wyciągów w całej dolinie. Również około 3 km od osiedla położony jest kompleks Terma Bania z basenami termalnymi wewnętrznymi i zewnętrznymi oraz widokami na Tatry. " +
+    eyebrow: "Lokalizacja i okolica",
+    title: "Białka Tatrzańska, *przez cały rok*", // DRAFT
+    body: [
+      "Trakt Janosika znajduje się w wyjątkowej lokalizacji w Białce Tatrzańskiej, bezpośrednio na malowniczym zboczu Grapy. Od czystej rzeki Białki i imponujących skałek Skałki Białczańskie dzieli inwestycję jedynie około 0,5 km — idealnie na spokojny spacer w otoczeniu natury.",
+      "Dla miłośników sportów zimowych i letnich, główny ośrodek narciarski Kotelnica Białczańska znajduje się w odległości około 3 km, oferując dziesiątki tras, snowparki, szkoły narciarskie oraz połączenia wyciągów w całej dolinie. Również około 3 km od osiedla położony jest kompleks Terma Bania z basenami termalnymi wewnętrznymi i zewnętrznymi oraz widokami na Tatry.",
       "Do pełnego zaplecza usługowego Nowego Targu jest około 17 km, a do stolicy Podhala — Zakopanego — około 22 km, co zapewnia wygodny dostęp do sklepów, atrakcji i wydarzeń kulturowych. Dzięki otaczającym lasom, szlakom i przestrzeni, lokalizacja łączy naturę, wygodę i całoroczny komfort życia.",
-    nearby: {
-      ski: "Kotelnica Białczańska – ok. 3 km",
-      terma: "Terma Bania – ok. 3 km",
-      river: "Rzeka Białka i Skałki – ok. 0,5 km",
-      bike: "Szlaki rowerowe",
-      towns: "Łatwy dojazd do Nowego Targu i Zakopanego",
+    ],
+    placesLabel: "Odległości od osiedla",
+    nearby: "tuż obok",
+    imageAlt: "Krajobraz Podhala z panoramą Tatr nad Białką Tatrzańską",
+    map: {
+      title: "Mapa — Grapa 35, Białka Tatrzańska",
+      load: "Pokaż mapę",
+      note: "Mapa Google zostanie wczytana po kliknięciu.",
     },
   },
 
   story: {
-    title: "Nasze Korzenie",
-    imageAlt: "Logo Trakt Janosika — postać Janosika na tle gór",
-    body:
-      "Inspiracją dla projektu Trakt Janosika jest bogata tradycja i siła regionu Podhala. W sercu Białki, gdzie niegdyś wędrował legendarny Janosik, a nad rzeką górują Skałki Białczańskie, kontynuujemy opowieść o rzemiośle, pasji i trwałości. " +
-      "Trakt Janosika to nie tylko inwestycja mieszkaniowa — to hołd dla lokalnych tradycji budownictwa, w którym łączymy naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania. " +
+    eyebrow: "Nasze korzenie",
+    title: "Tam, gdzie wędrował *Janosik*", // DRAFT
+    body: [
+      "Inspiracją dla projektu Trakt Janosika jest bogata tradycja i siła regionu Podhala. W sercu Białki, gdzie niegdyś wędrował legendarny Janosik, a nad rzeką górują Skałki Białczańskie, kontynuujemy opowieść o rzemiośle, pasji i trwałości.",
+      "Trakt Janosika to nie tylko inwestycja mieszkaniowa — to hołd dla lokalnych tradycji budownictwa, w którym łączymy naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania.",
       "W ten sposób powstają domy, które z szacunkiem odnoszą się do przeszłości, a jednocześnie patrzą w przyszłość.",
+    ],
+    values: ["Tradycja", "Rzemiosło", "Trwałość"],
+    imageAlt: "Rzeźbiona drewniana rozeta — motyw inspirowany góralską snycerką",
+    imageCaption: "Motyw rozety — przykładowa aranżacja wnętrza (wizualizacja)",
   },
 
   contact: {
-    title: "Kontakt",
+    eyebrow: "Kontakt",
+    title: "Porozmawiajmy o *Twoim domu*", // DRAFT
     blurb: "Zostaw dane, a wyślemy broszurę, rzuty i aktualizacje postępu prac.",
-    downloadBrochure: "Pobierz broszurę",
+    receive: ["Broszura inwestycji", "Rzuty domów", "Aktualizacje postępu prac"],
+    receiveLabel: "Co otrzymasz",
+    directLabel: "Kontakt bezpośredni",
     firstName: "Imię",
     lastName: "Nazwisko",
     email: "E-mail",
     phone: "Telefon (opcjonalnie)",
+    interest: "Interesuje mnie (opcjonalnie)",
+    interestGeneral: "Ogólne zapytanie",
     message: "Wiadomość",
-    send: "Wyślij",
+    required: "Pola oznaczone * są wymagane.",
+    consent:
+      "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu w celu udzielenia odpowiedzi na zapytanie i przesłania materiałów o inwestycji.",
+    privacy:
+      "Administratorem Twoich danych osobowych jest {controller}. Dane przetwarzamy wyłącznie w celu obsługi zapytania, na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO), nie dłużej niż jest to potrzebne. Formularz obsługuje zewnętrzny dostawca Formspree. Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, wycofania zgody w dowolnym momencie oraz wniesienia skargi do Prezesa UODO.",
+    privacyMore: "Informacja o przetwarzaniu danych",
+    controllerPlaceholder: "[ADMINISTRATOR DANYCH — DO UZUPEŁNIENIA]",
+    send: "Wyślij zapytanie",
     sending: "Wysyłanie…",
     success: "Dziękujemy! Wiadomość została wysłana — skontaktujemy się wkrótce.",
     error: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
@@ -104,6 +199,7 @@ const pl = {
     emailLabel: "E-mail",
     phoneLabel: "Telefon",
     addressLabel: "Adres",
+    imageAlt: "Dom w stylu góralskim od strony ogrodu",
   },
 
   gallery: {

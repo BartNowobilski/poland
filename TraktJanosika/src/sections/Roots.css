@@ -1,0 +1,104 @@
+.roots__grid {
+  display: grid;
+  gap: var(--space-8) var(--grid-gap);
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .roots__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+
+/* ---------- Figure ---------- */
+.roots__figure {
+  position: relative;
+  margin: 0;
+}
+.roots__figure .picture {
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.6);
+}
+.roots__caption {
+  margin-top: var(--space-3);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  color: var(--text-on-dark-soft);
+}
+.roots__emblem {
+  position: absolute;
+  right: -6%;
+  bottom: 12%;
+  width: clamp(130px, 18vw, 220px);
+  padding: clamp(0.75rem, 1.5vw, 1.25rem);
+  background: var(--c-walnut-deep);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+}
+.roots__emblem .logo {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 959px) {
+  .roots__emblem {
+    right: var(--space-4);
+    bottom: calc(var(--space-7) + var(--space-4));
+  }
+}
+
+/* ---------- Text ---------- */
+.roots__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.roots__title {
+  max-width: 14ch;
+}
+.roots__body {
+  font-size: var(--fs-lead);
+  line-height: 1.75;
+}
+/* drop cap on the opening paragraph */
+.roots__body > p:first-child::first-letter {
+  float: left;
+  margin: 0.06em 0.08em 0 0;
+  font-family: var(--font-display);
+  font-size: 4.2em;
+  line-height: 0.8;
+  color: var(--c-gold-soft);
+}
+
+.roots__values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line-on-dark);
+}
+.roots__values li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  color: var(--c-ivory);
+}
+.roots__sep {
+  width: 1.1rem !important;
+}
+
+/* ---------- Closing quote ---------- */
+.roots__quote {
+  margin-top: clamp(5rem, 3rem + 6vw, 9rem);
+  text-align: center;
+}
+.roots__quote blockquote {
+  margin: var(--space-6) 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.75rem);
+  font-style: italic;
+  line-height: 1.15;
+  color: var(--c-ivory);
+  text-wrap: balance;
+}

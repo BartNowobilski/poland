@@ -3,9 +3,11 @@ import Ornament from "./Ornament";
 import Reveal from "../motion/Reveal";
 import "./Section.css";
 
+const DARK_TONES = new Set(["forest", "walnut", "charcoal"]);
+
 /**
  * Page section with a background tone and consistent vertical rhythm.
- * tone:    "ivory" | "sand" | "forest" | "charcoal"
+ * tone:    "ivory" | "sand" | "forest" | "walnut" | "charcoal"  (dark tones add .on-dark)
  * spacing: "default" | "tight" | "none"
  * Pass `labelledBy` (id of the heading) for an accessible region name.
  */
@@ -26,6 +28,7 @@ export function Section({
       className={[
         "section",
         `tone-${tone}`,
+        DARK_TONES.has(tone) && "on-dark",
         spacing !== "default" && `section--${spacing}`,
         pattern && "pattern-rozeta",
         className,

@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
-import Home from "./Home";
+import Home from "./pages/Home";
 import Gallery from "./Gallery";
 
 // Design-system reference page, compiled out of production builds.
