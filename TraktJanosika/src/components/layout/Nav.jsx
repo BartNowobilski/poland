@@ -61,6 +61,14 @@ export default function Nav({ overlay = false }) {
     };
   }, []);
 
+  // the menu is hidden ≥1100px (CSS) — close it so inert/scroll lock are released
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1100px)");
+    const onChange = (e) => e.matches && setOpen(false);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   // close the menu on route change
   useEffect(() => setOpen(false), [pathname]);
 
@@ -72,7 +80,17 @@ export default function Nav({ overlay = false }) {
 
   return (
     <>
-      <a className="skip-link" href="#main">
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(e) => {
+          // move keyboard focus, not just the scroll position
+          e.preventDefault();
+          const main = document.getElementById("main");
+          main?.focus({ preventScroll: true });
+          main?.scrollIntoView({ block: "start" });
+        }}
+      >
         {t.common.skipToContent}
       </a>
 

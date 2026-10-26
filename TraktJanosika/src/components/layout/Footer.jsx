@@ -76,7 +76,7 @@ export default function Footer() {
 
       <div className="footer__bottom container">
         <p>
-          © {year} {SITE.name}. {t.footer.rights}
+          © <span suppressHydrationWarning>{year}</span> {SITE.name}. {t.footer.rights}
         </p>
         <p>{t.footer.visualisationNote}</p>
       </div>

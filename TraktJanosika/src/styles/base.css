@@ -296,3 +296,8 @@ h6 {
     clip-path: none;
   }
 }
+
+/* skip-link target receives focus programmatically; no outline box around the page */
+#main:focus {
+  outline: none;
+}

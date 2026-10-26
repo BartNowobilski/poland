@@ -8,6 +8,7 @@ import "./components/layout/Ornament.css";
 import Root from "./Root.jsx";
 import { enableReveal } from "./lib/reveal";
 
+document.documentElement.classList.add("js"); // enables JS-only hiding (image fade-in)
 enableReveal();
 
 const app = (

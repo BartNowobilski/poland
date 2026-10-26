@@ -1,6 +1,6 @@
 /* Navigation. `hash` targets a section id on the homepage; `to` is a route.
-   `label` is a key in i18n `nav`. `footerOnly` items are listed in the footer
-   (and mobile menu) but kept out of the desktop bar to avoid crowding. */
+   `label` is a key in i18n `nav`. `footerOnly` items appear only in the footer —
+   the desktop bar and the mobile menu show the primary items. */
 export const NAV_ITEMS = [
   { label: "about", hash: "about" },
   { label: "architecture", hash: "architecture" },

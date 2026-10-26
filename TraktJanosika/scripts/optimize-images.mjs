@@ -32,11 +32,14 @@ const WIDTHS = [640, 1280, 1920, 2560];
 // Modern formats generated at every width. AVIF covers ~95% of browsers; the
 // rest get the JPEG fallback. Add "webp" here for broader coverage (≈+18 MB).
 const FORMATS = ["avif"];
+const QUALITY = { avif: { quality: 52, effort: 4 }, webp: { quality: 76, effort: 5 }, jpeg: { quality: 80 } };
 const ENCODERS = {
-  avif: (img) => img.avif({ quality: 52, effort: 4 }),
-  webp: (img) => img.webp({ quality: 76, effort: 5 }),
+  avif: (img) => img.avif(QUALITY.avif),
+  webp: (img) => img.webp(QUALITY.webp),
 };
 const FALLBACK_WIDTH = 1280;
+// any change here re-processes every image (and changes its ?v= cache key)
+const SETTINGS = JSON.stringify({ WIDTHS, FALLBACK_WIDTH, FORMATS, QUALITY });
 const CATEGORIES = ["architecture", "interiors", "surroundings", "lifestyle", "construction", "renderings"];
 const IMAGE_EXT = /\.(jpe?g|png|webp|tiff?|avif)$/i;
 
@@ -133,7 +136,7 @@ const outputsFor = (id, e) => [
 async function processImage(source, previous) {
   const { id, file, category, variant } = source;
   const { mtimeMs, size } = await stat(file);
-  const fingerprint = `${Math.round(mtimeMs)}-${size}-${FORMATS}-${JSON.stringify(ADJUST[id] ?? source.baseAdjust ?? {})}-${JSON.stringify(variant ?? {})}`;
+  const fingerprint = `${Math.round(mtimeMs)}-${size}-${SETTINGS}-${JSON.stringify(ADJUST[id] ?? source.baseAdjust ?? {})}-${JSON.stringify(variant ?? {})}`;
 
   if (!FORCE && previous?.fingerprint === fingerprint) {
     if (outputsFor(id, previous).every((f) => existsSync(path.join(OUT, f)))) return { ...previous, category, skipped: true };
@@ -184,7 +187,7 @@ async function processImage(source, previous) {
   await base
     .clone()
     .resize({ width: fallback, withoutEnlargement: true })
-    .jpeg({ quality: 80, mozjpeg: true, progressive: true })
+    .jpeg({ ...QUALITY.jpeg, mozjpeg: true, progressive: true })
     .toFile(path.join(OUT, `${id}-${fallback}.jpg`));
 
   const tiny = await base.clone().resize({ width: 24 }).webp({ quality: 40 }).toBuffer();

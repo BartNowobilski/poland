@@ -51,7 +51,7 @@
 .lightbox__stage {
   position: relative;
   overflow: hidden;
-  touch-action: pan-y;
+  touch-action: pan-y pinch-zoom;
   user-select: none;
 }
 .lightbox__slide {

@@ -18,8 +18,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/bialka.jpg",
-   "fingerprint": "1792979651716-8237138-avif-{}-{}",
-   "v": "3e8e3253"
+   "fingerprint": "1792979651716-8237138-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "9fdafe1a"
   },
   "bialka-portrait": {
    "w": 1276,
@@ -37,8 +37,8 @@
    "color": "#e8e8e8",
    "category": null,
    "source": "public/bialka.jpg",
-   "fingerprint": "1792979651716-8237138-avif-{}-{\"id\":\"bialka-portrait\",\"aspect\":0.5625,\"x\":0.5,\"y\":0.5,\"widths\":[640,960]}",
-   "v": "f12d4630"
+   "fingerprint": "1792979651716-8237138-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{\"id\":\"bialka-portrait\",\"aspect\":0.5625,\"x\":0.5,\"y\":0.5,\"widths\":[640,960]}",
+   "v": "cfc95a9c"
   },
   "h2": {
    "w": 3840,
@@ -57,8 +57,8 @@
    "color": "#3868a8",
    "category": null,
    "source": "public/h2.jpg",
-   "fingerprint": "1792979651725-9102516-avif-{}-{}",
-   "v": "944228c8"
+   "fingerprint": "1792979651725-9102516-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "88a2607e"
   },
   "h3": {
    "w": 3840,
@@ -77,8 +77,8 @@
    "color": "#084888",
    "category": null,
    "source": "public/h3.jpg",
-   "fingerprint": "1792979651734-8503340-avif-{}-{}",
-   "v": "a5fd271d"
+   "fingerprint": "1792979651734-8503340-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "228afe66"
   },
   "h4": {
    "w": 3840,
@@ -97,8 +97,8 @@
    "color": "#084888",
    "category": null,
    "source": "public/h4.jpg",
-   "fingerprint": "1792979651742-8758960-avif-{}-{}",
-   "v": "43c5ee16"
+   "fingerprint": "1792979651742-8758960-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "0f1bda11"
   },
   "h5": {
    "w": 3840,
@@ -117,8 +117,8 @@
    "color": "#6888b8",
    "category": null,
    "source": "public/h5.jpg",
-   "fingerprint": "1792979651749-6821199-avif-{\"crop\":{\"bottom\":24}}-{}",
-   "v": "232b305c"
+   "fingerprint": "1792979651749-6821199-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{\"crop\":{\"bottom\":24}}-{}",
+   "v": "a15327c8"
   },
   "pano1": {
    "w": 3072,
@@ -137,8 +137,8 @@
    "color": "#787878",
    "category": null,
    "source": "public/pano1.jpeg",
-   "fingerprint": "1792979651752-889735-avif-{}-{}",
-   "v": "0fbd0849"
+   "fingerprint": "1792979651752-889735-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "5dc6bd93"
   },
   "s1": {
    "w": 1600,
@@ -156,8 +156,8 @@
    "color": "#786848",
    "category": null,
    "source": "public/S1.jpg",
-   "fingerprint": "1792979651655-1082146-avif-{}-{}",
-   "v": "89d01a86"
+   "fingerprint": "1792979651655-1082146-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "d73d99d0"
   },
   "s2": {
    "w": 1600,
@@ -175,8 +175,8 @@
    "color": "#786848",
    "category": null,
    "source": "public/S2.jpg",
-   "fingerprint": "1792979651665-913226-avif-{}-{}",
-   "v": "38f6e10d"
+   "fingerprint": "1792979651665-913226-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "59a3762b"
   },
   "s3": {
    "w": 1600,
@@ -194,8 +194,8 @@
    "color": "#b89878",
    "category": null,
    "source": "public/S3.jpg",
-   "fingerprint": "1792979651682-1153670-avif-{}-{}",
-   "v": "d976f431"
+   "fingerprint": "1792979651682-1153670-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "b3394d81"
   },
   "s4": {
    "w": 1600,
@@ -213,8 +213,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S4.jpg",
-   "fingerprint": "1792979651694-1167481-avif-{}-{}",
-   "v": "97bdeaed"
+   "fingerprint": "1792979651694-1167481-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "e463ba36"
   },
   "s5": {
    "w": 1600,
@@ -232,8 +232,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S5.jpg",
-   "fingerprint": "1792979651703-875113-avif-{}-{}",
-   "v": "2883d1a2"
+   "fingerprint": "1792979651703-875113-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "9c5be8be"
   },
   "s6": {
    "w": 1600,
@@ -251,8 +251,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S6.jpg",
-   "fingerprint": "1792979651703-833214-avif-{}-{}",
-   "v": "33d1bf45"
+   "fingerprint": "1792979651703-833214-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "0a0d9522"
   },
   "s7": {
    "w": 1600,
@@ -270,8 +270,8 @@
    "color": "#b8a8a8",
    "category": null,
    "source": "public/S7.jpg",
-   "fingerprint": "1792979651704-800539-avif-{}-{}",
-   "v": "24fa71ac"
+   "fingerprint": "1792979651704-800539-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "7e1140af"
   },
   "s8": {
    "w": 1600,
@@ -289,8 +289,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S8.jpg",
-   "fingerprint": "1792979651705-856041-avif-{}-{}",
-   "v": "db1829b0"
+   "fingerprint": "1792979651705-856041-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "ed32664f"
   },
   "s9": {
    "w": 1600,
@@ -308,8 +308,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S9.jpg",
-   "fingerprint": "1792979651706-1281186-avif-{}-{}",
-   "v": "69684072"
+   "fingerprint": "1792979651706-1281186-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "79dfa978"
   },
   "s15": {
    "w": 1600,
@@ -327,8 +327,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S15.jpg",
-   "fingerprint": "1792979651656-933393-avif-{}-{}",
-   "v": "c1f55191"
+   "fingerprint": "1792979651656-933393-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "4f21bb14"
   },
   "s16": {
    "w": 1600,
@@ -346,8 +346,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S16.jpg",
-   "fingerprint": "1792979651658-950725-avif-{}-{}",
-   "v": "1d064b47"
+   "fingerprint": "1792979651658-950725-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "0520a3e5"
   },
   "s17": {
    "w": 1600,
@@ -365,8 +365,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S17.jpg",
-   "fingerprint": "1792979651659-947645-avif-{}-{}",
-   "v": "25326d52"
+   "fingerprint": "1792979651659-947645-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "d30202e2"
   },
   "s18": {
    "w": 1600,
@@ -384,8 +384,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S18.jpg",
-   "fingerprint": "1792979651661-688095-avif-{}-{}",
-   "v": "98da39a3"
+   "fingerprint": "1792979651661-688095-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "f665e9ef"
   },
   "s19": {
    "w": 1600,
@@ -403,8 +403,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S19.jpg",
-   "fingerprint": "1792979651663-1068878-avif-{}-{}",
-   "v": "a01da6ba"
+   "fingerprint": "1792979651663-1068878-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "34f6ec1a"
   },
   "s20": {
    "w": 1600,
@@ -422,8 +422,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S20.jpg",
-   "fingerprint": "1792979651665-919518-avif-{}-{}",
-   "v": "3b57fdaf"
+   "fingerprint": "1792979651665-919518-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "7f4443d1"
   },
   "s21": {
    "w": 1600,
@@ -441,8 +441,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S21.jpg",
-   "fingerprint": "1792979651666-837140-avif-{}-{}",
-   "v": "cef4f15b"
+   "fingerprint": "1792979651666-837140-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "a57003a0"
   },
   "s22": {
    "w": 1600,
@@ -460,8 +460,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S22.jpg",
-   "fingerprint": "1792979651668-677937-avif-{}-{}",
-   "v": "32bfecc1"
+   "fingerprint": "1792979651668-677937-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "0f9a74ad"
   },
   "s23": {
    "w": 1600,
@@ -479,8 +479,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S23.jpg",
-   "fingerprint": "1792979651670-1028400-avif-{}-{}",
-   "v": "41f04a47"
+   "fingerprint": "1792979651670-1028400-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "e19de8d6"
   },
   "s24": {
    "w": 1600,
@@ -498,8 +498,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S24.jpg",
-   "fingerprint": "1792979651671-930237-avif-{}-{}",
-   "v": "1f7a0b15"
+   "fingerprint": "1792979651671-930237-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "a059c48c"
   },
   "s25": {
    "w": 1600,
@@ -517,8 +517,8 @@
    "color": "#a88868",
    "category": null,
    "source": "public/S25.jpg",
-   "fingerprint": "1792979651672-946764-avif-{}-{}",
-   "v": "c224354c"
+   "fingerprint": "1792979651672-946764-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "485cc6ef"
   },
   "s26": {
    "w": 1600,
@@ -536,8 +536,8 @@
    "color": "#a88868",
    "category": null,
    "source": "public/S26.jpg",
-   "fingerprint": "1792979651674-786994-avif-{}-{}",
-   "v": "a2b77802"
+   "fingerprint": "1792979651674-786994-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "7c0d8966"
   },
   "s27": {
    "w": 1600,
@@ -555,8 +555,8 @@
    "color": "#e8d8d8",
    "category": null,
    "source": "public/S27.jpg",
-   "fingerprint": "1792979651675-785734-avif-{}-{}",
-   "v": "8d06a410"
+   "fingerprint": "1792979651675-785734-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "e91d284e"
   },
   "s28": {
    "w": 1600,
@@ -574,8 +574,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S28.jpg",
-   "fingerprint": "1792979651677-893710-avif-{}-{}",
-   "v": "345e01ae"
+   "fingerprint": "1792979651677-893710-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "6d793772"
   },
   "s29a": {
    "w": 1600,
@@ -593,8 +593,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29a.jpg",
-   "fingerprint": "1792979651679-1081853-avif-{}-{}",
-   "v": "1c2432ed"
+   "fingerprint": "1792979651679-1081853-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "24e9db69"
   },
   "s29b": {
    "w": 1600,
@@ -612,8 +612,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29b.jpg",
-   "fingerprint": "1792979651680-1057510-avif-{}-{}",
-   "v": "f037205b"
+   "fingerprint": "1792979651680-1057510-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "2be82916"
   },
   "s29c": {
    "w": 1600,
@@ -631,8 +631,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29c.jpg",
-   "fingerprint": "1792979651681-940672-avif-{}-{}",
-   "v": "5b6ef517"
+   "fingerprint": "1792979651681-940672-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "db559141"
   },
   "s30": {
    "w": 1600,
@@ -650,8 +650,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S30.jpg",
-   "fingerprint": "1792979651684-764724-avif-{}-{}",
-   "v": "65221034"
+   "fingerprint": "1792979651684-764724-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "29864638"
   },
   "s31": {
    "w": 1600,
@@ -669,8 +669,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S31.jpg",
-   "fingerprint": "1792979651685-942007-avif-{}-{}",
-   "v": "8352cb5c"
+   "fingerprint": "1792979651685-942007-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "198a84f8"
   },
   "s32": {
    "w": 1600,
@@ -688,8 +688,8 @@
    "color": "#d8d8d8",
    "category": null,
    "source": "public/S32.jpg",
-   "fingerprint": "1792979651687-764701-avif-{}-{}",
-   "v": "7aefdfae"
+   "fingerprint": "1792979651687-764701-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "2b0b57ac"
   },
   "s33": {
    "w": 1600,
@@ -707,8 +707,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S33.jpg",
-   "fingerprint": "1792979651688-951582-avif-{}-{}",
-   "v": "8123b070"
+   "fingerprint": "1792979651688-951582-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "a45298d2"
   },
   "s34": {
    "w": 1600,
@@ -726,8 +726,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S34.jpg",
-   "fingerprint": "1792979651689-1038686-avif-{}-{}",
-   "v": "fa71ba65"
+   "fingerprint": "1792979651689-1038686-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1702bd81"
   },
   "s35": {
    "w": 1600,
@@ -745,8 +745,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S35.jpg",
-   "fingerprint": "1792979651691-833883-avif-{}-{}",
-   "v": "90359666"
+   "fingerprint": "1792979651691-833883-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "ef920c26"
   },
   "s36": {
    "w": 1600,
@@ -764,8 +764,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S36.jpg",
-   "fingerprint": "1792979651691-759279-avif-{}-{}",
-   "v": "bc92d673"
+   "fingerprint": "1792979651691-759279-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "8fb0c71d"
   },
   "s37": {
    "w": 1600,
@@ -783,8 +783,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S37.jpg",
-   "fingerprint": "1792979651692-827433-avif-{}-{}",
-   "v": "7db9d358"
+   "fingerprint": "1792979651692-827433-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "07aa5962"
   },
   "s39": {
    "w": 1600,
@@ -802,8 +802,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S39.jpg",
-   "fingerprint": "1792979651693-759034-avif-{}-{}",
-   "v": "131ce4cd"
+   "fingerprint": "1792979651693-759034-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "e0e15784"
   },
   "s40": {
    "w": 1600,
@@ -821,8 +821,8 @@
    "color": "#d8d8d8",
    "category": null,
    "source": "public/S40.jpg",
-   "fingerprint": "1792979651696-785174-avif-{}-{}",
-   "v": "0f0ebd5b"
+   "fingerprint": "1792979651696-785174-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "7d7302ff"
   },
   "s41": {
    "w": 1600,
@@ -840,8 +840,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S41.jpg",
-   "fingerprint": "1792979651698-859743-avif-{}-{}",
-   "v": "9458f538"
+   "fingerprint": "1792979651698-859743-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1f265807"
   },
   "s42": {
    "w": 1600,
@@ -859,8 +859,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S42.jpg",
-   "fingerprint": "1792979651699-703097-avif-{}-{}",
-   "v": "6f458da6"
+   "fingerprint": "1792979651699-703097-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "0c49ee66"
   },
   "s43": {
    "w": 1600,
@@ -878,8 +878,8 @@
    "color": "#a8a898",
    "category": null,
    "source": "public/S43.jpg",
-   "fingerprint": "1792979651699-690409-avif-{}-{}",
-   "v": "9784f721"
+   "fingerprint": "1792979651699-690409-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "cb8e31a0"
   },
   "s44": {
    "w": 1600,
@@ -897,8 +897,8 @@
    "color": "#888878",
    "category": null,
    "source": "public/S44.jpg",
-   "fingerprint": "1792979651701-749339-avif-{}-{}",
-   "v": "9d8f7cfc"
+   "fingerprint": "1792979651701-749339-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "6103ceb3"
   },
   "s45": {
    "w": 1600,
@@ -916,8 +916,8 @@
    "color": "#888878",
    "category": null,
    "source": "public/S45.jpg",
-   "fingerprint": "1792979651702-750440-avif-{}-{}",
-   "v": "db36c217"
+   "fingerprint": "1792979651702-750440-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "7f0134f7"
   }
  }
 }

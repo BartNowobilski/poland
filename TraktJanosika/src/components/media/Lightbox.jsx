@@ -12,7 +12,7 @@ import "./Lightbox.css";
  *   onClose / onIndex
  * Only the current image and its two neighbours are mounted, so a gallery of
  * hundreds of photos never loads more than three full-size files at once.
- * Keyboard: ← → Home End Esc · Touch: swipe left/right, swipe down to close.
+ * Keyboard: ← → Home End Esc · Touch: swipe left/right (vertical = page pan/zoom).
  */
 export default function Lightbox({ items, index, onClose, onIndex }) {
   const { t } = useLanguage();
@@ -57,7 +57,11 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
     touch.current = null;
     setDrag(0);
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
-    else if (dy > 90 && Math.abs(dy) > Math.abs(dx)) onClose();
+  };
+  // the browser took over (vertical pan / pinch) — not a swipe
+  const onPointerCancel = () => {
+    touch.current = null;
+    setDrag(0);
   };
 
   if (!open) return null;
@@ -87,7 +91,7 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
+        onPointerCancel={onPointerCancel}
         onClick={(e) => e.target === e.currentTarget && onClose()}
       >
         {[...new Set(visible)].map((i) => {

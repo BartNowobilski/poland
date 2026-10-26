@@ -16,7 +16,7 @@
   transition: opacity var(--dur-slow) var(--ease-out);
 }
 /* soft shimmer when no placeholder image exists */
-.picture:not(.is-loaded)::after {
+.js .picture:not(.is-loaded)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -47,7 +47,6 @@
 }
 .picture img {
   object-fit: cover;
-  opacity: 0;
   transition:
     opacity var(--dur-slow) var(--ease-out),
     transform 1.4s var(--ease-cinematic);
@@ -55,8 +54,9 @@
 .picture--contain img {
   object-fit: contain;
 }
-.picture.is-loaded img {
-  opacity: 1;
+/* fade in only when JS can report the load — prerendered/no-JS pages show images at once */
+.js .picture:not(.is-loaded):not(.is-priority) img {
+  opacity: 0;
 }
 .picture.is-loaded::before {
   opacity: 0;

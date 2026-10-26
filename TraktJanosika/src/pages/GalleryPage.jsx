@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { format, localize, useLanguage } from "../i18n/context";
 import { availableCategories, buildGallery, filterGallery } from "../lib/gallery";
@@ -17,7 +17,11 @@ export default function GalleryPage() {
   const { t, lang } = useLanguage();
   const g = t.gallery;
   const [params, setParams] = useSearchParams();
-  const category = params.get("kategoria");
+  // ?kategoria= is applied after mount: /gallery is prerendered unfiltered,
+  // so the first client render must match it (no hydration mismatch)
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const category = mounted ? params.get("kategoria") : null;
   useDocumentMeta({ title: t.meta.galleryTitle, description: t.meta.galleryDescription, path: "/gallery" });
 
   const all = useMemo(() => buildGallery(lang), [lang]);
