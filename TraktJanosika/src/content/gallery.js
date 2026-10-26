@@ -22,6 +22,7 @@ export const CATEGORIES = [
 
 const render = (pl, en) => ({ pl: `${pl} — wizualizacja`, en: `${en} — visualisation` });
 const photo = (pl, en) => ({ pl: `${pl} — zdjęcie, wrzesień 2026`, en: `${en} — photo, September 2026` });
+const photoOct = (pl, en) => ({ pl: `${pl} — zdjęcie, październik 2026`, en: `${en} — photo, October 2026` });
 const photoUndated = (pl, en) => ({ pl: `${pl} — zdjęcie`, en: `${en} — photo` });
 
 export const GALLERY = [
@@ -59,6 +60,86 @@ export const GALLERY = [
     alt: photo("Elewacja domu z balkonem i kamienną podmurówką", "Façade with balcony and stone plinth"),
   },
 
+  {
+    id: "architecture-dach-szczyt-01",
+    category: "architecture",
+    alt: photoOct("Góralski szczyt dachu z drewnianym okapem", "Highlander roof gable with timber eaves"),
+  },
+
+  // ---------- Photos: interiors (October 2026, professional shoot) ----------
+  {
+    id: "interiors-salon-zyrandol-03",
+    category: "interiors",
+    featured: true,
+    alt: photoOct("Kryształowy żyrandol pod drewnianymi belkami stropu", "Crystal chandelier beneath timber ceiling beams"),
+  },
+  {
+    id: "interiors-lazienka-lustro-02",
+    category: "interiors",
+    featured: true,
+    alt: photoOct("Łazienka z podwójną umywalką, złotą armaturą i okrągłym podświetlanym lustrem", "Bathroom with double basin, brass taps and round backlit mirror"),
+  },
+  {
+    id: "interiors-schody-01",
+    category: "interiors",
+    alt: photoOct("Drewniane schody na poddasze", "Timber staircase to the attic"),
+  },
+  {
+    id: "interiors-salon-zyrandol-01",
+    category: "interiors",
+    alt: photoOct("Salon z drewnianymi belkami i kryształowym żyrandolem", "Living room with timber beams and crystal chandelier"),
+  },
+  {
+    id: "interiors-lazienka-lustro-01",
+    category: "interiors",
+    alt: photoOct("Okrągłe lustro z podświetleniem nad podwójną umywalką", "Round backlit mirror above a double basin"),
+  },
+  {
+    id: "interiors-lazienka-umywalka-kamien-01",
+    category: "interiors",
+    alt: photoOct("Łazienka z kamienną umywalką wolnostojącą i prysznicem", "Bathroom with freestanding stone basin and shower"),
+  },
+  {
+    id: "interiors-sufit-drewno-01",
+    category: "interiors",
+    alt: photoOct("Drewniany sufit i szklana lampa", "Timber ceiling and glass pendant light"),
+  },
+  {
+    id: "interiors-salon-zyrandol-02",
+    category: "interiors",
+    alt: photoOct("Żyrandol z kryształowych gałązek", "Chandelier of crystal branches"),
+  },
+  {
+    id: "interiors-lazienka-lustro-03",
+    category: "interiors",
+    alt: photoOct("Łazienka z podwójną umywalką i podświetlaną wnęką", "Bathroom with double basin and lit niche"),
+  },
+  {
+    id: "interiors-lazienka-umywalka-kamien-02",
+    category: "interiors",
+    alt: photoOct("Kamienna umywalka i czarna armatura", "Stone basin and black fittings"),
+  },
+  {
+    id: "interiors-pokoj-poddasze-01",
+    category: "interiors",
+    alt: photoOct("Pokój na poddaszu widziany przez drewnianą ościeżnicę", "Attic room seen through a timber door frame"),
+  },
+  {
+    id: "interiors-lazienka-lustro-04",
+    category: "interiors",
+    alt: photoOct("Podwójna umywalka i lustro z podświetleniem", "Double basin and backlit mirror"),
+  },
+  {
+    id: "interiors-lazienka-umywalka-kamien-03",
+    category: "interiors",
+    alt: photoOct("Łazienka z okrągłym lustrem i kamienną umywalką", "Bathroom with round mirror and stone basin"),
+  },
+  {
+    id: "interiors-schody-02",
+    category: "interiors",
+    alt: photoOct("Drewniane schody — widok z góry", "Timber staircase seen from above"),
+  },
+
   // ---------- Photos: interiors ----------
   {
     id: "interiors-lazienka-poddasze-01",
@@ -69,7 +150,6 @@ export const GALLERY = [
   {
     id: "interiors-kuchnia-01",
     category: "interiors",
-    featured: true,
     alt: photoUndated("Kuchnia z wyspą i drewnianym sufitem", "Kitchen with island and timber ceiling"),
   },
   {
@@ -121,7 +201,6 @@ export const GALLERY = [
     id: "h5",
     category: "architecture",
     render: true,
-    featured: true,
     alt: render("Wjazd na ogrodzone osiedle z kamiennym murem", "Gated entrance with a stone wall"),
   },
   {

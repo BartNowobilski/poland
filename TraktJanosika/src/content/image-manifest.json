@@ -1,6 +1,26 @@
 {
  "generated": "npm run images",
  "images": {
+  "architecture-dach-szczyt-01": {
+   "w": 4258,
+   "h": 6387,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAADwBgCdASoYACQAPu1urVKppiOipWsxMB2JYwDH5dwBQVXhnYUpQsLqrFbPwpHr5FNkVqoqYhWxY9koGJdMDoIAAN2Qwj9CU7XAUBcXBplqPn6rNGACwIw1xsvcSYSkBZMDwJam9wT0mvJSTHgwyonFWLW4Q+KE8SXpKu1iksadC38JKi2ZxJcbk4RzxOlXDbY40j6y6o+9NxRkm5pkmlO8labb+PSPf97vLQHVQCUaoh342Poq2VY7TbKWRURoLkibWgKiIgN9FtXm7yYtbY31h3UarhqPXK9nlc/ZPCzTmgyAAAA=",
+   "color": "#8898a8",
+   "category": "architecture",
+   "source": "photos/architecture/dach-szczyt-01.jpg",
+   "fingerprint": "1792990959484-5720401-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "240fb58e"
+  },
   "architecture-dom-zmierzch-01": {
    "w": 5712,
    "h": 4284,
@@ -259,6 +279,86 @@
    "fingerprint": "1792989270804-2169667-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
    "v": "1aa7cc7f"
   },
+  "interiors-lazienka-lustro-01": {
+   "w": 6888,
+   "h": 4592,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JYgCdDiAAHV7jxBuqXL4bpwAA/NMdImu/oVE9i9qDhFAFF7R88oeG1xskuCl3v5x0PTzdaMoc0Q0q33udi9VuoXAj+VmJb0FOyoWZ7q1jMpfhs41MvX1nBfN3jcILebgLuyZDAHJEAA==",
+   "color": "#a89878",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-lustro-01.jpg",
+   "fingerprint": "1792990959461-4086353-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "f0d472bc"
+  },
+  "interiors-lazienka-lustro-02": {
+   "w": 7008,
+   "h": 4672,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JQBOmUAA06lHlz1eEs/8d9sQA+RzVw/2FfyxFK+xD3LxjXnpTHNH0hX4xloehU6b81dvGfNFOqtaaEH5e8u6Sx3cU03gzWafAAGdhwWuHmNC4S9e/JRtrDViIkgrYo5qepUAA",
+   "color": "#988868",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-lustro-02.jpg",
+   "fingerprint": "1792990959463-4848401-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "a991a07e"
+  },
+  "interiors-lazienka-lustro-03": {
+   "w": 7008,
+   "h": 4672,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYwC06BkuXOeCJXR1q4AA/OgqcrJeOQwuVAj23iJQmK3kDLXZny0b4LkQro7oaFtfKF7FC1VFz7lNmslu9I4g40kqtk6QDlf8edg/4SAk+o8EXGG3c1bqwAAAAA==",
+   "color": "#988868",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-lustro-03.jpg",
+   "fingerprint": "1792990959466-4543589-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "9dabce08"
+  },
+  "interiors-lazienka-lustro-04": {
+   "w": 6760,
+   "h": 4507,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JYgCdABBNeuAmY/3oggAA/dH+W5X7Z6aA5Fjk7+dnx8mz1fOEXEj0QewmAGGt7OsTP4SeSXy8pZTbZ+bFuJ0ZdGaXhw+R0BRYK7C42/w/eFJt55YiG+AA",
+   "color": "#b8a898",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-lustro-04.jpg",
+   "fingerprint": "1792990959468-3541205-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "43b943ba"
+  },
   "interiors-lazienka-poddasze-01": {
    "w": 1278,
    "h": 1230,
@@ -357,6 +457,66 @@
    "fingerprint": "1792989110436-4044840-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
    "v": "a36a9ee3"
   },
+  "interiors-lazienka-umywalka-kamien-01": {
+   "w": 4648,
+   "h": 6972,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAAAQBgCdASoYACQAPu1cqE2ppKOiNVgIATAdiWMArAAW6ZlaX8Ed/xsS+ce2Dl9P5A1l3qD/4vFxp4AA8nRyN5aVDyp2UXe/QOn53ju6eZyMnnJooLK7ZiT4AWUgW+1cxt6EvaNEkAHS2Qt3CarOXry80Jb5QCznSHyqxrdBeFQnUeTM7OSMKtOka5TQ05nZxHsym85CN1OfEEOxtebpXGN+yH0CuMlPvzoEfhAcv/FuDgHDDiuHb9xEdmgkhK6J4hmlRIKKBdq0gyuue/OkAA==",
+   "color": "#b8b8a8",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-umywalka-kamien-01.jpg",
+   "fingerprint": "1792990959477-4889006-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "c6ab005b"
+  },
+  "interiors-lazienka-umywalka-kamien-02": {
+   "w": 4449,
+   "h": 6673,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAAAQBgCdASoYACQAPulcp02pJKOiMBqtUSAdCWMAxQtVwZrAXdoMGG2996ksNGkThameLKCXJQZuLQAA/ILKN6o4LCGhv213Gx0nXE4h7j9r6rpD8Hs0d4zlV9gqjzJPxBQFPH184UIKbJSIZk9POiJslzTMYdBEgFwWpXqJq5QSVA7p8KOFXDHO5v7njCMqI59Bh0HICPj/py8ktzlMwoBEH5yc9Vjgr/AhqE44ofpfIDxoEnScRZs3Ya6YYgkzxwAAAA==",
+   "color": "#b8a898",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-umywalka-kamien-02.jpg",
+   "fingerprint": "1792990959479-4120572-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1bb98396"
+  },
+  "interiors-lazienka-umywalka-kamien-03": {
+   "w": 4609,
+   "h": 6914,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABwBgCdASoYACQAPu1ur1IppiQiqrgIATAdiWMArDPDAxuaignZV4iCSCiGC1dZBxWnzMY66mQPX7jQNOAA+TB7GuBsJSrN9aB6ec5+JiRhZ7DQEktdnBa9KItwta+1hUVkGd40V4Xsl5HlUD32lxjm4OjmnL/UIXmUxR32zOMjOBJsfY9zb3HCyqFIaBik9rmjNXTY3MSYYId/w4V3kA5UKrqyLU837BXwp5h4/r4cpYF6ZgkSNn5J/OTk2yxOGgmLvG7cI9euYsNcFMaqLE6zb1x5M9N9mDCNmLCQMwAAAA==",
+   "color": "#b8b8a8",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-umywalka-kamien-03.jpg",
+   "fingerprint": "1792990959481-4485250-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "4686f960"
+  },
   "interiors-lazienka-wanna-01": {
    "w": 4284,
    "h": 5712,
@@ -376,6 +536,26 @@
    "source": "photos/interiors/lazienka-wanna-01.jpg",
    "fingerprint": "1792989110438-6716435-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
    "v": "564a805a"
+  },
+  "interiors-pokoj-poddasze-01": {
+   "w": 4405,
+   "h": 6607,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACwBgCdASoYACQAPu1ksFEppSSiqrgKATAdiUATpBxf//P/RAABtm8zdplLIPEeOSUxbd9R17FMoLW1t9dTQAD+0EXKnV1x8dQjdimowpX82f/VUVe5ZQpOkGWsVsHa+7THDHHbr25vGEp2R9YZBE+2xH6122DKqaTVGmqGjcBfDCl4f2hGrFeCNIzxbw1Sgzvs5Q3W3Uyv60bFyhhs6XZUx2qC7CGPRsiC7PmjLBWkXGRx34Be28DFV7wzB7vMTG8OatDysLQqTnVW9zPAAA==",
+   "color": "#b8b8a8",
+   "category": "interiors",
+   "source": "photos/interiors/pokoj-poddasze-01.jpg",
+   "fingerprint": "1792990959459-4798140-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "d6b1ab56"
   },
   "interiors-salon-01": {
    "w": 1448,
@@ -413,6 +593,126 @@
    "source": "photos/interiors/salon-kominek-01.png",
    "fingerprint": "1792989270814-2015949-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
    "v": "1ef7428b"
+  },
+  "interiors-salon-zyrandol-01": {
+   "w": 6761,
+   "h": 4507,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPu1iqU2ppaQiMAgBMB2JYwCdABu2RrbbwH9xdiZBwAD+n8iQkZiAKecLMdhHwrRRjqLNjCT7gx0/C56+4ikC2S26z0SsFnL+2tjssiP4ZTbv5SU70xqKFBynE3wAAA==",
+   "color": "#787868",
+   "category": "interiors",
+   "source": "photos/interiors/salon-zyrandol-01.jpg",
+   "fingerprint": "1792990959470-4549017-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1ceeca82"
+  },
+  "interiors-salon-zyrandol-02": {
+   "w": 4623,
+   "h": 6934,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBQCdASoYACQAPulgpk2pJaOiNVgIASAdCWUAvVgWhR+kRv+Uw9AwEX9fcPvuT655IKfQAP6jYEdJkpF9yA1OCNh7j+VJ717H0/pumxp6xxAt3nxxhJuV6TXqokZ7ExIF//qW8hLpaTfssQKywlPB7nciMQAA",
+   "color": "#a8a8a8",
+   "category": "interiors",
+   "source": "photos/interiors/salon-zyrandol-02.jpg",
+   "fingerprint": "1792990959472-4555952-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "6b3f503b"
+  },
+  "interiors-salon-zyrandol-03": {
+   "w": 6197,
+   "h": 4131,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPu1oqk6ppiQiMAgBMB2JYwCdACIEvaK8//N71ZLdbyAAywPXftj7XWdJ2W5wiJ8aLDIecNwkjNevZ8Qq57P/LLIb4kujGz5F5BMw8ibuuzJE6rr2fymzPUyMR5ae8CJgwcLIpZAA",
+   "color": "#989888",
+   "category": "interiors",
+   "source": "photos/interiors/salon-zyrandol-03.jpg",
+   "fingerprint": "1792990959474-4010059-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "183d19a2"
+  },
+  "interiors-schody-01": {
+   "w": 4672,
+   "h": 7008,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABwBgCdASoYACQAPu1mrE8ppaQiJW5hMB2JYwDHMETFZP54Sm95SvRGkYReHw8yC0v/9nZsIZ3AsCyI9aAA/u1G4wpN5UaGhswk4Yx+tiFsNaIqOsYFryYOnfArmnH+83OuaOrXNEVsubcEhr0OoVJMy9Pco2nCQXQBpNXKc3vpO0L+29Ll9qxB6UZzcbozXpvCDDUDTjUtV05dciWFj+OAgtXCCs+VT1dcxYvcw0YAAA==",
+   "color": "#c8c8c8",
+   "category": "interiors",
+   "source": "photos/interiors/schody-01.jpg",
+   "fingerprint": "1792990959453-3770866-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "9cdbc63b"
+  },
+  "interiors-schody-02": {
+   "w": 4638,
+   "h": 6957,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAADQBgCdASoYACQAPuVgqk2pJaQiMAqpIByJYgCsM4PBdssgwBraI9KZ14+lIpeH6qd0eHQzeZzcxw871C1Vz4AA/iCg60DBGDoThYzeptWNWBEnV7rXd3ipdTqQuka00UdXVjC+ByhpS8CX3v495oFWEOZukkiW9TvvOLYVYzx2HWmMI5kDfi/P17JkqUQsxf3dKjudvw33NRdHBKhPre+JpK/pf5sTDIe17IKwu3xU1AQBH+kGe7CLSELCU3i0cZbcyAPS+0hFhF9ISuIs4IrwtQbNLmob5cAicXxiXL8cYz+qoNN0gv2eGkAAAA==",
+   "color": "#886848",
+   "category": "interiors",
+   "source": "photos/interiors/schody-02.jpg",
+   "fingerprint": "1792990959450-6097996-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "78574e99"
+  },
+  "interiors-sufit-drewno-01": {
+   "w": 4521,
+   "h": 6781,
+   "widths": [
+    640,
+    1280,
+    1920,
+    2560
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBQCdASoYACQAPu1ep0+ppKMiMBVdUTAdiWUAwzQLQiZ00MKefQtAaf3h/jqTLaXJFAAA/qHeXiNbcMicPINXOOIyGQ9E4HQfGUQhhxDZCO4Va9eBB38xwoRfyTxrZtn9xylPhczaNbUQ91SnKrkai73EpUAk8GARDzOwi7q1aJY4pBCCAUM21uVrtSx6awMAAA==",
+   "color": "#a8a898",
+   "category": "interiors",
+   "source": "photos/interiors/sufit-drewno-01.jpg",
+   "fingerprint": "1792990959456-6594755-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "fdf79150"
   },
   "pano1": {
    "w": 3072,
