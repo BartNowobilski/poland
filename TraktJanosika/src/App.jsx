@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
-import Gallery from "./Gallery";
+import GalleryPage from "./pages/GalleryPage";
 
 // Design-system reference page, compiled out of production builds.
 const Styleguide = import.meta.env.DEV ? lazy(() => import("./pages/Styleguide")) : null;
@@ -18,7 +18,7 @@ export default function App() {
       <main id="main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           {Styleguide && (
             <Route
               path="/styleguide"

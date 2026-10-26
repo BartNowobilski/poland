@@ -18,15 +18,23 @@ export default function Reveal({
   className,
   style,
   children,
+  ref: externalRef,
   ...rest
 }) {
   const ref = useRef(null);
 
   useEffect(() => observeReveal(ref.current), []);
 
+  // React 19 passes `ref` as a prop — merge it with the internal one
+  const setRef = (node) => {
+    ref.current = node;
+    if (typeof externalRef === "function") externalRef(node);
+    else if (externalRef) externalRef.current = node;
+  };
+
   return (
     <Tag
-      ref={ref}
+      ref={setRef}
       data-reveal={variant}
       className={className}
       style={delay ? { ...style, "--reveal-delay": `${delay}ms` } : style}

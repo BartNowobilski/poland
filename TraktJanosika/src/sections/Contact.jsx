@@ -1,8 +1,10 @@
+import { useEffect, useRef, useState } from "react";
 import { format, localize, useLanguage } from "../i18n/context";
 import { IMAGES } from "../content/images";
 import { RESIDENCES } from "../content/residences";
 import { SITE, telHref } from "../content/site";
 import { useInquiry } from "../lib/useInquiry";
+import { INQUIRE_EVENT } from "../lib/inquiry";
 import { Section } from "../components/layout/Section";
 import Reveal from "../components/motion/Reveal";
 import Picture from "../components/media/Picture";
@@ -17,6 +19,24 @@ export default function Contact() {
   const c = t.contact;
   const { status, submit } = useInquiry();
   const { contact, address, maps, dataController } = SITE;
+  const [interest, setInterest] = useState("");
+  const formRef = useRef(null);
+
+  // the form resets itself on success; keep the controlled select in sync
+  useEffect(() => {
+    if (status === "success") setInterest("");
+  }, [status]);
+
+  // "Ask about this home" buttons pre-select the residence
+  useEffect(() => {
+    const onInquire = (e) => {
+      const r = RESIDENCES.find((x) => x.id === e.detail?.residenceId);
+      if (r) setInterest(r.label.pl);
+      window.setTimeout(() => formRef.current?.querySelector("input")?.focus({ preventScroll: true }), 700);
+    };
+    window.addEventListener(INQUIRE_EVENT, onInquire);
+    return () => window.removeEventListener(INQUIRE_EVENT, onInquire);
+  }, []);
 
   const controller = dataController.name
     ? [dataController.name, dataController.address, dataController.nip && `NIP ${dataController.nip}`]
@@ -90,7 +110,13 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        <Reveal as="form" onSubmit={submit} className="contact__form" autoComplete="on">
+        <Reveal
+          as="form"
+          ref={formRef}
+          onSubmit={submit}
+          className="contact__form"
+          autoComplete="on"
+        >
           <div className="contact__row">
             <Field label={c.firstName} name="firstName" autoComplete="given-name" required />
             <Field label={c.lastName} name="lastName" autoComplete="family-name" required />
@@ -99,7 +125,13 @@ export default function Contact() {
             <Field label={c.email} name="email" type="email" autoComplete="email" inputMode="email" required />
             <Field label={c.phone} name="phone" type="tel" autoComplete="tel" inputMode="tel" />
           </div>
-          <Field label={c.interest} name="interest" as="select" defaultValue="">
+          <Field
+            label={c.interest}
+            name="interest"
+            as="select"
+            value={interest}
+            onChange={(e) => setInterest(e.target.value)}
+          >
             <option value="">{c.interestGeneral}</option>
             {RESIDENCES.map((r) => (
               <option key={r.id} value={r.label.pl}>

@@ -16,6 +16,9 @@ const pl = {
     label: "Nawigacja główna",
     about: "O inwestycji",
     architecture: "Architektura",
+    homes: "Domy",
+    masterplan: "Masterplan",
+    progress: "Postęp budowy",
     location: "Lokalizacja",
     story: "Nasze korzenie",
     gallery: "Galeria",
@@ -202,11 +205,64 @@ const pl = {
     imageAlt: "Dom w stylu góralskim od strony ogrodu",
   },
 
+  residences: {
+    eyebrow: "Domy",
+    title: "Osiem domów, *każdy własny*", // DRAFT
+    lead: "Każdy dom stoi na prywatnej działce z własnym, niezależnym wjazdem. Szczegółowe metraże, rzuty i dostępność poszczególnych domów opublikujemy wkrótce — zapytaj, a prześlemy aktualne informacje.", // DRAFT (facts from Masterplan copy)
+    listLabel: "Lista domów",
+    floorArea: "Powierzchnia domu",
+    plotArea: "Powierzchnia działki",
+    bedrooms: "Sypialnie",
+    bathrooms: "Łazienki",
+    tbc: "do potwierdzenia",
+    status: {
+      available: "Dostępny",
+      reserved: "Rezerwacja",
+      sold: "Sprzedany",
+      unknown: "Zapytaj o dostępność",
+    },
+    details: "Szczegóły",
+    inquire: "Zapytaj o ten dom",
+    floorPlans: "Rzuty",
+    gallery: "Galeria",
+    specs: "Specyfikacja",
+    close: "Zamknij",
+    imageAlt: "Domy Trakt Janosika — wizualizacja osiedla",
+  },
+
+  progress: {
+    eyebrow: "Postęp budowy",
+    title: "Dom po domu, *etap po etapie*", // DRAFT
+    lead: "Śledź postęp prac na Trakcie Janosika — od fundamentów po wykończenie.", // DRAFT
+    emptyTitle: "Pierwsza relacja z budowy już wkrótce",
+    emptyText: "Inwestycja jest obecnie w trakcie budowy. Niedługo opublikujemy tu zdjęcia i opisy kolejnych etapów prac.",
+    subscribe: "Zapisz się na aktualizacje",
+    milestone: "Kamień milowy",
+    showOlder: "Pokaż starsze wpisy",
+    photos: "Zdjęcia: {n}",
+    openPhoto: "Powiększ zdjęcie: {alt}",
+  },
+
+  galleryPreview: {
+    eyebrow: "Galeria",
+    title: "Zobacz *Trakt Janosika*", // DRAFT
+    lead: "Architektura, wnętrza i krajobraz Podhala — w wizualizacjach, a wkrótce także na zdjęciach z budowy.", // DRAFT
+    cta: "Zobacz całą galerię",
+  },
+
   gallery: {
     title: "Galeria",
-    interior: "Wnętrza",
-    exterior: "Zewnętrze",
-    imageAlt: "{category} — wizualizacja {n}",
+    lead: "Wizualizacje architektury i wnętrz, okolica oraz zdjęcia z postępu prac.", // DRAFT
+    all: "Wszystkie",
+    filterLabel: "Filtruj według kategorii",
+    showMore: "Pokaż więcej",
+    count: "Zdjęcia: {n}",
+    open: "Powiększ: {alt}",
+    close: "Zamknij galerię",
+    prev: "Poprzednie zdjęcie",
+    next: "Następne zdjęcie",
+    lightboxLabel: "Galeria zdjęć",
+    empty: "Brak zdjęć w tej kategorii.",
   },
 
   footer: {

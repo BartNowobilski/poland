@@ -39,15 +39,14 @@ export default function Masterplan() {
         </Reveal>
       </div>
 
-      {/* anchor kept as #homes for links to the former 360° section */}
-      <div id="homes" className="container estate__pano">
+      <div id="panorama" className="container estate__pano">
         <Reveal variant="fade">
           <h3 className="eyebrow eyebrow--bare estate__pano-title">{t.panorama.title}</h3>
         </Reveal>
         <Reveal variant="fade" delay={100}>
           <Panorama
             src={IMAGES.panorama.src}
-            poster={IMAGES.panorama.src}
+            poster={IMAGES.panoramaPoster?.src}
             label={t.panorama.viewerLabel}
             activateLabel={t.panorama.activate}
             hint={t.panorama.hint}

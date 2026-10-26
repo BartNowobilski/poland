@@ -1,0 +1,238 @@
+.residences__head {
+  display: grid;
+  gap: var(--space-7) var(--grid-gap);
+  align-items: center;
+  margin-bottom: clamp(3rem, 2rem + 4vw, 6rem);
+}
+@media (min-width: 960px) {
+  .residences__head {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+.residences__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+/* ---------- Cards ---------- */
+.residences__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
+}
+@media (min-width: 1100px) {
+  .residences__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.residence {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  background: var(--c-paper);
+  border: 1px solid var(--line);
+  transition:
+    transform var(--dur-slow) var(--ease-cinematic),
+    box-shadow var(--dur-slow) var(--ease-cinematic),
+    border-color var(--dur);
+}
+@media (hover: hover) {
+  .residence:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+    border-color: transparent;
+  }
+}
+.residence.is-sold {
+  opacity: 0.7;
+}
+.residence__cover {
+  margin: calc(var(--space-6) * -1) calc(var(--space-5) * -1) 0;
+  overflow: hidden;
+}
+.residence__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.residence__num {
+  font-size: clamp(2.75rem, 2rem + 2vw, 3.75rem);
+  line-height: 0.9;
+  font-weight: 400;
+  color: var(--c-gold);
+}
+.residence__title {
+  margin-top: calc(var(--space-2) * -1);
+}
+.residence__specs {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.residence__specs div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-small);
+}
+.residence__specs dt {
+  color: var(--text-muted);
+}
+.residence__specs dd {
+  margin: 0;
+  font-weight: 500;
+}
+.residence__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* ---------- Status pill ---------- */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-soft);
+}
+.status::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--c-linen);
+}
+.status--available::before { background: #5f7d5a; }
+.status--reserved::before { background: var(--c-gold); }
+.status--sold::before { background: #9a3b2a; }
+
+/* ---------- Details dialog ---------- */
+.rdialog {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-lightbox) - 10);
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+}
+.rdialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 15, 0.6);
+  backdrop-filter: blur(4px);
+  animation: lightbox-in var(--dur) var(--ease-out);
+}
+.rdialog__panel {
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+  width: min(100%, 860px);
+  max-height: calc(100dvh - 2 * var(--space-4));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  background: var(--c-ivory);
+  box-shadow: var(--shadow-lift);
+  animation: rdialog-in var(--dur-slow) var(--ease-cinematic);
+}
+@keyframes rdialog-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.rdialog__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.rdialog__head .h2 {
+  margin-top: var(--space-3);
+}
+.rdialog__close {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+}
+.rdialog__close .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.rdialog__specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0 var(--space-5);
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.rdialog__specs div {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+.rdialog__specs dt {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.rdialog__specs dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.5rem;
+}
+.rdialog__group {
+  display: grid;
+  gap: var(--space-4);
+}
+.rdialog__media {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: var(--space-3);
+}
+.rdialog__media button {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.rdialog__media .is-plan .picture {
+  background: #fff;
+}
+
+/* phones: swipeable row of cards instead of a long stack */
+@media (max-width: 599px) {
+  .residences__list {
+    display: flex;
+    gap: var(--space-3);
+    margin-inline: calc(var(--gutter) * -1);
+    padding: var(--space-2) var(--gutter) var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .residences__list::-webkit-scrollbar {
+    display: none;
+  }
+  .residence {
+    flex: 0 0 min(82%, 20rem);
+    scroll-snap-align: start;
+  }
+}

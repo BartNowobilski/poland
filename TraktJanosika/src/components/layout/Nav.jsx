@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useLanguage } from "../../i18n/context";
-import { CONTACT_HASH, NAV_ITEMS } from "../../content/navigation";
+import { CONTACT_HASH, PRIMARY_NAV } from "../../content/navigation";
 import { SITE } from "../../content/site";
 import { useSectionLink } from "../../lib/useSectionLink";
+import { useModal } from "../../lib/useModal";
 import Button from "../ui/Button";
 import { CloseIcon } from "../ui/Icon";
 import LangSwitch from "./LangSwitch";
@@ -43,7 +44,6 @@ export default function Nav({ overlay = false }) {
   const go = useSectionLink();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const burgerRef = useRef(null);
   const menuRef = useRef(null);
 
   // compact/solid header after scrolling
@@ -64,27 +64,11 @@ export default function Nav({ overlay = false }) {
   // close the menu on route change
   useEffect(() => setOpen(false), [pathname]);
 
-  // mobile menu: scroll lock, Escape to close, focus management
-  useEffect(() => {
-    if (!open) return;
-    const burger = burgerRef.current;
-    // keep keyboard focus inside the dialog
-    const background = document.querySelectorAll(".nav, #main, .footer");
-    background.forEach((el) => (el.inert = true));
-    document.body.classList.add("is-locked");
-    menuRef.current?.querySelector(".menu__close")?.focus();
-    const onKey = (e) => e.key === "Escape" && setOpen(false);
-    window.addEventListener("keydown", onKey);
-    return () => {
-      background.forEach((el) => (el.inert = false));
-      document.body.classList.remove("is-locked");
-      window.removeEventListener("keydown", onKey);
-      burger?.focus();
-    };
-  }, [open]);
+  // mobile menu: inert background, scroll lock, Escape, focus in/out
+  const close = useCallback(() => setOpen(false), []);
+  useModal(menuRef, open, close, { initialFocus: ".menu__close" });
 
   const isOverlay = overlay && !scrolled;
-  const close = () => setOpen(false);
 
   return (
     <>
@@ -113,7 +97,7 @@ export default function Nav({ overlay = false }) {
 
           <nav className="nav__links" aria-label={t.nav.label}>
             <ul role="list">
-              {NAV_ITEMS.map((item) => (
+              {PRIMARY_NAV.map((item) => (
                 <li key={item.label}>
                   <NavItem item={item} t={t} go={go} className="nav__link" />
                 </li>
@@ -133,7 +117,6 @@ export default function Nav({ overlay = false }) {
               {t.nav.contactCta}
             </Button>
             <button
-              ref={burgerRef}
               type="button"
               className="nav__burger"
               aria-expanded={open}
@@ -174,15 +157,15 @@ export default function Nav({ overlay = false }) {
 
         <nav className="menu__body container" aria-label={t.nav.label}>
           <ol role="list" className="menu__list">
-            {NAV_ITEMS.map((item, i) => (
+            {PRIMARY_NAV.map((item, i) => (
               <li key={item.label} style={{ "--i": i }}>
                 <span className="menu__num numeral">{String(i + 1).padStart(2, "0")}</span>
                 <NavItem item={item} t={t} go={go} onNavigate={close} className="menu__link" />
               </li>
             ))}
-            <li style={{ "--i": NAV_ITEMS.length }}>
+            <li style={{ "--i": PRIMARY_NAV.length }}>
               <span className="menu__num numeral">
-                {String(NAV_ITEMS.length + 1).padStart(2, "0")}
+                {String(PRIMARY_NAV.length + 1).padStart(2, "0")}
               </span>
               <NavItem
                 item={{ label: "contact", hash: CONTACT_HASH }}

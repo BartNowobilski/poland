@@ -15,6 +15,9 @@ const en = {
     label: "Main navigation",
     about: "About",
     architecture: "Architecture",
+    homes: "Homes",
+    masterplan: "Masterplan",
+    progress: "Construction",
     location: "Location",
     story: "Our Roots",
     gallery: "Gallery",
@@ -200,11 +203,64 @@ const en = {
     imageAlt: "The garden side of a Highlander-style home",
   },
 
+  residences: {
+    eyebrow: "The Homes",
+    title: "Eight homes, *each its own*", // DRAFT
+    lead: "Every home stands on its own private plot with dedicated access. Detailed floor areas, plans and availability for each home will be published soon — ask us and we’ll send the latest information.", // DRAFT (facts from Masterplan copy)
+    listLabel: "List of homes",
+    floorArea: "Floor area",
+    plotArea: "Plot area",
+    bedrooms: "Bedrooms",
+    bathrooms: "Bathrooms",
+    tbc: "to be confirmed",
+    status: {
+      available: "Available",
+      reserved: "Reserved",
+      sold: "Sold",
+      unknown: "Ask about availability",
+    },
+    details: "Details",
+    inquire: "Ask about this home",
+    floorPlans: "Floor plans",
+    gallery: "Gallery",
+    specs: "Specification",
+    close: "Close",
+    imageAlt: "Trakt Janosika homes — visualisation of the estate",
+  },
+
+  progress: {
+    eyebrow: "Construction",
+    title: "Home by home, *stage by stage*", // DRAFT
+    lead: "Follow the progress at Trakt Janosika — from foundations to finishing.", // DRAFT
+    emptyTitle: "First construction update coming soon",
+    emptyText: "Trakt Janosika is currently under active construction. Photos and notes from each stage of the works will be published here shortly.",
+    subscribe: "Get construction updates",
+    milestone: "Milestone",
+    showOlder: "Show older updates",
+    photos: "Photos: {n}",
+    openPhoto: "Enlarge photo: {alt}",
+  },
+
+  galleryPreview: {
+    eyebrow: "Gallery",
+    title: "See *Trakt Janosika*", // DRAFT
+    lead: "Architecture, interiors and the Podhale landscape — in visualisations, and soon in photographs from the site.", // DRAFT
+    cta: "View the full gallery",
+  },
+
   gallery: {
     title: "Gallery",
-    interior: "Interior",
-    exterior: "Exterior",
-    imageAlt: "{category} — visualisation {n}",
+    lead: "Architectural and interior visualisations, the surroundings and construction progress.", // DRAFT
+    all: "All",
+    filterLabel: "Filter by category",
+    showMore: "Show more",
+    count: "Photos: {n}",
+    open: "Enlarge: {alt}",
+    close: "Close gallery",
+    prev: "Previous photo",
+    next: "Next photo",
+    lightboxLabel: "Photo gallery",
+    empty: "No photos in this category.",
   },
 
   footer: {

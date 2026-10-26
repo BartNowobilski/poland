@@ -138,3 +138,14 @@
 .btn--block {
   width: 100%;
 }
+
+/* small screens: long labels wrap instead of widening the page */
+.btn {
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+}
