@@ -1,28 +1,29 @@
 /* =========================================================
-   Named images used by homepage sections.
-   Interim registry: points at the original files in /public.
-   Phase 4 replaces `src` with optimised AVIF/WebP derivatives
-   from the generated manifest — section code won't change.
+   Named images used by homepage sections, resolved from the
+   generated manifest (AVIF + JPEG fallback, several widths).
    `position` = focal point used when the image is cropped.
+   To swap an image, change its id here (ids = file names,
+   lower-case; see README → "Images").
    ========================================================= */
-
-const img = (src, width, height, position) => ({ src, width, height, position });
+import { getImage } from "../lib/images";
 
 export const IMAGES = {
   // Exterior visualisations
-  aerial: img("/bialka.jpg", 4032, 2268, "50% 60%"),
-  gate: img("/h5.jpg", 3840, 2560, "40% 60%"),
-  houseCorner: img("/h2.jpg", 3840, 2560, "60% 55%"),
-  houseFront: img("/h3.jpg", 3840, 2560, "50% 45%"),
-  houseGarden: img("/h4.jpg", 3840, 2560, "45% 50%"),
+  aerial: getImage("bialka", { position: "50% 60%" }),
+  gate: getImage("h5", { position: "40% 60%" }),
+  houseCorner: getImage("h2", { position: "60% 55%" }),
+  houseFront: getImage("h3", { position: "50% 45%" }),
+  houseGarden: getImage("h4", { position: "45% 50%" }),
 
   // Interior visualisations (example arrangements)
-  hall: img("/S1.jpg", 1600, 1600, "50% 50%"),
-  living: img("/S9.jpg", 1600, 1600, "50% 55%"),
-  dining: img("/S5.jpg", 1600, 1600, "50% 55%"),
-  carvedRosette: img("/S19.jpg", 1600, 1600, "50% 30%"),
-  carvedMirror: img("/S29c.jpg", 1600, 1600, "50% 35%"),
-  bedroom: img("/S25.jpg", 1600, 1600, "50% 60%"),
+  hall: getImage("s1"),
+  living: getImage("s9", { position: "50% 55%" }),
+  dining: getImage("s5", { position: "50% 55%" }),
+  carvedRosette: getImage("s19", { position: "50% 30%" }),
+  carvedMirror: getImage("s29c", { position: "50% 35%" }),
+  bedroom: getImage("s25", { position: "50% 60%" }),
 
-  panorama: img("/pano1.jpeg", 3072, 2048),
+  // 360° viewer needs the full-resolution equirectangular original
+  panorama: { src: "/pano1.jpeg", width: 3072, height: 2048 },
+  panoramaPoster: getImage("pano1"),
 };

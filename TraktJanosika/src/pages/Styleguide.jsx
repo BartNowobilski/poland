@@ -6,6 +6,7 @@ import Picture from "../components/media/Picture";
 import Button from "../components/ui/Button";
 import Field from "../components/ui/Field";
 import * as Icons from "../components/ui/Icon";
+import { getImage } from "../lib/images";
 
 const SWATCHES = [
   ["--c-ivory", "Ivory"],
@@ -117,9 +118,9 @@ export default function Styleguide() {
         <div className="container" style={box}>
           <h2 className="eyebrow">Images & motion</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1rem" }}>
-            <Reveal variant="mask"><Picture image="/h2.jpg" ratio="4 / 5" alt="" /></Reveal>
-            <Reveal variant="zoom"><Picture image="/h3.jpg" ratio="4 / 5" alt="" /></Reveal>
-            <Reveal variant="up" delay={150} className="zoom-on-hover"><Picture image="/S1.jpg" ratio="4 / 5" alt="" /></Reveal>
+            <Reveal variant="mask"><Picture image={getImage("h2")} ratio="4 / 5" alt="" /></Reveal>
+            <Reveal variant="zoom"><Picture image={getImage("h3")} ratio="4 / 5" alt="" /></Reveal>
+            <Reveal variant="up" delay={150} className="zoom-on-hover"><Picture image={getImage("s1")} ratio="4 / 5" alt="" /></Reveal>
           </div>
           <p className="small">mask · zoom · up + hover-zoom</p>
         </div>
