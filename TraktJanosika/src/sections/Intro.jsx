@@ -50,7 +50,7 @@ export default function Intro() {
           </Reveal>
           <Reveal variant="mask" delay={250} className="intro__detail">
             <Picture
-              image={IMAGES.bathVanity}
+              image={IMAGES.living}
               ratio="1 / 1"
               alt={about.detailAlt}
               sizes="(min-width: 960px) 20vw, 45vw"

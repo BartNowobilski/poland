@@ -22,6 +22,7 @@ export const CATEGORIES = [
 
 const render = (pl, en) => ({ pl: `${pl} — wizualizacja`, en: `${en} — visualisation` });
 const photo = (pl, en) => ({ pl: `${pl} — zdjęcie, wrzesień 2026`, en: `${en} — photo, September 2026` });
+const photoUndated = (pl, en) => ({ pl: `${pl} — zdjęcie`, en: `${en} — photo` });
 
 export const GALLERY = [
   // ---------- Photos: exteriors (September 2026) ----------
@@ -58,17 +59,38 @@ export const GALLERY = [
     alt: photo("Elewacja domu z balkonem i kamienną podmurówką", "Façade with balcony and stone plinth"),
   },
 
-  // ---------- Photos: interiors (September 2026) ----------
+  // ---------- Photos: interiors ----------
+  {
+    id: "interiors-lazienka-poddasze-01",
+    category: "interiors",
+    featured: true,
+    alt: photoUndated("Łazienka na poddaszu z wanną wolnostojącą i drewnianymi ramami okien", "Attic bathroom with freestanding bath and timber window frames"),
+  },
+  {
+    id: "interiors-kuchnia-01",
+    category: "interiors",
+    featured: true,
+    alt: photoUndated("Kuchnia z wyspą i drewnianym sufitem", "Kitchen with island and timber ceiling"),
+  },
+  {
+    id: "interiors-salon-01",
+    category: "interiors",
+    featured: true,
+    alt: photoUndated("Salon z kominkiem, drewnianymi belkami i żyrandolem", "Living room with fireplace, timber beams and chandelier"),
+  },
+  {
+    id: "interiors-salon-kominek-01",
+    category: "interiors",
+    alt: photoUndated("Ściana z kominkiem pod wysokim sufitem z belkami", "Fireplace wall under a high beamed ceiling"),
+  },
   {
     id: "interiors-lazienka-umywalka-02",
     category: "interiors",
-    featured: true,
     alt: photo("Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem", "Bathroom with double basin and round backlit mirror"),
   },
   {
     id: "interiors-lazienka-wanna-01",
     category: "interiors",
-    featured: true,
     alt: photo("Łazienka na poddaszu z wanną i drewnianym sufitem", "Attic bathroom with bathtub and timber ceiling"),
   },
   {

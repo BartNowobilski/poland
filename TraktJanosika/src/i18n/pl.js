@@ -84,7 +84,7 @@ const pl = {
       },
     ],
     imageAlt: "Wjazd na ogrodzone osiedle Trakt Janosika z kamiennym murem i tablicą z nazwą",
-    detailAlt: "Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem — zdjęcie wnętrza",
+    detailAlt: "Salon z kominkiem, drewnianymi belkami i żyrandolem — zdjęcie wnętrza",
   },
 
   architecture: {
@@ -113,14 +113,14 @@ const pl = {
     interiorsTitle: "Wnętrza z *duszą*", // DRAFT
     interiorsText:
       "Naturalne materiały, regionalne wzornictwo i nowoczesne, energooszczędne rozwiązania — rzemiosło obecne w codziennym życiu domu.", // DRAFT (reuses claims from "Nasze korzenie")
-    interiorsNote: "Zdjęcia z wnętrz domów Trakt Janosika, wrzesień 2026.",
+    interiorsNote: "Zdjęcia z wnętrz domów Trakt Janosika.",
     alts: {
       wide: "Dom w stylu góralskim ze stromym dachem, kamienną podmurówką i balkonem",
       front: "Fasada domu z wysokim szczytem i dużymi przeszkleniami",
       garden: "Dom od strony ogrodu — kamień, drewno i taras",
-      bathTub: "Łazienka na poddaszu z wanną i drewnianym sufitem",
-      bathVanity: "Łazienka z podwójną umywalką i okrągłym podświetlanym lustrem",
-      bathShower: "Łazienka z prysznicem i wolnostojącą umywalką",
+      livingFireplace: "Ściana z kominkiem i drewnianymi belkami pod wysokim sufitem",
+      atticBath: "Łazienka na poddaszu z wanną wolnostojącą i drewnianymi ramami okien",
+      kitchen: "Kuchnia z wyspą i drewnianym sufitem",
     },
   },
 

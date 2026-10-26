@@ -83,7 +83,7 @@ const en = {
       },
     ],
     imageAlt: "Entrance to the gated Trakt Janosika estate with a stone wall and name plaque",
-    detailAlt: "Bathroom with double basin and round backlit mirror — interior photo",
+    detailAlt: "Living room with fireplace, timber beams and chandelier — interior photo",
   },
 
   architecture: {
@@ -112,14 +112,14 @@ const en = {
     interiorsTitle: "Interiors with *soul*", // DRAFT
     interiorsText:
       "Natural materials, regional artistry and modern energy-efficient technologies — craftsmanship that is part of everyday life at home.", // DRAFT (reuses claims from "Our Roots")
-    interiorsNote: "Photos from inside the Trakt Janosika homes, September 2026.",
+    interiorsNote: "Photos from inside the Trakt Janosika homes.",
     alts: {
       wide: "Highlander-style home with a steep roof, stone plinth and balcony",
       front: "House façade with a tall gable and large windows",
       garden: "The garden side of a home — stone, timber and terrace",
-      bathTub: "Attic bathroom with bathtub and timber ceiling",
-      bathVanity: "Bathroom with double basin and round backlit mirror",
-      bathShower: "Bathroom with shower and freestanding basin",
+      livingFireplace: "Fireplace wall with timber beams under a high ceiling",
+      atticBath: "Attic bathroom with freestanding bath and timber window frames",
+      kitchen: "Kitchen with island and timber ceiling",
     },
   },
 

@@ -240,6 +240,43 @@
    "fingerprint": "1792979651749-6821199-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{\"crop\":{\"bottom\":24}}-{}",
    "v": "a15327c8"
   },
+  "interiors-kuchnia-01": {
+   "w": 1448,
+   "h": 1086,
+   "widths": [
+    640,
+    1280,
+    1448
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACQBQCdASoYABIAPu1qrFEppaQiqAqpMB2JQBOmXG/E9TrwApO7BP+EynbAS9PWEAZn+Ft1IACswQi4Ww7s9m3h7XIsOlCJxwpC5grOeIT6Rtkv2110ze5GkMDDv/vE91QQJDKqRdcciMJBSLHiCOHl+025BK3FA5lHnB85gyME8o+nv0dpJOL6qqSLDOJsWI5N7++dNis81E8Fxy+OscXSAmYDpg1UwgAAAA==",
+   "color": "#987858",
+   "category": "interiors",
+   "source": "photos/interiors/kuchnia-01.png",
+   "fingerprint": "1792989270804-2169667-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1aa7cc7f"
+  },
+  "interiors-lazienka-poddasze-01": {
+   "w": 1278,
+   "h": 1230,
+   "widths": [
+    640,
+    1278
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1278,
+   "ph": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAQBQCdASoYABcAPu1ur1IppiQiqAgBMB2JQBOmWU6OWAAnFtWnExkF1Pyq5daVP1iAAP7SQrjjFCi0xZBhARSBe3zYpZnRnmrhuy/U62dGrRiv7fAvbl7oCYPpu+VcKlGyotpbh9buADDmj4OtNXK5A5BLWikKET4hhcFCw0UM463B07yGRjY3PQULJZCeAHITQaGlbW3K2Fl5zx5HnJ23DBJBUoJmwrvnBjBZnyKvS6d36fDAAA==",
+   "color": "#886858",
+   "category": "interiors",
+   "source": "photos/interiors/lazienka-poddasze-01.png",
+   "fingerprint": "1792989270818-2065287-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1225d311"
+  },
   "interiors-lazienka-prysznic-01": {
    "w": 4284,
    "h": 5712,
@@ -339,6 +376,43 @@
    "source": "photos/interiors/lazienka-wanna-01.jpg",
    "fingerprint": "1792989110438-6716435-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
    "v": "564a805a"
+  },
+  "interiors-salon-01": {
+   "w": 1448,
+   "h": 1086,
+   "widths": [
+    640,
+    1280,
+    1448
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1280,
+   "ph": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAwBQCdASoYABIAPu1orVCppaQiqAqpMB2JQBbe6CAXC7RzozF/OoEW2QjZctj4KVcuAADL12IJ994iAFtvxoEMX+kcL2tLaqpbZfhnzyNIz8/HhLejwy/TYpYbAphDnI+9Xrx4819Oai8YQWRWMnVHXitkFPKhWHgE06PjoyfK8J4/RkYYIMTgsL4RkBug/CICzbCHr5CmpY8QAAA=",
+   "color": "#b88868",
+   "category": "interiors",
+   "source": "photos/interiors/salon-01.png",
+   "fingerprint": "1792989270809-1881056-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "b71d34e2"
+  },
+  "interiors-salon-kominek-01": {
+   "w": 1086,
+   "h": 1448,
+   "widths": [
+    640,
+    1086
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1086,
+   "ph": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASoYACAAPu1iqE2ppaOiMAgBMB2JYgCxH0c9D9BXxBjm0oYkB6/1yllln6SbO9KSkfnccAD7qxVp2YIstn7chru4fLyeAHQnVo2yPXHvifsOB+NIb82uGPtqvHjUcfAXG+C/M3LDxLtye8tt/rodbefs0fEbPfHqA1seXgt3gUcS0QURDn0yA0DkovLv8Oum2kbwTKTo4kIPDC/7T5boqOsVd3ugGevhqpF8SHVIfnsVlZ0WlXGyXrVXuGw3Z3KilYg5PCm2QAA=",
+   "color": "#986848",
+   "category": "interiors",
+   "source": "photos/interiors/salon-kominek-01.png",
+   "fingerprint": "1792989270814-2015949-{\"WIDTHS\":[640,1280,1920,2560],\"FALLBACK_WIDTH\":1280,\"FORMATS\":[\"avif\"],\"QUALITY\":{\"avif\":{\"quality\":52,\"effort\":4},\"webp\":{\"quality\":76,\"effort\":5},\"jpeg\":{\"quality\":80}}}-{}-{}",
+   "v": "1ef7428b"
   },
   "pano1": {
    "w": 3072,

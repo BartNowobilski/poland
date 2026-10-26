@@ -16,10 +16,11 @@ export const IMAGES = {
   houseFront: getImage("h3", { position: "50% 45%" }),
   houseGarden: getImage("h4", { position: "45% 50%" }),
 
-  // Photos — interiors (September 2026)
-  bathVanity: getImage("interiors-lazienka-umywalka-02", { position: "50% 40%" }),
-  bathShower: getImage("interiors-lazienka-prysznic-02", { position: "50% 55%" }),
-  bathTub: getImage("interiors-lazienka-wanna-01", { position: "50% 40%" }),
+  // Photos — interiors
+  living: getImage("interiors-salon-01", { position: "50% 45%" }),
+  livingFireplace: getImage("interiors-salon-kominek-01", { position: "50% 50%" }),
+  kitchen: getImage("interiors-kuchnia-01", { position: "55% 60%" }),
+  atticBath: getImage("interiors-lazienka-poddasze-01", { position: "50% 45%" }),
 
   // Photos — exteriors after dark (September 2026)
   houseNight: getImage("architecture-dom-zmierzch-02", { position: "50% 45%" }),

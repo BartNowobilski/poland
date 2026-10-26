@@ -86,13 +86,13 @@ export default function Architecture() {
 
         <div className="arch__mosaic">
           <Reveal variant="zoom" className="arch__m1 zoom-on-hover">
-            <Picture image={IMAGES.bathTub} ratio="3 / 4" alt={a.alts.bathTub} sizes="(min-width: 960px) 30vw, 60vw" />
+            <Picture image={IMAGES.livingFireplace} ratio="3 / 4" alt={a.alts.livingFireplace} sizes="(min-width: 960px) 30vw, 60vw" />
           </Reveal>
           <Reveal variant="zoom" delay={120} className="arch__m2 zoom-on-hover">
-            <Picture image={IMAGES.bathVanity} ratio="1 / 1" alt={a.alts.bathVanity} sizes="(min-width: 960px) 22vw, 40vw" />
+            <Picture image={IMAGES.atticBath} ratio="1 / 1" alt={a.alts.atticBath} sizes="(min-width: 960px) 22vw, 40vw" />
           </Reveal>
           <Reveal variant="zoom" delay={240} className="arch__m3 zoom-on-hover">
-            <Picture image={IMAGES.bathShower} ratio="1 / 1" alt={a.alts.bathShower} sizes="(min-width: 960px) 22vw, 40vw" />
+            <Picture image={IMAGES.kitchen} ratio="1 / 1" alt={a.alts.kitchen} sizes="(min-width: 960px) 22vw, 40vw" />
           </Reveal>
         </div>
       </div>
