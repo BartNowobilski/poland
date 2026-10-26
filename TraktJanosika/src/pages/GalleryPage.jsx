@@ -7,15 +7,18 @@ import Reveal from "../components/motion/Reveal";
 import Picture from "../components/media/Picture";
 import Lightbox from "../components/media/Lightbox";
 import Button from "../components/ui/Button";
+import { useDocumentMeta } from "../lib/useDocumentMeta";
 import "./GalleryPage.css";
 
 const PAGE_SIZE = 24;
+const ABOVE_FOLD = 4; // first tiles render without reveal animation (LCP)
 
 export default function GalleryPage() {
   const { t, lang } = useLanguage();
   const g = t.gallery;
   const [params, setParams] = useSearchParams();
   const category = params.get("kategoria");
+  useDocumentMeta({ title: t.meta.galleryTitle, description: t.meta.galleryDescription, path: "/gallery" });
 
   const all = useMemo(() => buildGallery(lang), [lang]);
   const categories = useMemo(() => availableCategories(all), [all]);
@@ -73,7 +76,11 @@ export default function GalleryPage() {
                   className="justified__item"
                   style={{ "--r": ratio.toFixed(3) }}
                 >
-                  <Reveal variant="fade" delay={(i % 6) * 50} className="justified__inner">
+                  <Reveal
+                    variant={i < ABOVE_FOLD ? "none" : "fade"}
+                    delay={(i % 6) * 50}
+                    className="justified__inner"
+                  >
                     <button
                       type="button"
                       className="justified__btn zoom-on-hover"
@@ -83,6 +90,7 @@ export default function GalleryPage() {
                       <Picture
                         image={item.image}
                         alt=""
+                        priority={i === 0}
                         sizes={ratio > 1.2 ? "(min-width: 1100px) 40vw, 90vw" : "(min-width: 1100px) 22vw, 45vw"}
                       />
                       {item.render && <span className="justified__tag">{t.common.visualisation}</span>}

@@ -8,6 +8,7 @@ import { observeReveal } from "../../lib/reveal";
  *   <Reveal variant="fade" delay={150}>    fade only, delayed
  *   <Reveal variant="mask">                image wipes in from below
  *   <Reveal variant="zoom">                child eases from 108% → 100%
+ *   <Reveal variant="none">                plain element (e.g. above-the-fold items)
  *
  * Disabled automatically for prefers-reduced-motion (see base.css).
  */
@@ -23,7 +24,7 @@ export default function Reveal({
 }) {
   const ref = useRef(null);
 
-  useEffect(() => observeReveal(ref.current), []);
+  useEffect(() => (variant === "none" ? undefined : observeReveal(ref.current)), [variant]);
 
   // React 19 passes `ref` as a prop — merge it with the internal one
   const setRef = (node) => {
@@ -35,7 +36,7 @@ export default function Reveal({
   return (
     <Tag
       ref={setRef}
-      data-reveal={variant}
+      data-reveal={variant === "none" ? undefined : variant}
       className={className}
       style={delay ? { ...style, "--reveal-delay": `${delay}ms` } : style}
       {...rest}

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { useLanguage } from "../i18n/context";
 import { IMAGES } from "../content/images";
 import { CONTACT_HASH } from "../content/navigation";
@@ -8,18 +7,6 @@ import Picture from "../components/media/Picture";
 import Button from "../components/ui/Button";
 import "./Hero.css";
 
-/* Splits a heading into words for the staggered entrance. */
-function Words({ text, start = 0 }) {
-  return text.split(" ").map((word, i) => (
-    <Fragment key={i}>
-      {i > 0 && " "}
-      <span className="hero__word">
-        <span style={{ "--d": `${start + i * 90}ms` }}>{word}</span>
-      </span>
-    </Fragment>
-  ));
-}
-
 export default function Hero() {
   const { t } = useLanguage();
   const go = useSectionLink();
@@ -28,7 +15,13 @@ export default function Hero() {
   return (
     <section className="hero on-dark" id="top" aria-labelledby="hero-title">
       <div className="hero__media" ref={mediaRef}>
-        <Picture image={IMAGES.aerial} alt={t.hero.imageAlt} priority sizes="100vw" />
+        <Picture
+          image={IMAGES.aerial}
+          portrait={IMAGES.aerialPortrait}
+          alt={t.hero.imageAlt}
+          priority
+          sizes="100vw"
+        />
       </div>
       <div className="hero__shade" aria-hidden="true" />
 
@@ -38,7 +31,7 @@ export default function Hero() {
             {t.hero.eyebrow}
           </span>
           <span className="display hero__name">
-            <Words text={t.brand.name} start={300} />
+            {t.brand.name}
           </span>
         </h1>
         <p className="hero__motto" data-enter style={{ "--d": "650ms" }}>

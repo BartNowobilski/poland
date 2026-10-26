@@ -2,6 +2,9 @@
   position: relative;
   padding-block: var(--section-y);
 }
+/* Note: content-visibility:auto was tried here and removed — its estimated
+   section heights made in-page anchor links (#location, #contact…) land
+   hundreds of pixels off. */
 .section--tight {
   padding-block: var(--section-y-tight);
 }

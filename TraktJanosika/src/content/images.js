@@ -10,6 +10,7 @@ import { getImage } from "../lib/images";
 export const IMAGES = {
   // Exterior visualisations
   aerial: getImage("bialka", { position: "50% 60%" }),
+  aerialPortrait: getImage("bialka-portrait"), // phones in portrait (hero)
   gate: getImage("h5", { position: "40% 60%" }),
   houseCorner: getImage("h2", { position: "60% 55%" }),
   houseFront: getImage("h3", { position: "50% 45%" }),

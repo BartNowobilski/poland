@@ -1,24 +1,25 @@
 import { StrictMode } from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./styles/fonts.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
 import "./components/layout/Ornament.css";
-import App from "./App.jsx";
-import ScrollManager from "./ScrollManager.jsx";
-import LanguageProvider from "./i18n/LanguageProvider.jsx";
+import Root from "./Root.jsx";
 import { enableReveal } from "./lib/reveal";
 
 enableReveal();
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const app = (
   <StrictMode>
     <BrowserRouter>
-      <LanguageProvider>
-        <ScrollManager />
-        <App />
-      </LanguageProvider>
+      <Root />
     </BrowserRouter>
   </StrictMode>
 );
+
+const container = document.getElementById("root");
+// Production pages are prerendered to HTML at build time → hydrate them.
+// The dev server serves an empty #root → render from scratch.
+if (container.hasChildNodes()) hydrateRoot(container, app);
+else createRoot(container).render(app);

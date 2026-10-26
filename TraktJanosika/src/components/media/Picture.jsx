@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./Picture.css";
 
+export const PORTRAIT_MEDIA = "(max-aspect-ratio: 4/5)";
+
 /**
  * Responsive, layout-stable image.
  *
@@ -20,6 +22,7 @@ import "./Picture.css";
  *   fit       "cover" | "contain"
  *   priority  above-the-fold: eager load + fetchpriority=high, no fade
  *   sizes     standard `sizes` attribute (defaults to full width)
+ *   portrait  optional art-directed crop used on portrait screens (≤ 4:5)
  */
 export default function Picture({
   image,
@@ -31,6 +34,7 @@ export default function Picture({
   className = "",
   imgClassName = "",
   position,
+  portrait,
   ...rest
 }) {
   const img = typeof image === "string" ? { src: image } : image ?? {};
@@ -67,6 +71,12 @@ export default function Picture({
       {...rest}
     >
       <picture>
+        {portrait?.sources?.avif && (
+          <source media={PORTRAIT_MEDIA} type="image/avif" srcSet={portrait.sources.avif} sizes="100vw" />
+        )}
+        {portrait && (
+          <source media={PORTRAIT_MEDIA} type="image/jpeg" srcSet={portrait.src} />
+        )}
         {img.sources?.avif && (
           <source type="image/avif" srcSet={img.sources.avif} sizes={sizes} />
         )}

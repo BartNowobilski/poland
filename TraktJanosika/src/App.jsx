@@ -4,6 +4,7 @@ import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import GalleryPage from "./pages/GalleryPage";
+import NotFound from "./pages/NotFound";
 
 // Design-system reference page, compiled out of production builds.
 const Styleguide = import.meta.env.DEV ? lazy(() => import("./pages/Styleguide")) : null;
@@ -29,6 +30,7 @@ export default function App() {
               }
             />
           )}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

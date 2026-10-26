@@ -1,6 +1,8 @@
 /* Self-hosted fonts (SIL Open Font License — see /public/fonts/LICENSE-*.txt).
-   Split into latin + latin-ext so Polish diacritics (ą ć ę ł ń ó ś ź ż) are
-   served only when needed by the browser via unicode-range. */
+   "latin" files cover Basic Latin + Latin-1 (incl. ó). "polish" files are
+   subsets with only ą ć ę ł ń ś ź ż (≈2–5 KB each instead of 20–83 KB),
+   made with: pyftsubset <latin-ext.woff2> --unicodes=<range below>
+   --flavor=woff2 --layout-features='*'. */
 
 /* ---------- Cormorant Garamond — display & headings ---------- */
 @font-face {
@@ -8,8 +10,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/cormorant-latin-ext-400.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("/fonts/cormorant-polish-400.woff2") format("woff2");
+  unicode-range: U+0104-0107, U+0118-0119, U+0141-0144, U+015A-015B, U+0179-017C; /* Polish letters only */
 }
 @font-face {
   font-family: "Cormorant Garamond";
@@ -24,8 +26,8 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/cormorant-latin-ext-400-italic.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("/fonts/cormorant-polish-400-italic.woff2") format("woff2");
+  unicode-range: U+0104-0107, U+0118-0119, U+0141-0144, U+015A-015B, U+0179-017C; /* Polish letters only */
 }
 @font-face {
   font-family: "Cormorant Garamond";
@@ -40,8 +42,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("/fonts/cormorant-latin-ext-500.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("/fonts/cormorant-polish-500.woff2") format("woff2");
+  unicode-range: U+0104-0107, U+0118-0119, U+0141-0144, U+015A-015B, U+0179-017C; /* Polish letters only */
 }
 @font-face {
   font-family: "Cormorant Garamond";
@@ -52,30 +54,12 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("/fonts/cormorant-latin-ext-600.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("/fonts/cormorant-latin-600.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* ---------- Inter (variable 100–900) — body & UI ---------- */
-@font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/inter-latin-ext-var.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("/fonts/inter-polish-var.woff2") format("woff2");
+  unicode-range: U+0104-0107, U+0118-0119, U+0141-0144, U+015A-015B, U+0179-017C; /* Polish letters only */
 }
 @font-face {
   font-family: "Inter";
@@ -84,4 +68,35 @@
   font-display: swap;
   src: url("/fonts/inter-latin-var.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Metric-matched fallbacks ----------
+   Shown until the web fonts arrive (they are not preloaded), sized so the
+   swap causes no layout shift. Values measured in Chrome against the real
+   fonts (width of a Polish sample sentence + font ascent/descent). */
+@font-face {
+  font-family: "Cormorant Fallback";
+  font-style: normal;
+  src: local("Times New Roman"), local("TimesNewRomanPSMT"), local("Times");
+  size-adjust: 95.8%;
+  ascent-override: 96.1%;
+  descent-override: 30.3%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Cormorant Fallback";
+  font-style: italic;
+  src: local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT"), local("Times-Italic");
+  size-adjust: 86.5%;
+  ascent-override: 106.3%;
+  descent-override: 33.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial"), local("ArialMT"), local("Helvetica");
+  size-adjust: 107.3%;
+  ascent-override: 90.4%;
+  descent-override: 22.4%;
+  line-gap-override: 0%;
 }

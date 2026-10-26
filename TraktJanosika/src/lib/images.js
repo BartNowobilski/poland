@@ -15,16 +15,17 @@ export function getImage(id, extra = {}) {
     if (import.meta.env.DEV) console.warn(`[images] unknown image id "${id}" — run "npm run images"?`);
     return null;
   }
-  const srcset = (fmt) => e.widths.map((w) => `/img/${id}-${w}.${fmt} ${w}w`).join(", ");
+  const q = e.v ? `?v=${e.v}` : "";
+  const srcset = (fmt) => e.widths.map((w) => `/img/${id}-${w}.${fmt}${q} ${w}w`).join(", ");
   return {
     id,
-    src: `/img/${id}-${e.fallback}.jpg`,
+    src: `/img/${id}-${e.fallback}.jpg${q}`,
     width: e.w,
     height: e.h,
     sources: Object.fromEntries((e.formats ?? ["avif"]).map((fmt) => [fmt, srcset(fmt)])),
     placeholder: e.ph,
     color: e.color,
-    largest: `/img/${id}-${e.widths[e.widths.length - 1]}.${(e.formats ?? ["avif"])[0]}`,
+    largest: `/img/${id}-${e.widths[e.widths.length - 1]}.${(e.formats ?? ["avif"])[0]}${q}`,
     ...extra,
   };
 }

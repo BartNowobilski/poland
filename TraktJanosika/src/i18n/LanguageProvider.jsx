@@ -7,7 +7,9 @@ import {
   STORAGE_KEY,
 } from "./context";
 
-function initialLang() {
+/* Saved or ?lang= choice. Read after mount: pages are prerendered in Polish,
+   so the first client render must match before switching language. */
+function detectLang() {
   try {
     const fromUrl = new URLSearchParams(window.location.search).get("lang");
     if (LANGUAGES.includes(fromUrl)) return fromUrl;
@@ -20,7 +22,12 @@ function initialLang() {
 }
 
 export default function LanguageProvider({ children }) {
-  const [lang, setLangState] = useState(initialLang);
+  const [lang, setLangState] = useState(DEFAULT_LANG);
+
+  useEffect(() => {
+    const detected = detectLang();
+    if (detected !== DEFAULT_LANG) setLangState(detected);
+  }, []);
 
   const setLang = useCallback((next) => {
     if (!LANGUAGES.includes(next)) return;

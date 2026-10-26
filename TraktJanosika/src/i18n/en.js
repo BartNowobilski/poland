@@ -3,6 +3,13 @@
 // Lines marked "DRAFT" are new copy written for the redesign — please review.
 const en = {
   meta: {
+    title: "Trakt Janosika — Highlander-style mountain homes in Białka Tatrzańska, Poland",
+    description:
+      "Trakt Janosika is an exclusive, gated community of eight single-family homes in Białka Tatrzańska, Podhale, Poland. Homes of 160–200 m² combining Highlander craftsmanship with contemporary design.",
+    galleryTitle: "Gallery — homes and interiors | Trakt Janosika",
+    galleryDescription:
+      "Trakt Janosika gallery: visualisations of the Highlander-style homes, interiors and estate in Białka Tatrzańska, plus construction progress photos.",
+    notFoundTitle: "Page not found | Trakt Janosika",
     langName: "English",
     switchTo: "Switch language to English",
   },
@@ -261,6 +268,12 @@ const en = {
     next: "Next photo",
     lightboxLabel: "Photo gallery",
     empty: "No photos in this category.",
+  },
+
+  notFound: {
+    title: "Page not found",
+    text: "The page you are looking for doesn’t exist or has been moved.",
+    home: "Back to the homepage",
   },
 
   footer: {

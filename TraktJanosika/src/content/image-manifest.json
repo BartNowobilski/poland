@@ -18,7 +18,27 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/bialka.jpg",
-   "fingerprint": "1792979651716-8237138-avif-{}"
+   "fingerprint": "1792979651716-8237138-avif-{}-{}",
+   "v": "3e8e3253"
+  },
+  "bialka-portrait": {
+   "w": 1276,
+   "h": 2268,
+   "widths": [
+    640,
+    960,
+    1276
+   ],
+   "formats": [
+    "avif"
+   ],
+   "fallback": 1276,
+   "ph": "data:image/webp;base64,UklGRjgBAABXRUJQVlA4ICwBAABwBwCdASoYACsAPu1orlIppSQiqrgIATAdiUAY6KABusY18ZIlMZK8+8ddPcbOmtYtQTH0AQLOnj875Bhx2FumclZcAAD++rW82ATDDUaBVTDe+PcF/MbxY18Z0HtIwQNTB96JW+Df6dOOhSbsupywRa2tbXkvxkCeXb7jPo/PWXbh1sokmcV9xkvjGVFmc7GYEQPv1ojPbm2fIHMCkibwB6Ov0sMo/67niW8TIsBinVXIgYz0apm8HmSXHTz3eR7pzrFl8FnEuwaCfV7B5Id3OTQ7rqW/PnKJeHFLoFsSY4vJMwK325pM2mpju71WZYsQ6u3b7M1CA+Xqfp/uxKwcUcsOZw6PkYD2ZKyixlT9WaW1Hpo6P/RE/VR+wq6g6rB//HQH5PbrqUJ+AAA=",
+   "color": "#e8e8e8",
+   "category": null,
+   "source": "public/bialka.jpg",
+   "fingerprint": "1792979651716-8237138-avif-{}-{\"id\":\"bialka-portrait\",\"aspect\":0.5625,\"x\":0.5,\"y\":0.5,\"widths\":[640,960]}",
+   "v": "f12d4630"
   },
   "h2": {
    "w": 3840,
@@ -37,7 +57,8 @@
    "color": "#3868a8",
    "category": null,
    "source": "public/h2.jpg",
-   "fingerprint": "1792979651725-9102516-avif-{}"
+   "fingerprint": "1792979651725-9102516-avif-{}-{}",
+   "v": "944228c8"
   },
   "h3": {
    "w": 3840,
@@ -56,7 +77,8 @@
    "color": "#084888",
    "category": null,
    "source": "public/h3.jpg",
-   "fingerprint": "1792979651734-8503340-avif-{}"
+   "fingerprint": "1792979651734-8503340-avif-{}-{}",
+   "v": "a5fd271d"
   },
   "h4": {
    "w": 3840,
@@ -75,7 +97,8 @@
    "color": "#084888",
    "category": null,
    "source": "public/h4.jpg",
-   "fingerprint": "1792979651742-8758960-avif-{}"
+   "fingerprint": "1792979651742-8758960-avif-{}-{}",
+   "v": "43c5ee16"
   },
   "h5": {
    "w": 3840,
@@ -94,7 +117,8 @@
    "color": "#6888b8",
    "category": null,
    "source": "public/h5.jpg",
-   "fingerprint": "1792979651749-6821199-avif-{\"crop\":{\"bottom\":24}}"
+   "fingerprint": "1792979651749-6821199-avif-{\"crop\":{\"bottom\":24}}-{}",
+   "v": "232b305c"
   },
   "pano1": {
    "w": 3072,
@@ -113,7 +137,8 @@
    "color": "#787878",
    "category": null,
    "source": "public/pano1.jpeg",
-   "fingerprint": "1792979651752-889735-avif-{}"
+   "fingerprint": "1792979651752-889735-avif-{}-{}",
+   "v": "0fbd0849"
   },
   "s1": {
    "w": 1600,
@@ -131,7 +156,8 @@
    "color": "#786848",
    "category": null,
    "source": "public/S1.jpg",
-   "fingerprint": "1792979651655-1082146-avif-{}"
+   "fingerprint": "1792979651655-1082146-avif-{}-{}",
+   "v": "89d01a86"
   },
   "s2": {
    "w": 1600,
@@ -149,7 +175,8 @@
    "color": "#786848",
    "category": null,
    "source": "public/S2.jpg",
-   "fingerprint": "1792979651665-913226-avif-{}"
+   "fingerprint": "1792979651665-913226-avif-{}-{}",
+   "v": "38f6e10d"
   },
   "s3": {
    "w": 1600,
@@ -167,7 +194,8 @@
    "color": "#b89878",
    "category": null,
    "source": "public/S3.jpg",
-   "fingerprint": "1792979651682-1153670-avif-{}"
+   "fingerprint": "1792979651682-1153670-avif-{}-{}",
+   "v": "d976f431"
   },
   "s4": {
    "w": 1600,
@@ -185,7 +213,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S4.jpg",
-   "fingerprint": "1792979651694-1167481-avif-{}"
+   "fingerprint": "1792979651694-1167481-avif-{}-{}",
+   "v": "97bdeaed"
   },
   "s5": {
    "w": 1600,
@@ -203,7 +232,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S5.jpg",
-   "fingerprint": "1792979651703-875113-avif-{}"
+   "fingerprint": "1792979651703-875113-avif-{}-{}",
+   "v": "2883d1a2"
   },
   "s6": {
    "w": 1600,
@@ -221,7 +251,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S6.jpg",
-   "fingerprint": "1792979651703-833214-avif-{}"
+   "fingerprint": "1792979651703-833214-avif-{}-{}",
+   "v": "33d1bf45"
   },
   "s7": {
    "w": 1600,
@@ -239,7 +270,8 @@
    "color": "#b8a8a8",
    "category": null,
    "source": "public/S7.jpg",
-   "fingerprint": "1792979651704-800539-avif-{}"
+   "fingerprint": "1792979651704-800539-avif-{}-{}",
+   "v": "24fa71ac"
   },
   "s8": {
    "w": 1600,
@@ -257,7 +289,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S8.jpg",
-   "fingerprint": "1792979651705-856041-avif-{}"
+   "fingerprint": "1792979651705-856041-avif-{}-{}",
+   "v": "db1829b0"
   },
   "s9": {
    "w": 1600,
@@ -275,7 +308,8 @@
    "color": "#b8b8a8",
    "category": null,
    "source": "public/S9.jpg",
-   "fingerprint": "1792979651706-1281186-avif-{}"
+   "fingerprint": "1792979651706-1281186-avif-{}-{}",
+   "v": "69684072"
   },
   "s15": {
    "w": 1600,
@@ -293,7 +327,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S15.jpg",
-   "fingerprint": "1792979651656-933393-avif-{}"
+   "fingerprint": "1792979651656-933393-avif-{}-{}",
+   "v": "c1f55191"
   },
   "s16": {
    "w": 1600,
@@ -311,7 +346,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S16.jpg",
-   "fingerprint": "1792979651658-950725-avif-{}"
+   "fingerprint": "1792979651658-950725-avif-{}-{}",
+   "v": "1d064b47"
   },
   "s17": {
    "w": 1600,
@@ -329,7 +365,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S17.jpg",
-   "fingerprint": "1792979651659-947645-avif-{}"
+   "fingerprint": "1792979651659-947645-avif-{}-{}",
+   "v": "25326d52"
   },
   "s18": {
    "w": 1600,
@@ -347,7 +384,8 @@
    "color": "#b8b8b8",
    "category": null,
    "source": "public/S18.jpg",
-   "fingerprint": "1792979651661-688095-avif-{}"
+   "fingerprint": "1792979651661-688095-avif-{}-{}",
+   "v": "98da39a3"
   },
   "s19": {
    "w": 1600,
@@ -365,7 +403,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S19.jpg",
-   "fingerprint": "1792979651663-1068878-avif-{}"
+   "fingerprint": "1792979651663-1068878-avif-{}-{}",
+   "v": "a01da6ba"
   },
   "s20": {
    "w": 1600,
@@ -383,7 +422,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S20.jpg",
-   "fingerprint": "1792979651665-919518-avif-{}"
+   "fingerprint": "1792979651665-919518-avif-{}-{}",
+   "v": "3b57fdaf"
   },
   "s21": {
    "w": 1600,
@@ -401,7 +441,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S21.jpg",
-   "fingerprint": "1792979651666-837140-avif-{}"
+   "fingerprint": "1792979651666-837140-avif-{}-{}",
+   "v": "cef4f15b"
   },
   "s22": {
    "w": 1600,
@@ -419,7 +460,8 @@
    "color": "#c8b8b8",
    "category": null,
    "source": "public/S22.jpg",
-   "fingerprint": "1792979651668-677937-avif-{}"
+   "fingerprint": "1792979651668-677937-avif-{}-{}",
+   "v": "32bfecc1"
   },
   "s23": {
    "w": 1600,
@@ -437,7 +479,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S23.jpg",
-   "fingerprint": "1792979651670-1028400-avif-{}"
+   "fingerprint": "1792979651670-1028400-avif-{}-{}",
+   "v": "41f04a47"
   },
   "s24": {
    "w": 1600,
@@ -455,7 +498,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S24.jpg",
-   "fingerprint": "1792979651671-930237-avif-{}"
+   "fingerprint": "1792979651671-930237-avif-{}-{}",
+   "v": "1f7a0b15"
   },
   "s25": {
    "w": 1600,
@@ -473,7 +517,8 @@
    "color": "#a88868",
    "category": null,
    "source": "public/S25.jpg",
-   "fingerprint": "1792979651672-946764-avif-{}"
+   "fingerprint": "1792979651672-946764-avif-{}-{}",
+   "v": "c224354c"
   },
   "s26": {
    "w": 1600,
@@ -491,7 +536,8 @@
    "color": "#a88868",
    "category": null,
    "source": "public/S26.jpg",
-   "fingerprint": "1792979651674-786994-avif-{}"
+   "fingerprint": "1792979651674-786994-avif-{}-{}",
+   "v": "a2b77802"
   },
   "s27": {
    "w": 1600,
@@ -509,7 +555,8 @@
    "color": "#e8d8d8",
    "category": null,
    "source": "public/S27.jpg",
-   "fingerprint": "1792979651675-785734-avif-{}"
+   "fingerprint": "1792979651675-785734-avif-{}-{}",
+   "v": "8d06a410"
   },
   "s28": {
    "w": 1600,
@@ -527,7 +574,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S28.jpg",
-   "fingerprint": "1792979651677-893710-avif-{}"
+   "fingerprint": "1792979651677-893710-avif-{}-{}",
+   "v": "345e01ae"
   },
   "s29a": {
    "w": 1600,
@@ -545,7 +593,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29a.jpg",
-   "fingerprint": "1792979651679-1081853-avif-{}"
+   "fingerprint": "1792979651679-1081853-avif-{}-{}",
+   "v": "1c2432ed"
   },
   "s29b": {
    "w": 1600,
@@ -563,7 +612,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29b.jpg",
-   "fingerprint": "1792979651680-1057510-avif-{}"
+   "fingerprint": "1792979651680-1057510-avif-{}-{}",
+   "v": "f037205b"
   },
   "s29c": {
    "w": 1600,
@@ -581,7 +631,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S29c.jpg",
-   "fingerprint": "1792979651681-940672-avif-{}"
+   "fingerprint": "1792979651681-940672-avif-{}-{}",
+   "v": "5b6ef517"
   },
   "s30": {
    "w": 1600,
@@ -599,7 +650,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S30.jpg",
-   "fingerprint": "1792979651684-764724-avif-{}"
+   "fingerprint": "1792979651684-764724-avif-{}-{}",
+   "v": "65221034"
   },
   "s31": {
    "w": 1600,
@@ -617,7 +669,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S31.jpg",
-   "fingerprint": "1792979651685-942007-avif-{}"
+   "fingerprint": "1792979651685-942007-avif-{}-{}",
+   "v": "8352cb5c"
   },
   "s32": {
    "w": 1600,
@@ -635,7 +688,8 @@
    "color": "#d8d8d8",
    "category": null,
    "source": "public/S32.jpg",
-   "fingerprint": "1792979651687-764701-avif-{}"
+   "fingerprint": "1792979651687-764701-avif-{}-{}",
+   "v": "7aefdfae"
   },
   "s33": {
    "w": 1600,
@@ -653,7 +707,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S33.jpg",
-   "fingerprint": "1792979651688-951582-avif-{}"
+   "fingerprint": "1792979651688-951582-avif-{}-{}",
+   "v": "8123b070"
   },
   "s34": {
    "w": 1600,
@@ -671,7 +726,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S34.jpg",
-   "fingerprint": "1792979651689-1038686-avif-{}"
+   "fingerprint": "1792979651689-1038686-avif-{}-{}",
+   "v": "fa71ba65"
   },
   "s35": {
    "w": 1600,
@@ -689,7 +745,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S35.jpg",
-   "fingerprint": "1792979651691-833883-avif-{}"
+   "fingerprint": "1792979651691-833883-avif-{}-{}",
+   "v": "90359666"
   },
   "s36": {
    "w": 1600,
@@ -707,7 +764,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S36.jpg",
-   "fingerprint": "1792979651691-759279-avif-{}"
+   "fingerprint": "1792979651691-759279-avif-{}-{}",
+   "v": "bc92d673"
   },
   "s37": {
    "w": 1600,
@@ -725,7 +783,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S37.jpg",
-   "fingerprint": "1792979651692-827433-avif-{}"
+   "fingerprint": "1792979651692-827433-avif-{}-{}",
+   "v": "7db9d358"
   },
   "s39": {
    "w": 1600,
@@ -743,7 +802,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S39.jpg",
-   "fingerprint": "1792979651693-759034-avif-{}"
+   "fingerprint": "1792979651693-759034-avif-{}-{}",
+   "v": "131ce4cd"
   },
   "s40": {
    "w": 1600,
@@ -761,7 +821,8 @@
    "color": "#d8d8d8",
    "category": null,
    "source": "public/S40.jpg",
-   "fingerprint": "1792979651696-785174-avif-{}"
+   "fingerprint": "1792979651696-785174-avif-{}-{}",
+   "v": "0f0ebd5b"
   },
   "s41": {
    "w": 1600,
@@ -779,7 +840,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S41.jpg",
-   "fingerprint": "1792979651698-859743-avif-{}"
+   "fingerprint": "1792979651698-859743-avif-{}-{}",
+   "v": "9458f538"
   },
   "s42": {
    "w": 1600,
@@ -797,7 +859,8 @@
    "color": "#f8f8f8",
    "category": null,
    "source": "public/S42.jpg",
-   "fingerprint": "1792979651699-703097-avif-{}"
+   "fingerprint": "1792979651699-703097-avif-{}-{}",
+   "v": "6f458da6"
   },
   "s43": {
    "w": 1600,
@@ -815,7 +878,8 @@
    "color": "#a8a898",
    "category": null,
    "source": "public/S43.jpg",
-   "fingerprint": "1792979651699-690409-avif-{}"
+   "fingerprint": "1792979651699-690409-avif-{}-{}",
+   "v": "9784f721"
   },
   "s44": {
    "w": 1600,
@@ -833,7 +897,8 @@
    "color": "#888878",
    "category": null,
    "source": "public/S44.jpg",
-   "fingerprint": "1792979651701-749339-avif-{}"
+   "fingerprint": "1792979651701-749339-avif-{}-{}",
+   "v": "9d8f7cfc"
   },
   "s45": {
    "w": 1600,
@@ -851,7 +916,8 @@
    "color": "#888878",
    "category": null,
    "source": "public/S45.jpg",
-   "fingerprint": "1792979651702-750440-avif-{}"
+   "fingerprint": "1792979651702-750440-avif-{}-{}",
+   "v": "db36c217"
   }
  }
 }

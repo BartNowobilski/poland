@@ -112,7 +112,7 @@
   min-width: 2.25rem;
   min-height: 2.75rem; /* touch target */
   padding: 0 0.35rem;
-  opacity: 0.55;
+  opacity: 0.72; /* ≥ 4.5:1 contrast for the inactive language */
   transition: opacity var(--dur-fast);
 }
 .lang-switch__btn + .lang-switch__btn {

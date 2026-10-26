@@ -19,6 +19,7 @@ import { readdir, stat, mkdir, readFile, writeFile, unlink } from "node:fs/promi
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import sharp from "sharp";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -46,6 +47,13 @@ const EXCLUDE = new Set(["logo.jpeg", "logoT.PNG", "janosik.jpg"]);
 const ADJUST = {
   // the original file is truncated — rows below ~2540 px are corrupt
   h5: { crop: { bottom: 24 } },
+};
+
+// Extra art-directed crops, generated as separate images (own id).
+// aspect = width / height of the crop, x/y = focal point 0–1.
+const VARIANTS = {
+  // phones in portrait: the wide hero aerial cropped around the houses
+  bialka: [{ id: "bialka-portrait", aspect: 9 / 16, x: 0.5, y: 0.5, widths: [640, 960] }],
 };
 
 const FORCE = process.argv.includes("--force");
@@ -89,6 +97,11 @@ async function collectSources() {
     const parsed = path.parse(rel);
     sources.push({ id: slugify(path.join(parsed.dir, parsed.name)), file, category: folder });
   }
+  for (const s of [...sources]) {
+    for (const v of VARIANTS[s.id] ?? []) {
+      sources.push({ id: v.id, file: s.file, category: null, variant: v, baseAdjust: ADJUST[s.id] });
+    }
+  }
   const seen = new Map();
   for (const s of sources) {
     if (seen.has(s.id)) throw new Error(`Duplicate image id "${s.id}": ${seen.get(s.id)} and ${s.file}`);
@@ -118,9 +131,9 @@ const outputsFor = (id, e) => [
 
 /* ---------- processing ---------- */
 async function processImage(source, previous) {
-  const { id, file, category } = source;
+  const { id, file, category, variant } = source;
   const { mtimeMs, size } = await stat(file);
-  const fingerprint = `${Math.round(mtimeMs)}-${size}-${FORMATS}-${JSON.stringify(ADJUST[id] ?? {})}`;
+  const fingerprint = `${Math.round(mtimeMs)}-${size}-${FORMATS}-${JSON.stringify(ADJUST[id] ?? source.baseAdjust ?? {})}-${JSON.stringify(variant ?? {})}`;
 
   if (!FORCE && previous?.fingerprint === fingerprint) {
     if (outputsFor(id, previous).every((f) => existsSync(path.join(OUT, f)))) return { ...previous, category, skipped: true };
@@ -132,7 +145,7 @@ async function processImage(source, previous) {
   let width = meta.autoOrient?.width ?? meta.width;
   let height = meta.autoOrient?.height ?? meta.height;
 
-  const crop = ADJUST[id]?.crop;
+  const crop = (ADJUST[id] ?? source.baseAdjust)?.crop;
   if (crop) {
     const box = {
       left: crop.left ?? 0,
@@ -144,7 +157,21 @@ async function processImage(source, previous) {
     ({ width, height } = box);
   }
 
-  const widths = WIDTHS.filter((w) => w < width);
+  if (variant) {
+    // crop to the variant's aspect ratio around its focal point
+    const targetW = Math.min(width, Math.round(height * variant.aspect));
+    const targetH = Math.min(height, Math.round(targetW / variant.aspect));
+    const box = {
+      left: Math.round((width - targetW) * variant.x),
+      top: Math.round((height - targetH) * variant.y),
+      width: targetW,
+      height: targetH,
+    };
+    base = sharp(await base.extract(box).toBuffer());
+    ({ width, height } = box);
+  }
+
+  const widths = (variant?.widths ?? WIDTHS).filter((w) => w < width);
   if (!widths.length || width < WIDTHS[WIDTHS.length - 1]) widths.push(width);
   const fallback = widths.filter((w) => w <= FALLBACK_WIDTH).pop() ?? widths[0];
 
@@ -190,6 +217,8 @@ const images = {};
 sources.forEach((s, i) => {
   const { skipped, ...entry } = entries[i];
   void skipped;
+  // short content version appended to URLs (?v=) so files can be cached forever
+  entry.v = createHash("sha1").update(`${entry.fingerprint}|${entry.widths}|${entry.formats}`).digest("hex").slice(0, 8);
   images[s.id] = entry;
 });
 

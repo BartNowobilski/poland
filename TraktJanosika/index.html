@@ -3,13 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Trakt Janosika — domy w stylu góralskim w Białce Tatrzańskiej</title>
+    <meta
+      name="description"
+      content="Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu domów jednorodzinnych w Białce Tatrzańskiej na Podhalu (gmina Bukowina Tatrzańska). Domy 160–200 m² łączące góralskie rzemiosło z nowoczesną architekturą."
+    />
+    <link rel="canonical" href="https://www.traktjanosika.pl/" />
     <meta name="theme-color" content="#f5f0e6" />
-    <link rel="preload" href="/fonts/cormorant-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
-    <title>traktjanosika</title>
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Trakt Janosika" />
+    <meta property="og:url" content="https://www.traktjanosika.pl/" />
+    <meta property="og:title" content="Trakt Janosika — Tam, gdzie historia spotyka nowoczesność" />
+    <meta
+      property="og:description"
+      content="Osiem ekskluzywnych domów jednorodzinnych w stylu góralskim w Białce Tatrzańskiej. Ogrodzone osiedle u podnóża Tatr."
+    />
+    <meta property="og:image" content="https://www.traktjanosika.pl/og/trakt-janosika.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Trakt Janosika — osiedle domów w Białce Tatrzańskiej, w tle Tatry (wizualizacja)" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts are intentionally not preloaded: on slow mobile connections the
+         preloads competed with the page and delayed first paint by ~2 s.
+         Metric-matched fallbacks (fonts.css) keep the swap shift-free. -->
+    <!-- hero image preload is injected at build time (vite.config.js) -->
+
+    <!-- Structured data — only facts published on this site -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.traktjanosika.pl/#website",
+            "url": "https://www.traktjanosika.pl/",
+            "name": "Trakt Janosika",
+            "inLanguage": ["pl", "en"]
+          },
+          {
+            "@type": "GatedResidenceCommunity",
+            "@id": "https://www.traktjanosika.pl/#estate",
+            "name": "Trakt Janosika",
+            "slogan": "Tam, gdzie historia spotyka nowoczesność",
+            "description": "Ekskluzywne, ogrodzone osiedle ośmiu domów jednorodzinnych w stylu góralskim w Białce Tatrzańskiej. Domy o powierzchni od 160 do 200 m², od 4 do 6 sypialni.",
+            "url": "https://www.traktjanosika.pl/",
+            "image": "https://www.traktjanosika.pl/og/trakt-janosika.jpg",
+            "email": "info@traktjanosika.pl",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Grapa 35",
+              "postalCode": "34-405",
+              "addressLocality": "Białka Tatrzańska",
+              "addressRegion": "małopolskie",
+              "addressCountry": "PL"
+            },
+            "hasMap": "https://maps.app.goo.gl/Lk9xgjqrWJwin7ES6"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="padding:2rem;font-family:serif">
+        Trakt Janosika — osiem domów w stylu góralskim w Białce Tatrzańskiej. Kontakt:
+        <a href="mailto:info@traktjanosika.pl">info@traktjanosika.pl</a>
+      </p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

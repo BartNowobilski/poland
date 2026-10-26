@@ -4,6 +4,13 @@
 // Lines marked "DRAFT" are new copy written for the redesign — please review.
 const pl = {
   meta: {
+    title: "Trakt Janosika — domy w stylu góralskim w Białce Tatrzańskiej",
+    description:
+      "Trakt Janosika to ekskluzywne, ogrodzone osiedle ośmiu domów jednorodzinnych w Białce Tatrzańskiej na Podhalu (gmina Bukowina Tatrzańska). Domy 160–200 m² łączące góralskie rzemiosło z nowoczesną architekturą.",
+    galleryTitle: "Galeria — wizualizacje domów i wnętrz | Trakt Janosika",
+    galleryDescription:
+      "Galeria Trakt Janosika: wizualizacje domów w stylu góralskim, wnętrz i osiedla w Białce Tatrzańskiej oraz zdjęcia z postępu budowy.",
+    notFoundTitle: "Nie znaleziono strony | Trakt Janosika",
     langName: "Polski",
     switchTo: "Zmień język na polski",
   },
@@ -263,6 +270,12 @@ const pl = {
     next: "Następne zdjęcie",
     lightboxLabel: "Galeria zdjęć",
     empty: "Brak zdjęć w tej kategorii.",
+  },
+
+  notFound: {
+    title: "Nie znaleziono strony",
+    text: "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+    home: "Wróć na stronę główną",
   },
 
   footer: {
