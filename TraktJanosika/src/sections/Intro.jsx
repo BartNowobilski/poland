@@ -42,7 +42,7 @@ export default function Intro() {
         <div className="intro__media">
           <Reveal variant="mask" className="intro__main">
             <Picture
-              image={IMAGES.gate}
+              image={IMAGES.introHouse}
               ratio="4 / 5"
               alt={about.imageAlt}
               sizes="(min-width: 960px) 45vw, 100vw"
@@ -50,15 +50,12 @@ export default function Intro() {
           </Reveal>
           <Reveal variant="mask" delay={250} className="intro__detail">
             <Picture
-              image={IMAGES.chandelier}
+              image={IMAGES.introBath}
               ratio="1 / 1"
               alt={about.detailAlt}
               sizes="(min-width: 960px) 20vw, 45vw"
             />
           </Reveal>
-          <span className="intro__tag" aria-hidden="true">
-            {t.common.visualisation}
-          </span>
         </div>
       </div>
 

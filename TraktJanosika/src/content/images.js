@@ -17,13 +17,14 @@ export const IMAGES = {
   houseGarden: getImage("h4", { position: "45% 50%" }),
 
   // Photos — interiors
-  chandelier: getImage("interiors-salon-zyrandol-03", { position: "50% 45%" }),
+  introBath: getImage("interiors-lazienka-lustro-01", { position: "40% 55%" }),
   chandelierBeams: getImage("interiors-salon-zyrandol-01", { position: "50% 40%" }),
   staircase: getImage("interiors-schody-01", { position: "50% 50%" }),
   bathMirror: getImage("interiors-lazienka-lustro-02", { position: "45% 50%" }),
 
   // Photos — exteriors after dark (September 2026)
   houseNight: getImage("architecture-dom-zmierzch-02", { position: "50% 45%" }),
+  introHouse: getImage("architecture-dom-zmierzch-12", { position: "50% 40%" }),
   houseNightWide: getImage("architecture-dom-zmierzch-05", { position: "50% 55%" }),
 
   // 360° viewer needs the full-resolution equirectangular original

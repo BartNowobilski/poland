@@ -82,8 +82,8 @@ const en = {
         text: "Ready for move-in.",
       },
     ],
-    imageAlt: "Entrance to the gated Trakt Janosika estate with a stone wall and name plaque",
-    detailAlt: "Crystal chandelier beneath timber beams — interior photo",
+    imageAlt: "A Trakt Janosika home at dusk — tall Highlander gable, balcony and lit eaves",
+    detailAlt: "Bathroom with round backlit mirror and double basin — interior photo",
   },
 
   architecture: {

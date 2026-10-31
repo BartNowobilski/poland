@@ -83,8 +83,8 @@ const pl = {
         text: "Gotowy do zamieszkania.",
       },
     ],
-    imageAlt: "Wjazd na ogrodzone osiedle Trakt Janosika z kamiennym murem i tablicą z nazwą",
-    detailAlt: "Kryształowy żyrandol pod drewnianymi belkami — zdjęcie wnętrza",
+    imageAlt: "Dom Trakt Janosika o zmierzchu — wysoki góralski szczyt, balkon i oświetlony okap",
+    detailAlt: "Łazienka z okrągłym podświetlanym lustrem i podwójną umywalką — zdjęcie wnętrza",
   },
 
   architecture: {

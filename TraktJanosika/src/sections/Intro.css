@@ -67,17 +67,6 @@
   border: clamp(6px, 0.8vw, 12px) solid var(--c-ivory);
   box-shadow: var(--shadow-soft);
 }
-.intro__tag {
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-4);
-  padding: 0.3rem 0.7rem;
-  background: rgba(245, 240, 230, 0.85);
-  font-size: 0.6875rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
 @media (min-width: 960px) {
   .intro__media {
     padding-left: 18%;
