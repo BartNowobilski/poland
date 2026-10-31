@@ -84,7 +84,7 @@ const pl = {
       },
     ],
     imageAlt: "Wjazd na ogrodzone osiedle Trakt Janosika z kamiennym murem i tablicą z nazwą",
-    detailAlt: "Salon z kominkiem, drewnianymi belkami i żyrandolem — zdjęcie wnętrza",
+    detailAlt: "Kryształowy żyrandol pod drewnianymi belkami — zdjęcie wnętrza",
   },
 
   architecture: {
@@ -118,9 +118,9 @@ const pl = {
       wide: "Dom w stylu góralskim ze stromym dachem, kamienną podmurówką i balkonem",
       front: "Fasada domu z wysokim szczytem i dużymi przeszkleniami",
       garden: "Dom od strony ogrodu — kamień, drewno i taras",
-      livingFireplace: "Ściana z kominkiem i drewnianymi belkami pod wysokim sufitem",
-      atticBath: "Łazienka na poddaszu z wanną wolnostojącą i drewnianymi ramami okien",
-      kitchen: "Kuchnia z wyspą i drewnianym sufitem",
+      staircase: "Drewniane schody na poddasze",
+      bathMirror: "Łazienka z podwójną umywalką, złotą armaturą i okrągłym podświetlanym lustrem",
+      chandelierBeams: "Kryształowy żyrandol pod drewnianymi belkami stropu",
     },
   },
 

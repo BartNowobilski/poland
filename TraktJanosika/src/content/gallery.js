@@ -23,7 +23,6 @@ export const CATEGORIES = [
 const render = (pl, en) => ({ pl: `${pl} — wizualizacja`, en: `${en} — visualisation` });
 const photo = (pl, en) => ({ pl: `${pl} — zdjęcie, wrzesień 2026`, en: `${en} — photo, September 2026` });
 const photoOct = (pl, en) => ({ pl: `${pl} — zdjęcie, październik 2026`, en: `${en} — photo, October 2026` });
-const photoUndated = (pl, en) => ({ pl: `${pl} — zdjęcie`, en: `${en} — photo` });
 
 export const GALLERY = [
   // ---------- Photos: exteriors (September 2026) ----------
@@ -61,6 +60,52 @@ export const GALLERY = [
   },
 
   {
+    id: "architecture-dom-zmierzch-07",
+    category: "architecture",
+    alt: photo("Dom z garażem i brukowanym placem o zmierzchu", "Home with garage and paved yard at dusk"),
+  },
+  {
+    id: "architecture-dom-zmierzch-08",
+    category: "architecture",
+    alt: photo("Elewacja z kamiennymi narożnikami i oświetlonym okapem", "Façade with stone corners and lit eaves"),
+  },
+  {
+    id: "architecture-dom-zmierzch-09",
+    category: "architecture",
+    alt: photo("Dom z garażem i drewnianym okapem", "Home with garage and timber eaves"),
+  },
+  {
+    id: "architecture-dom-zmierzch-10",
+    category: "architecture",
+    alt: photo("Dom i brukowany podjazd, w tle sąsiednie domy", "Home and paved driveway, neighbouring houses behind"),
+  },
+  {
+    id: "architecture-dom-zmierzch-11",
+    category: "architecture",
+    alt: photo("Dom z balkonem na końcu brukowanego podjazdu", "Home with balcony at the end of the paved drive"),
+  },
+  {
+    id: "architecture-dom-zmierzch-12",
+    category: "architecture",
+    alt: photo("Frontowa elewacja z wysokim szczytem i balkonem", "Front façade with tall gable and balcony"),
+  },
+  {
+    id: "architecture-dom-zmierzch-13",
+    category: "architecture",
+    alt: photo("Dom z przeszklonym balkonem i tarasem", "Home with glass balcony and terrace"),
+  },
+  {
+    id: "architecture-dom-zmierzch-14",
+    category: "architecture",
+    featured: true,
+    alt: photo("Elewacja ogrodowa z dużymi przeszkleniami i balkonem", "Garden façade with large windows and balcony"),
+  },
+  {
+    id: "architecture-dom-zmierzch-15",
+    category: "architecture",
+    alt: photo("Elewacja ogrodowa po zmroku", "Garden façade after dark"),
+  },
+  {
     id: "architecture-dach-szczyt-01",
     category: "architecture",
     alt: photoOct("Góralski szczyt dachu z drewnianym okapem", "Highlander roof gable with timber eaves"),
@@ -82,6 +127,7 @@ export const GALLERY = [
   {
     id: "interiors-schody-01",
     category: "interiors",
+    featured: true,
     alt: photoOct("Drewniane schody na poddasze", "Timber staircase to the attic"),
   },
   {
@@ -141,28 +187,6 @@ export const GALLERY = [
   },
 
   // ---------- Photos: interiors ----------
-  {
-    id: "interiors-lazienka-poddasze-01",
-    category: "interiors",
-    featured: true,
-    alt: photoUndated("Łazienka na poddaszu z wanną wolnostojącą i drewnianymi ramami okien", "Attic bathroom with freestanding bath and timber window frames"),
-  },
-  {
-    id: "interiors-kuchnia-01",
-    category: "interiors",
-    alt: photoUndated("Kuchnia z wyspą i drewnianym sufitem", "Kitchen with island and timber ceiling"),
-  },
-  {
-    id: "interiors-salon-01",
-    category: "interiors",
-    featured: true,
-    alt: photoUndated("Salon z kominkiem, drewnianymi belkami i żyrandolem", "Living room with fireplace, timber beams and chandelier"),
-  },
-  {
-    id: "interiors-salon-kominek-01",
-    category: "interiors",
-    alt: photoUndated("Ściana z kominkiem pod wysokim sufitem z belkami", "Fireplace wall under a high beamed ceiling"),
-  },
   {
     id: "interiors-lazienka-umywalka-02",
     category: "interiors",

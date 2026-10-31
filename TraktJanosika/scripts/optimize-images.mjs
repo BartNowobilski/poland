@@ -21,6 +21,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
+import { GRADE, grade } from "./grade.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = path.join(ROOT, "public");
@@ -39,7 +40,7 @@ const ENCODERS = {
 };
 const FALLBACK_WIDTH = 1280;
 // any change here re-processes every image (and changes its ?v= cache key)
-const SETTINGS = JSON.stringify({ WIDTHS, FALLBACK_WIDTH, FORMATS, QUALITY });
+const SETTINGS = JSON.stringify({ WIDTHS, FALLBACK_WIDTH, FORMATS, QUALITY, GRADE });
 const CATEGORIES = ["architecture", "interiors", "surroundings", "lifestyle", "construction", "renderings"];
 const IMAGE_EXT = /\.(jpe?g|png|webp|tiff?|avif)$/i;
 
@@ -174,8 +175,18 @@ async function processImage(source, previous) {
     ({ width, height } = box);
   }
 
-  const widths = (variant?.widths ?? WIDTHS).filter((w) => w < width);
-  if (!widths.length || width < WIDTHS[WIDTHS.length - 1]) widths.push(width);
+  // real photos (photos/<category>/) get the shared colour grade — see grade.mjs.
+  // Legacy renders in public/ are left as they are. Opt out: ADJUST[id] = { grade: false }
+  let graded = null;
+  if (category && (ADJUST[id] ?? {}).grade !== false) {
+    const g = await grade(base);
+    base = g.image;
+    ({ width, height } = await base.metadata());
+    graded = { gamma: +g.plan.gamma.toFixed(3), saturation: +g.plan.saturation.toFixed(3) };
+  }
+
+  const widths = (variant?.widths ?? WIDTHS).filter((w) => w <= width);
+  if (!widths.length || (width < WIDTHS[WIDTHS.length - 1] && !widths.includes(width))) widths.push(width);
   const fallback = widths.filter((w) => w <= FALLBACK_WIDTH).pop() ?? widths[0];
 
   for (const w of widths) {
@@ -204,6 +215,7 @@ async function processImage(source, previous) {
     ph: `data:image/webp;base64,${tiny.toString("base64")}`,
     color: `#${hex(dominant.r)}${hex(dominant.g)}${hex(dominant.b)}`,
     category,
+    graded,
     source: path.relative(ROOT, file),
     fingerprint,
   };

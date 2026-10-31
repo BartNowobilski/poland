@@ -48,6 +48,15 @@ Use the id to:
 - use photos for a **house** (`cover`, `gallery`, `floorPlans`) in
   `src/content/residences.js`.
 
+## Colour grading (cohesive look)
+
+Every photo in `photos/` gets an automatic, adaptive grade on its website
+copies (`scripts/grade.mjs`): very dark or very blue/orange photos are moved
+part of the way toward a shared look (exposure, warmth, saturation, gentle
+contrast). Originals are not changed and renders in `public/` are not graded.
+To skip one photo, add `ADJUST["<id>"] = { grade: false }` in
+`scripts/optimize-images.mjs`. Tune the look in `GRADE` in `grade.mjs`.
+
 ## Replacing or removing
 
 - Replace: overwrite the file with the same name and run `npm run images`.

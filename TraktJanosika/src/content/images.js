@@ -17,10 +17,10 @@ export const IMAGES = {
   houseGarden: getImage("h4", { position: "45% 50%" }),
 
   // Photos — interiors
-  living: getImage("interiors-salon-01", { position: "50% 45%" }),
-  livingFireplace: getImage("interiors-salon-kominek-01", { position: "50% 50%" }),
-  kitchen: getImage("interiors-kuchnia-01", { position: "55% 60%" }),
-  atticBath: getImage("interiors-lazienka-poddasze-01", { position: "50% 45%" }),
+  chandelier: getImage("interiors-salon-zyrandol-03", { position: "50% 45%" }),
+  chandelierBeams: getImage("interiors-salon-zyrandol-01", { position: "50% 40%" }),
+  staircase: getImage("interiors-schody-01", { position: "50% 50%" }),
+  bathMirror: getImage("interiors-lazienka-lustro-02", { position: "45% 50%" }),
 
   // Photos — exteriors after dark (September 2026)
   houseNight: getImage("architecture-dom-zmierzch-02", { position: "50% 45%" }),

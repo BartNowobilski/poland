@@ -83,7 +83,7 @@ const en = {
       },
     ],
     imageAlt: "Entrance to the gated Trakt Janosika estate with a stone wall and name plaque",
-    detailAlt: "Living room with fireplace, timber beams and chandelier — interior photo",
+    detailAlt: "Crystal chandelier beneath timber beams — interior photo",
   },
 
   architecture: {
@@ -117,9 +117,9 @@ const en = {
       wide: "Highlander-style home with a steep roof, stone plinth and balcony",
       front: "House façade with a tall gable and large windows",
       garden: "The garden side of a home — stone, timber and terrace",
-      livingFireplace: "Fireplace wall with timber beams under a high ceiling",
-      atticBath: "Attic bathroom with freestanding bath and timber window frames",
-      kitchen: "Kitchen with island and timber ceiling",
+      staircase: "Timber staircase to the attic",
+      bathMirror: "Bathroom with double basin, brass taps and round backlit mirror",
+      chandelierBeams: "Crystal chandelier beneath timber ceiling beams",
     },
   },
 
